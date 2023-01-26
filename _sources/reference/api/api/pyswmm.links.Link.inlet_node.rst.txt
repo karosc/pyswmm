@@ -1,0 +1,6 @@
+Link.inlet\_node
+================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Link.inlet_node

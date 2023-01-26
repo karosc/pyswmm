@@ -1,0 +1,6 @@
+Soil.flux\_rate
+===============
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoproperty:: Soil.flux_rate

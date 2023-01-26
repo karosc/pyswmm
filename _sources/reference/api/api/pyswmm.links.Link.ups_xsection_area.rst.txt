@@ -1,0 +1,6 @@
+Link.ups\_xsection\_area
+========================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Link.ups_xsection_area

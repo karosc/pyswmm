@@ -1,0 +1,6 @@
+Pump.inlet\_offset
+==================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Pump.inlet_offset

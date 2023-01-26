@@ -1,0 +1,6 @@
+Simulation.percent\_complete
+============================
+
+.. currentmodule:: pyswmm.simulation
+
+.. autoproperty:: Simulation.percent_complete

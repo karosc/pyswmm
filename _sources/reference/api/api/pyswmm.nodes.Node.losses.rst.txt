@@ -1,0 +1,6 @@
+Node.losses
+===========
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Node.losses

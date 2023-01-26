@@ -1,0 +1,6 @@
+﻿Output.link\_series
+===================
+
+.. currentmodule:: pyswmm.output
+
+.. automethod:: Output.link_series

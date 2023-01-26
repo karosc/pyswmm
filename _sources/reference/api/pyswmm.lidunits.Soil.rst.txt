@@ -1,0 +1,35 @@
+﻿Soil
+====
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoclass:: Soil
+
+   
+   .. .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: api/
+      :nosignatures:
+      
+   
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree: api/
+   
+      ~Soil.evaporation
+      ~Soil.flux_rate
+      ~Soil.moisture
+      ~Soil.percolation
+   
+   

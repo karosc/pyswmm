@@ -1,0 +1,6 @@
+LidUnit.index
+=============
+
+.. currentmodule:: pyswmm.lidgroups
+
+.. autoproperty:: LidUnit.index

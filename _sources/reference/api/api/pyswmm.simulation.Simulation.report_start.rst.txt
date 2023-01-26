@@ -1,0 +1,6 @@
+Simulation.report\_start
+========================
+
+.. currentmodule:: pyswmm.simulation
+
+.. autoproperty:: Simulation.report_start

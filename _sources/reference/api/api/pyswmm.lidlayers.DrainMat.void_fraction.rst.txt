@@ -1,0 +1,6 @@
+DrainMat.void\_fraction
+=======================
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: DrainMat.void_fraction

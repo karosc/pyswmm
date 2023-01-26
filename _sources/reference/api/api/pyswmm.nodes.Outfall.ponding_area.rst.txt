@@ -1,0 +1,6 @@
+Outfall.ponding\_area
+=====================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Outfall.ponding_area

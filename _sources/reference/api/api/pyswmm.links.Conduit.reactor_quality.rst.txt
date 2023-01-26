@@ -1,0 +1,6 @@
+Conduit.reactor\_quality
+========================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Conduit.reactor_quality

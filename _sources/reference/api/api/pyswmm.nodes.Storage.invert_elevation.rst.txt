@@ -1,0 +1,6 @@
+Storage.invert\_elevation
+=========================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Storage.invert_elevation

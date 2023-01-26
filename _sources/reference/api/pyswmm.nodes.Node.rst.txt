@@ -1,0 +1,66 @@
+﻿Node
+====
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoclass:: Node
+
+   
+   .. .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: api/
+      :nosignatures:
+      
+   
+      
+      
+         ~Node.generated_inflow
+       
+      
+         ~Node.is_divider
+       
+      
+         ~Node.is_junction
+       
+      
+         ~Node.is_outfall
+       
+      
+         ~Node.is_storage
+       
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree: api/
+   
+      ~Node.cumulative_inflow
+      ~Node.depth
+      ~Node.flooding
+      ~Node.full_depth
+      ~Node.head
+      ~Node.hydraulic_retention_time
+      ~Node.inflow_quality
+      ~Node.initial_depth
+      ~Node.invert_elevation
+      ~Node.lateral_inflow
+      ~Node.losses
+      ~Node.nodeid
+      ~Node.pollut_quality
+      ~Node.ponding_area
+      ~Node.reactor_quality
+      ~Node.statistics
+      ~Node.surcharge_depth
+      ~Node.total_inflow
+      ~Node.total_outflow
+      ~Node.volume
+   
+   

@@ -1,0 +1,35 @@
+﻿Pavement
+========
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoclass:: Pavement
+
+   
+   .. .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: api/
+      :nosignatures:
+      
+   
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree: api/
+   
+      ~Pavement.depth
+      ~Pavement.evaporation
+      ~Pavement.flux_rate
+      ~Pavement.percolation
+   
+   

@@ -1,0 +1,6 @@
+Node.lateral\_inflow
+====================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Node.lateral_inflow

@@ -1,0 +1,6 @@
+﻿Output.links
+============
+
+.. currentmodule:: pyswmm.output
+
+.. autoproperty:: Output.links

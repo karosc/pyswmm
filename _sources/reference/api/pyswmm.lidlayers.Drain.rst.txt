@@ -1,0 +1,37 @@
+﻿Drain
+=====
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoclass:: Drain
+
+   
+   .. .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: api/
+      :nosignatures:
+      
+   
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree: api/
+   
+      ~Drain.close_head
+      ~Drain.coefficient
+      ~Drain.delay
+      ~Drain.exponent
+      ~Drain.offset
+      ~Drain.open_head
+   
+   

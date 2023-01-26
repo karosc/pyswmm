@@ -1,0 +1,6 @@
+Drain.exponent
+==============
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Drain.exponent

@@ -1,0 +1,6 @@
+WaterBalance.final\_volume
+==========================
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoproperty:: WaterBalance.final_volume

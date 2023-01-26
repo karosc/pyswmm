@@ -1,0 +1,35 @@
+﻿RainGage
+========
+
+.. currentmodule:: pyswmm.raingages
+
+.. autoclass:: RainGage
+
+   
+   .. .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: api/
+      :nosignatures:
+      
+   
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree: api/
+   
+      ~RainGage.rainfall
+      ~RainGage.raingageid
+      ~RainGage.snowfall
+      ~RainGage.total_precip
+   
+   

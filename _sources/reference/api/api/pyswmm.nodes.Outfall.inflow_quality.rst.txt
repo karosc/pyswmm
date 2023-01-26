@@ -1,0 +1,6 @@
+Outfall.inflow\_quality
+=======================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Outfall.inflow_quality

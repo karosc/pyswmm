@@ -1,0 +1,37 @@
+﻿Surface
+=======
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoclass:: Surface
+
+   
+   .. .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: api/
+      :nosignatures:
+      
+   
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree: api/
+   
+      ~Surface.depth
+      ~Surface.evaporation
+      ~Surface.flux_rate
+      ~Surface.infiltration
+      ~Surface.inflow
+      ~Surface.outflow
+   
+   

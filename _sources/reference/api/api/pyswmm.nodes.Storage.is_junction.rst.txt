@@ -1,0 +1,6 @@
+Storage.is\_junction
+====================
+
+.. currentmodule:: pyswmm.nodes
+
+.. automethod:: Storage.is_junction

@@ -1,0 +1,6 @@
+Node.ponding\_area
+==================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Node.ponding_area

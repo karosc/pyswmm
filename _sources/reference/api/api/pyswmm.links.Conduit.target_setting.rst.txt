@@ -1,0 +1,6 @@
+Conduit.target\_setting
+=======================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Conduit.target_setting

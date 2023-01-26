@@ -1,0 +1,6 @@
+RainGage.raingageid
+===================
+
+.. currentmodule:: pyswmm.raingages
+
+.. autoproperty:: RainGage.raingageid

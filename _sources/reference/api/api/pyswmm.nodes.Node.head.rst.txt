@@ -1,0 +1,6 @@
+Node.head
+=========
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Node.head

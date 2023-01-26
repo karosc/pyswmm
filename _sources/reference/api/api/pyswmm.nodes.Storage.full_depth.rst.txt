@@ -1,0 +1,6 @@
+Storage.full\_depth
+===================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Storage.full_depth

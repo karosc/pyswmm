@@ -1,0 +1,70 @@
+﻿Pump
+====
+
+.. currentmodule:: pyswmm.links
+
+.. autoclass:: Pump
+
+   
+   .. .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: api/
+      :nosignatures:
+      
+   
+      
+      
+         ~Pump.is_conduit
+       
+      
+         ~Pump.is_orifice
+       
+      
+         ~Pump.is_outlet
+       
+      
+         ~Pump.is_pump
+       
+      
+         ~Pump.is_weir
+       
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree: api/
+   
+      ~Pump.average_head_loss
+      ~Pump.connections
+      ~Pump.current_setting
+      ~Pump.depth
+      ~Pump.ds_xsection_area
+      ~Pump.flow
+      ~Pump.flow_limit
+      ~Pump.froude
+      ~Pump.initial_flow
+      ~Pump.inlet_head_loss
+      ~Pump.inlet_node
+      ~Pump.inlet_offset
+      ~Pump.linkid
+      ~Pump.outlet_head_loss
+      ~Pump.outlet_node
+      ~Pump.outlet_offset
+      ~Pump.pollut_quality
+      ~Pump.pump_statistics
+      ~Pump.reactor_quality
+      ~Pump.seepage_rate
+      ~Pump.target_setting
+      ~Pump.total_loading
+      ~Pump.ups_xsection_area
+      ~Pump.volume
+   
+   

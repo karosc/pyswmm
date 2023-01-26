@@ -1,0 +1,6 @@
+Storage.is\_storage
+===================
+
+.. currentmodule:: pyswmm.nodes
+
+.. automethod:: Storage.is_storage

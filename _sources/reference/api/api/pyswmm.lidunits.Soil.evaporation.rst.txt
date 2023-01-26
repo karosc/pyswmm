@@ -1,0 +1,6 @@
+Soil.evaporation
+================
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoproperty:: Soil.evaporation

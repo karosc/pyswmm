@@ -1,0 +1,6 @@
+Outfall.is\_divider
+===================
+
+.. currentmodule:: pyswmm.nodes
+
+.. automethod:: Outfall.is_divider

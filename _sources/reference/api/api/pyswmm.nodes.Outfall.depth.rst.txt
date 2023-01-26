@@ -1,0 +1,6 @@
+Outfall.depth
+=============
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Outfall.depth

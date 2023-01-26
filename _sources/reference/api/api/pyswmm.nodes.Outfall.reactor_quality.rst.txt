@@ -1,0 +1,6 @@
+Outfall.reactor\_quality
+========================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Outfall.reactor_quality

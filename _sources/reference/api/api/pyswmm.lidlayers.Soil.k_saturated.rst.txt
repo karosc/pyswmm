@@ -1,0 +1,6 @@
+Soil.k\_saturated
+=================
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Soil.k_saturated

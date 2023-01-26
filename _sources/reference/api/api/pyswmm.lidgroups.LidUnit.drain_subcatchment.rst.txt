@@ -1,0 +1,6 @@
+LidUnit.drain\_subcatchment
+===========================
+
+.. currentmodule:: pyswmm.lidgroups
+
+.. autoproperty:: LidUnit.drain_subcatchment

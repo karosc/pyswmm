@@ -1,0 +1,6 @@
+Node.full\_depth
+================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Node.full_depth

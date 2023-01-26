@@ -1,0 +1,6 @@
+Surface.roughness
+=================
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Surface.roughness

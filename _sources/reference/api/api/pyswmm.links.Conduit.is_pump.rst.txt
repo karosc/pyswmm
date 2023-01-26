@@ -1,0 +1,6 @@
+Conduit.is\_pump
+================
+
+.. currentmodule:: pyswmm.links
+
+.. automethod:: Conduit.is_pump

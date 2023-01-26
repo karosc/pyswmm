@@ -1,0 +1,6 @@
+Simulation.current\_time
+========================
+
+.. currentmodule:: pyswmm.simulation
+
+.. autoproperty:: Simulation.current_time

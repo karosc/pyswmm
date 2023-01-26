@@ -1,0 +1,6 @@
+LidUnit.from\_impervious
+========================
+
+.. currentmodule:: pyswmm.lidgroups
+
+.. autoproperty:: LidUnit.from_impervious

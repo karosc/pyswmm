@@ -1,0 +1,1490 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pyswmm.nodes &#8212; pyswmm</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/pyswmm.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/pyswmm/nodes';</script>
+    <link rel="shortcut icon" href="../../_static/icon-logo-black.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../_static/type-logo-black.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../_static/type-logo-white.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../overview.html">
+                        Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../install.html">
+                        Installing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../reference/index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-external" href="https://www.pyswmm.org/examples">
+                        Examples
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../authors.html">
+                        Authors
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../cite.html">
+                        How to Cite
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/OpenWaterAnalytics/pyswmm" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pyswmm" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-solid fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/@pyswmm" title="YouTube" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-youtube"></i></span>
+            <label class="sr-only">YouTube</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/company/pyswmm/" title="LinkedIn" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.pyswmm.org" title="pyswmm.org" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><img src="../../_static/icon-logo-grey.png" class="icon-link-image" alt="pyswmm.org"/></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../overview.html">
+                        Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../install.html">
+                        Installing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../reference/index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-external" href="https://www.pyswmm.org/examples">
+                        Examples
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../authors.html">
+                        Authors
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../cite.html">
+                        How to Cite
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/OpenWaterAnalytics/pyswmm" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pyswmm" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-solid fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/@pyswmm" title="YouTube" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-youtube"></i></span>
+            <label class="sr-only">YouTube</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/company/pyswmm/" title="LinkedIn" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.pyswmm.org" title="pyswmm.org" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><img src="../../_static/icon-logo-grey.png" class="icon-link-image" alt="pyswmm.org"/></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+  <h1>Source code for pyswmm.nodes</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="c1"># -----------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) 2014 Bryant E. McDonnell</span>
+<span class="c1">#</span>
+<span class="c1"># Licensed under the terms of the BSD2 License</span>
+<span class="c1"># See LICENSE.txt for details</span>
+<span class="c1"># -----------------------------------------------------------------------------</span>
+<span class="sd">&quot;&quot;&quot;Nodes module for the pythonic interface to SWMM5.&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">swmm.toolkit</span> <span class="kn">import</span> <span class="n">shared_enum</span>
+
+<span class="c1"># Local imports</span>
+<span class="kn">from</span> <span class="nn">pyswmm.swmm5</span> <span class="kn">import</span> <span class="n">PYSWMMException</span>
+<span class="kn">from</span> <span class="nn">pyswmm.toolkitapi</span> <span class="kn">import</span> <span class="n">NodeParams</span><span class="p">,</span> <span class="n">NodeResults</span><span class="p">,</span> <span class="n">NodePollut</span><span class="p">,</span> <span class="n">NodeType</span><span class="p">,</span> <span class="n">ObjectType</span>
+
+
+<div class="viewcode-block" id="Nodes"><a class="viewcode-back" href="../../reference/api/pyswmm.nodes.Nodes.html#pyswmm.nodes.Nodes">[docs]</a><span class="k">class</span> <span class="nc">Nodes</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Node Iterator Methods.</span>
+
+<span class="sd">    :param object model: Open Model Instance</span>
+
+<span class="sd">    Examples:</span>
+
+<span class="sd">    &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">    ...     for node in Nodes(sim):</span>
+<span class="sd">    ...         print(node)</span>
+<span class="sd">    ...         print(node.nodeid)</span>
+<span class="sd">    &lt;swmm5.Node object at 0x031B0350&gt;</span>
+<span class="sd">    J1</span>
+<span class="sd">    &lt;swmm5.Node object at 0x030693D0&gt;</span>
+<span class="sd">    J2</span>
+<span class="sd">    &lt;swmm5.Node object at 0x031B0350&gt;</span>
+<span class="sd">    J3</span>
+<span class="sd">    &lt;swmm5.Node object at 0x030693D0&gt;</span>
+<span class="sd">    J0</span>
+
+<span class="sd">    Iterating over Nodes Object</span>
+
+<span class="sd">    &gt;&gt;&gt; nodes = Nodes(sim)</span>
+<span class="sd">    &gt;&gt;&gt; for node in nodes:</span>
+<span class="sd">    ...     print(node.nodeid)</span>
+<span class="sd">    J0</span>
+<span class="sd">    J1</span>
+<span class="sd">    J2</span>
+<span class="sd">    J3</span>
+
+<span class="sd">    Testing Existence</span>
+
+<span class="sd">    &gt;&gt;&gt; nodes = Nodes(sim)</span>
+<span class="sd">    &gt;&gt;&gt; &quot;J1&quot; in nodes</span>
+<span class="sd">    True</span>
+
+<span class="sd">    Initializing a node Object</span>
+
+<span class="sd">    &gt;&gt;&gt; nodes = Nodes(sim)</span>
+<span class="sd">    &gt;&gt;&gt; j1 = nodes[&#39;J1&#39;]</span>
+<span class="sd">    &gt;&gt;&gt; print(j1.invert_elevation)</span>
+<span class="sd">    12</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; j1.invert_elevation = 200</span>
+<span class="sd">    &gt;&gt;&gt; print(j1.invert_elevation)</span>
+<span class="sd">    200</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">model</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">fileLoaded</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PYSWMMException</span><span class="p">(</span><span class="s2">&quot;SWMM Model Not Open&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">_model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cuindex</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nNodes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getProjectSize</span><span class="p">(</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">NODE</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return number of nodes. Use the expression &#39;len(Nodes)&#39;.</span>
+
+<span class="sd">        :return: Number of Nodes</span>
+<span class="sd">        :rtype: int</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getProjectSize</span><span class="p">(</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">NODE</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodeid</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Checks if Node ID exists.</span>
+
+<span class="sd">        :return: ID Exists</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">ObjectIDexist</span><span class="p">(</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">NODE</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">nodeid</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodeid</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__contains__</span><span class="p">(</span><span class="n">nodeid</span><span class="p">):</span>
+            <span class="n">nd</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="p">,</span> <span class="n">nodeid</span><span class="p">)</span>
+            <span class="n">_nd</span> <span class="o">=</span> <span class="n">nd</span>
+            <span class="k">if</span> <span class="n">nd</span><span class="o">.</span><span class="n">is_outfall</span><span class="p">():</span>
+                <span class="n">_nd</span><span class="o">.</span><span class="vm">__class__</span> <span class="o">=</span> <span class="n">Outfall</span>
+            <span class="k">elif</span> <span class="n">nd</span><span class="o">.</span><span class="n">is_storage</span><span class="p">():</span>
+                <span class="n">_nd</span><span class="o">.</span><span class="vm">__class__</span> <span class="o">=</span> <span class="n">Storage</span>
+            <span class="k">return</span> <span class="n">_nd</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PYSWMMException</span><span class="p">(</span><span class="s2">&quot;Node ID: </span><span class="si">{}</span><span class="s2"> Does not Exist&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nodeid</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="fm">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cuindex</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nNodes</span><span class="p">:</span>
+            <span class="n">nodeobject</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_cuindex</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Next Iteration</span>
+            <span class="k">return</span> <span class="n">nodeobject</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">StopIteration</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">_nodeid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Node ID.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getObjectId</span><span class="p">(</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">NODE</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cuindex</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Node"><a class="viewcode-back" href="../../reference/api/pyswmm.nodes.Node.html#pyswmm.nodes.Node">[docs]</a><span class="k">class</span> <span class="nc">Node</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Node Methods.</span>
+
+<span class="sd">    :param object model: Open Model Instance</span>
+<span class="sd">    :param str nodeid: Node ID</span>
+
+<span class="sd">    Examples:</span>
+
+<span class="sd">    &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">    ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">    ...     print(j1.invert_el)</span>
+<span class="sd">    ...     for step in sim:</span>
+<span class="sd">    ...         print(j1.depth)</span>
+<span class="sd">    0.0</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">nodeid</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">model</span><span class="o">.</span><span class="n">fileLoaded</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PYSWMMException</span><span class="p">(</span><span class="s2">&quot;SWMM Model Not Open&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">nodeid</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">getObjectIDList</span><span class="p">(</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">NODE</span><span class="o">.</span><span class="n">value</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">PYSWMMException</span><span class="p">(</span><span class="s2">&quot;ID Not valid&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span> <span class="o">=</span> <span class="n">nodeid</span>
+
+    <span class="c1"># --- Get Parameters</span>
+    <span class="c1"># -------------------------------------------------------------------------</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nodeid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Node ID.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     print(j1.nodeid)</span>
+<span class="sd">        J1</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span>
+
+<div class="viewcode-block" id="Node.is_junction"><a class="viewcode-back" href="../../reference/api/api/pyswmm.nodes.Node.is_junction.html#pyswmm.nodes.Node.is_junction">[docs]</a>    <span class="k">def</span> <span class="nf">is_junction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check if node is a Junction Type.</span>
+
+<span class="sd">        :return: is junction</span>
+<span class="sd">        :rtype: bool</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     print(j1.is_junction())</span>
+<span class="sd">        True</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getNodeType</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">)</span> <span class="ow">is</span> <span class="n">shared_enum</span><span class="o">.</span><span class="n">NodeType</span><span class="o">.</span><span class="n">JUNCTION</span></div>
+
+<div class="viewcode-block" id="Node.is_outfall"><a class="viewcode-back" href="../../reference/api/api/pyswmm.nodes.Node.is_outfall.html#pyswmm.nodes.Node.is_outfall">[docs]</a>    <span class="k">def</span> <span class="nf">is_outfall</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check if node is a Outfall Type.</span>
+
+<span class="sd">        :return: is outfall</span>
+<span class="sd">        :rtype: bool</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     print(j1.is_outfall())</span>
+<span class="sd">        True</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getNodeType</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">)</span> <span class="ow">is</span> <span class="n">shared_enum</span><span class="o">.</span><span class="n">NodeType</span><span class="o">.</span><span class="n">OUTFALL</span></div>
+
+<div class="viewcode-block" id="Node.is_storage"><a class="viewcode-back" href="../../reference/api/api/pyswmm.nodes.Node.is_storage.html#pyswmm.nodes.Node.is_storage">[docs]</a>    <span class="k">def</span> <span class="nf">is_storage</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check if node is a Storage Type.</span>
+
+<span class="sd">        :return: is storage</span>
+<span class="sd">        :rtype: bool</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     print(j1.is_storage())</span>
+<span class="sd">        True</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getNodeType</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">)</span> <span class="ow">is</span> <span class="n">shared_enum</span><span class="o">.</span><span class="n">NodeType</span><span class="o">.</span><span class="n">STORAGE</span></div>
+
+<div class="viewcode-block" id="Node.is_divider"><a class="viewcode-back" href="../../reference/api/api/pyswmm.nodes.Node.is_divider.html#pyswmm.nodes.Node.is_divider">[docs]</a>    <span class="k">def</span> <span class="nf">is_divider</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check if node is a Divider Type.</span>
+
+<span class="sd">        :return: is divider</span>
+<span class="sd">        :rtype: bool</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     print(j1.is_divider())</span>
+<span class="sd">        True</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getNodeType</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">)</span> <span class="ow">is</span> <span class="n">shared_enum</span><span class="o">.</span><span class="n">NodeType</span><span class="o">.</span><span class="n">DIVIDER</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">invert_elevation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get/set node invert elevation.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     print(j1.invert_elevation)</span>
+<span class="sd">        0.1</span>
+
+<span class="sd">        Setting the value</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     print(j1.invert_elevation)</span>
+<span class="sd">        ...     j1.invert_elevation = 0.2</span>
+<span class="sd">        ...     print(j1.invert_elevation)</span>
+<span class="sd">        0.1</span>
+<span class="sd">        0.2</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getNodeParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span>
+                                        <span class="n">NodeParams</span><span class="o">.</span><span class="n">invertElev</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@invert_elevation</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">invert_elevation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set Node Invert Elevation.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setNodeParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span> <span class="n">NodeParams</span><span class="o">.</span><span class="n">invertElev</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                 <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">full_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get node full depth (Physical Depth of manhole).</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     print(j1.full_depth)</span>
+<span class="sd">        10</span>
+
+<span class="sd">        Setting the value</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     print(j1.full_depth)</span>
+<span class="sd">        ...     j1.full_depth = 50</span>
+<span class="sd">        ...     print(j1.full_depth)</span>
+<span class="sd">        10</span>
+<span class="sd">        50</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getNodeParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span>
+                                        <span class="n">NodeParams</span><span class="o">.</span><span class="n">fullDepth</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@full_depth</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">full_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set Node Full Depth.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setNodeParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span> <span class="n">NodeParams</span><span class="o">.</span><span class="n">fullDepth</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                 <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">surcharge_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get/set node surcharge depth.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     print(j1.surcharge_depth)</span>
+<span class="sd">        10</span>
+
+<span class="sd">        Setting the value</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     print(j1.surcharge_depth)</span>
+<span class="sd">        ...     j1.surcharge_depth = 50</span>
+<span class="sd">        ...     print(j1.surcharge_depth)</span>
+<span class="sd">        10</span>
+<span class="sd">        50</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getNodeParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span>
+                                        <span class="n">NodeParams</span><span class="o">.</span><span class="n">surDepth</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@surcharge_depth</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">surcharge_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set Node Surcharge Depth.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setNodeParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span> <span class="n">NodeParams</span><span class="o">.</span><span class="n">surDepth</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                 <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ponding_area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get/set node ponding area.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     print(j1.ponding_area)</span>
+<span class="sd">        0</span>
+
+<span class="sd">        Setting the value</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     print(j1.ponding_area)</span>
+<span class="sd">        ...     j1.ponding_area = 50</span>
+<span class="sd">        ...     print(j1.ponding_area)</span>
+<span class="sd">        0</span>
+<span class="sd">        50</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getNodeParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span>
+                                        <span class="n">NodeParams</span><span class="o">.</span><span class="n">pondedArea</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@ponding_area</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">ponding_area</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set Node Ponding Area.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setNodeParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span> <span class="n">NodeParams</span><span class="o">.</span><span class="n">pondedArea</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                 <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">initial_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get/set node initial depth.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     print(j1.initial_depth)</span>
+<span class="sd">        0</span>
+
+<span class="sd">        Setting the value</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     print(j1.initial_depth)</span>
+<span class="sd">        ...     j1.initial_depth = 1</span>
+<span class="sd">        ...     print(j1.initial_depth)</span>
+<span class="sd">        0</span>
+<span class="sd">        1</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getNodeParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span>
+                                        <span class="n">NodeParams</span><span class="o">.</span><span class="n">initDepth</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@initial_depth</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">initial_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set Node Initial Depth.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setNodeParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span> <span class="n">NodeParams</span><span class="o">.</span><span class="n">initDepth</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                 <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">total_inflow</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Node Results for Total Inflow Rate.</span>
+
+<span class="sd">        If Simulation is not running this method will raise a warning and</span>
+<span class="sd">        return 0.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     for step in sim:</span>
+<span class="sd">        ...         print(j1.total_inflow)</span>
+<span class="sd">        0</span>
+<span class="sd">        1.2</span>
+<span class="sd">        1.5</span>
+<span class="sd">        1.9</span>
+<span class="sd">        1.2</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getNodeResult</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span>
+                                         <span class="n">NodeResults</span><span class="o">.</span><span class="n">totalinflow</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">total_outflow</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Node Results for Total Outflow Rate.</span>
+
+<span class="sd">        If Simulation is not running this method will raise a warning and</span>
+<span class="sd">        return 0.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     for step in sim:</span>
+<span class="sd">        ...         print(j1.total_outflow)</span>
+<span class="sd">        0</span>
+<span class="sd">        1.2</span>
+<span class="sd">        1.5</span>
+<span class="sd">        1.9</span>
+<span class="sd">        1.2</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getNodeResult</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span>
+                                         <span class="n">NodeResults</span><span class="o">.</span><span class="n">outflow</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">losses</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Node Results for Losses Rate (Evap and Exfiltration).</span>
+
+<span class="sd">        If Simulation is not running this method will raise a warning and</span>
+<span class="sd">        return 0.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     for step in sim:</span>
+<span class="sd">        ...         print(j1.losses)</span>
+<span class="sd">        0</span>
+<span class="sd">        0.01</span>
+<span class="sd">        0.01</span>
+<span class="sd">        0.01</span>
+<span class="sd">        0.01</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getNodeResult</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span>
+                                         <span class="n">NodeResults</span><span class="o">.</span><span class="n">losses</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Node Results for Volume.</span>
+
+<span class="sd">        If Simulation is not running this method will raise a warning and</span>
+<span class="sd">        return 0.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     for step in sim:</span>
+<span class="sd">        ...         print(j1.volume)</span>
+<span class="sd">        0</span>
+<span class="sd">        1.2</span>
+<span class="sd">        1.5</span>
+<span class="sd">        1.9</span>
+<span class="sd">        1.2</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getNodeResult</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span>
+                                         <span class="n">NodeResults</span><span class="o">.</span><span class="n">newVolume</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">flooding</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Node Results for Flooding Rate.</span>
+
+<span class="sd">        If Simulation is not running this method will raise a warning and</span>
+<span class="sd">        return 0.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     for step in sim:</span>
+<span class="sd">        ...         print(j1.flooding)</span>
+<span class="sd">        0</span>
+<span class="sd">        0</span>
+<span class="sd">        0.01</span>
+<span class="sd">        0</span>
+<span class="sd">        0</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getNodeResult</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span>
+                                         <span class="n">NodeResults</span><span class="o">.</span><span class="n">overflow</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">depth</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Node Results for Depth.</span>
+
+<span class="sd">        If Simulation is not running this method will raise a warning and</span>
+<span class="sd">        return 0.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     for step in sim:</span>
+<span class="sd">        ...         print(j1.depth)</span>
+<span class="sd">        0</span>
+<span class="sd">        0.5</span>
+<span class="sd">        0.51</span>
+<span class="sd">        0.52</span>
+<span class="sd">        0.49</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getNodeResult</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span>
+                                         <span class="n">NodeResults</span><span class="o">.</span><span class="n">newDepth</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">head</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Node Results for Head.</span>
+
+<span class="sd">        If Simulation is not running this method will raise a warning and</span>
+<span class="sd">        return 0.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     for step in sim:</span>
+<span class="sd">        ...         print(j1.head)</span>
+<span class="sd">        10</span>
+<span class="sd">        10.5</span>
+<span class="sd">        10.51</span>
+<span class="sd">        10.52</span>
+<span class="sd">        10.49</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getNodeResult</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span>
+                                         <span class="n">NodeResults</span><span class="o">.</span><span class="n">newHead</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">lateral_inflow</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Node Results for lateral Inflow rate.</span>
+
+<span class="sd">        If Simulation is not running this method will raise a warning and</span>
+<span class="sd">        return 0.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     for step in sim:</span>
+<span class="sd">        ...         print(j1.lateral_inflow)</span>
+<span class="sd">        0</span>
+<span class="sd">        0.25</span>
+<span class="sd">        0.25</span>
+<span class="sd">        0.3</span>
+<span class="sd">        0.4</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getNodeResult</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span>
+                                         <span class="n">NodeResults</span><span class="o">.</span><span class="n">newLatFlow</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">hydraulic_retention_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Node Results for hydraulic retention time.</span>
+
+<span class="sd">        If Simulation is not running this method will raise a warning and</span>
+<span class="sd">        return 0.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getNodeResult</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span>
+                                         <span class="n">NodeResults</span><span class="o">.</span><span class="n">hyd_res_time</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Node.generated_inflow"><a class="viewcode-back" href="../../reference/api/api/pyswmm.nodes.Node.generated_inflow.html#pyswmm.nodes.Node.generated_inflow">[docs]</a>    <span class="k">def</span> <span class="nf">generated_inflow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inflowrate</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Generate and Set a Node Inflow Rate.</span>
+
+<span class="sd">        The value is held constant in the model until it is redefined.</span>
+<span class="sd">        Generated inflows work like any SWMM inflow.  This does not</span>
+<span class="sd">        introduce any continuity errors since all flows is counted as</span>
+<span class="sd">        an inflow.</span>
+
+<span class="sd">        :param float inflowrate: Inflow Rate</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     for step in sim:</span>
+<span class="sd">        ...         j1.generated_inflow(9)</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setNodeInflow</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span> <span class="n">inflowrate</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">cumulative_inflow</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Cumulative Node Loading.</span>
+
+<span class="sd">        :return: Cumulative Volume</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">node_inflow</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nodeid</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">pollut_quality</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Current Water Quality Values for a Node.</span>
+<span class="sd">        If Simulation is not running this method will raise a warning and</span>
+<span class="sd">        return 0.</span>
+
+<span class="sd">        :return: Group of Water Quality Values.</span>
+<span class="sd">        :rtype: dict</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/test_pollutants.inp&#39;) as sim:</span>
+<span class="sd">        ...     J1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     for step in sim:</span>
+<span class="sd">        ...         print(J1.pollut_quality)</span>
+<span class="sd">        {&#39;test-pollutant&#39;: 0.0}</span>
+<span class="sd">        {&#39;test-pollutant&#39;: 120.0}</span>
+<span class="sd">        {&#39;test-pollutant&#39;: 120.0}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">out_dict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">pollut_ids</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getObjectIDList</span><span class="p">(</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">POLLUT</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+        <span class="n">quality_array</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getNodePollut</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span>
+                                                      <span class="n">NodePollut</span><span class="o">.</span><span class="n">nodeQual</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pollut_ids</span><span class="p">)):</span>
+            <span class="n">out_dict</span><span class="p">[</span><span class="n">pollut_ids</span><span class="p">[</span><span class="n">ind</span><span class="p">]]</span> <span class="o">=</span> <span class="n">quality_array</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">out_dict</span>
+
+    <span class="nd">@pollut_quality</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">pollut_quality</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set Current Node Water Quality Value</span>
+<span class="sd">        </span>
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/test_pollutants.inp&#39;) as sim:</span>
+<span class="sd">        ...     Tank = Nodes(sim)[&quot;Tank&quot;]</span>
+<span class="sd">        ...     for step in sim:</span>
+<span class="sd">        ...         Tank.pollut_quality = (&#39;test-pollutant&#39;, 100)</span>
+<span class="sd">                    print(Tank.pollut_quality)</span>
+<span class="sd">        {&#39;test-pollutant&#39;: 100.0}</span>
+<span class="sd">        {&#39;test-pollutant&#39;: 100.0}</span>
+<span class="sd">        {&#39;test-pollutant&#39;: 100.0}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">pollutant_ID</span><span class="p">,</span> <span class="n">pollutant_value</span> <span class="o">=</span> <span class="n">args</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setNodePollut</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span> <span class="n">pollutant_ID</span><span class="p">,</span> <span class="n">pollutant_value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">inflow_quality</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Current Inflow Water Quality Values for a Node.</span>
+<span class="sd">        If Simulation is not running this method will raise a warning and</span>
+<span class="sd">        return 0.</span>
+
+<span class="sd">        :return: Group of Water Quality Values.</span>
+<span class="sd">        :rtype: dict</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/test_pollutants.inp&#39;) as sim:</span>
+<span class="sd">        ...     J1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     for step in sim:</span>
+<span class="sd">        ...         print(J1.inflow_quality)</span>
+<span class="sd">        {&#39;test-pollutant&#39;: 0.0}</span>
+<span class="sd">        {&#39;test-pollutant&#39;: 120.0}</span>
+<span class="sd">        {&#39;test-pollutant&#39;: 120.0}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">out_dict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">pollut_ids</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getObjectIDList</span><span class="p">(</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">POLLUT</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+        <span class="n">quality_array</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getNodePollut</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span>
+                                                      <span class="n">NodePollut</span><span class="o">.</span><span class="n">inflowQual</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pollut_ids</span><span class="p">)):</span>
+            <span class="n">out_dict</span><span class="p">[</span><span class="n">pollut_ids</span><span class="p">[</span><span class="n">ind</span><span class="p">]]</span> <span class="o">=</span> <span class="n">quality_array</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">out_dict</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">reactor_quality</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Current Water Quality Values for the mixed reactor inside a Node.</span>
+<span class="sd">        If Simulation is not running this method will raise a warning and</span>
+<span class="sd">        return 0.</span>
+
+<span class="sd">        :return: Group of Water Quality Values.</span>
+<span class="sd">        :rtype: dict</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/test_pollutants.inp&#39;) as sim:</span>
+<span class="sd">        ...     J1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     for step in sim:</span>
+<span class="sd">        ...         print(J1.reactor_quality)</span>
+<span class="sd">        {&#39;test-pollutant&#39;: 0.0}</span>
+<span class="sd">        {&#39;test-pollutant&#39;: 120.0}</span>
+<span class="sd">        {&#39;test-pollutant&#39;: 120.0}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">out_dict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">pollut_ids</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getObjectIDList</span><span class="p">(</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">POLLUT</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+        <span class="n">quality_array</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getNodePollut</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span>
+                                                      <span class="n">NodePollut</span><span class="o">.</span><span class="n">reactorQual</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pollut_ids</span><span class="p">)):</span>
+            <span class="n">out_dict</span><span class="p">[</span><span class="n">pollut_ids</span><span class="p">[</span><span class="n">ind</span><span class="p">]]</span> <span class="o">=</span> <span class="n">quality_array</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">out_dict</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">statistics</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Node Statistics. The stats returned are rolling/cumulative.</span>
+<span class="sd">        Indeces are as follows:</span>
+
+<span class="sd">        +-------------------------+</span>
+<span class="sd">        | average_depth           |</span>
+<span class="sd">        +-------------------------+</span>
+<span class="sd">        | max_depth               |</span>
+<span class="sd">        +-------------------------+</span>
+<span class="sd">        | max_depth_date          |</span>
+<span class="sd">        +-------------------------+</span>
+<span class="sd">        | max_report_depth        |</span>
+<span class="sd">        +-------------------------+</span>
+<span class="sd">        | flooding_volume         |</span>
+<span class="sd">        +-------------------------+</span>
+<span class="sd">        | flooding_duration       |</span>
+<span class="sd">        +-------------------------+</span>
+<span class="sd">        | surcharge_duration      |</span>
+<span class="sd">        +-------------------------+</span>
+<span class="sd">        | courant_crit_duration   |</span>
+<span class="sd">        +-------------------------+</span>
+<span class="sd">        | lateral_inflow_vol      |</span>
+<span class="sd">        +-------------------------+</span>
+<span class="sd">        | peak_lateral_inflowrate |</span>
+<span class="sd">        +-------------------------+</span>
+<span class="sd">        | peak_total_inflow       |</span>
+<span class="sd">        +-------------------------+</span>
+<span class="sd">        | peak_flooding_rate      |</span>
+<span class="sd">        +-------------------------+</span>
+<span class="sd">        | max_ponded_volume       |</span>
+<span class="sd">        +-------------------------+</span>
+<span class="sd">        | max_inflow_date         |</span>
+<span class="sd">        +-------------------------+</span>
+<span class="sd">        | max_flooding_date       |</span>
+<span class="sd">        +-------------------------+</span>
+
+<span class="sd">        :return: Group of Stats</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">node_statistics</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nodeid</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Outfall"><a class="viewcode-back" href="../../reference/api/pyswmm.nodes.Outfall.html#pyswmm.nodes.Outfall">[docs]</a><span class="k">class</span> <span class="nc">Outfall</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Outfall Object: Subclass of Node Object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Outfall</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">outfall_statistics</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Outfall Stats. The stats returned are rolling/cumulative.</span>
+<span class="sd">        Indeces are as follows:</span>
+
+<span class="sd">        +-------------------+</span>
+<span class="sd">        | average_flowrate  |</span>
+<span class="sd">        +-------------------+</span>
+<span class="sd">        | peak_flowrate     |</span>
+<span class="sd">        +-------------------+</span>
+<span class="sd">        | pollutant_loading |</span>
+<span class="sd">        +-------------------+</span>
+<span class="sd">        | total_periods     |</span>
+<span class="sd">        +-------------------+</span>
+
+<span class="sd">        :return: Group of Stats</span>
+<span class="sd">        :rtype: list</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">outfall_statistics</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nodeid</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Outfall.outfall_stage"><a class="viewcode-back" href="../../reference/api/api/pyswmm.nodes.Outfall.outfall_stage.html#pyswmm.nodes.Outfall.outfall_stage">[docs]</a>    <span class="k">def</span> <span class="nf">outfall_stage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stage</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Generate and Set an Outfall Stage (head).</span>
+
+<span class="sd">        The value is held constant in the model until it is redefined.</span>
+<span class="sd">        Using the function overrides the mechanism within SWMM that would</span>
+<span class="sd">        internerally set the outfall stage.  This does not</span>
+<span class="sd">        introduce any continuity errors since all flows is counted as</span>
+<span class="sd">        an inflow.</span>
+
+<span class="sd">        :param float stage: Outfall Stage (Head)</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Nodes</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     j1 = Nodes(sim)[&quot;J1&quot;]</span>
+<span class="sd">        ...     for step in sim:</span>
+<span class="sd">        ...         j1.outfall_stage(9)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setOutfallStage</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nodeid</span><span class="p">,</span> <span class="n">stage</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="Storage"><a class="viewcode-back" href="../../reference/api/pyswmm.nodes.Storage.html#pyswmm.nodes.Storage">[docs]</a><span class="k">class</span> <span class="nc">Storage</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Storage Object: Subclass of Node Object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Storage</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">storage_statistics</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Storage Stats. The stats returned are rolling/cumulative.</span>
+<span class="sd">        Indeces are as follows:</span>
+
+<span class="sd">        +----------------+</span>
+<span class="sd">        | initial_volume |</span>
+<span class="sd">        +----------------+</span>
+<span class="sd">        | average_volume |</span>
+<span class="sd">        +----------------+</span>
+<span class="sd">        | max_volume     |</span>
+<span class="sd">        +----------------+</span>
+<span class="sd">        | peak_flowrate  |</span>
+<span class="sd">        +----------------+</span>
+<span class="sd">        | evap_loss      |</span>
+<span class="sd">        +----------------+</span>
+<span class="sd">        | exfil_loss     |</span>
+<span class="sd">        +----------------+</span>
+<span class="sd">        | max_vol_date   |</span>
+<span class="sd">        +----------------+</span>
+
+<span class="sd">        :return: Group of Stats</span>
+<span class="sd">        :rtype: list</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">storage_statistics</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nodeid</span><span class="p">)</span></div>
+</pre></div>
+
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div id="searchbox"></div>
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2016, Bryant E. McDonnell (EmNet LLC).<br>
+
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

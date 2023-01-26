@@ -1,0 +1,6 @@
+Conduit.average\_head\_loss
+===========================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Conduit.average_head_loss

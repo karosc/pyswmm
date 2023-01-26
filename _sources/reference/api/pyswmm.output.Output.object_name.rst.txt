@@ -1,0 +1,6 @@
+﻿Output.object\_name
+===================
+
+.. currentmodule:: pyswmm.output
+
+.. automethod:: Output.object_name

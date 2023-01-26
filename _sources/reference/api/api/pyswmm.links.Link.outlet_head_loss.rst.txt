@@ -1,0 +1,6 @@
+Link.outlet\_head\_loss
+=======================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Link.outlet_head_loss

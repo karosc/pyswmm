@@ -1,0 +1,6 @@
+Storage.reactor\_quality
+========================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Storage.reactor_quality

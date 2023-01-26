@@ -1,0 +1,6 @@
+﻿Output.subcatchments
+====================
+
+.. currentmodule:: pyswmm.output
+
+.. autoproperty:: Output.subcatchments

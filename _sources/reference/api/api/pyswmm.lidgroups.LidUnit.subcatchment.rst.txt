@@ -1,0 +1,6 @@
+LidUnit.subcatchment
+====================
+
+.. currentmodule:: pyswmm.lidgroups
+
+.. autoproperty:: LidUnit.subcatchment

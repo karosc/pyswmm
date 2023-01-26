@@ -1,0 +1,6 @@
+Storage.generated\_inflow
+=========================
+
+.. currentmodule:: pyswmm.nodes
+
+.. automethod:: Storage.generated_inflow

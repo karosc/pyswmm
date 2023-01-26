@@ -1,0 +1,6 @@
+Node.statistics
+===============
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Node.statistics

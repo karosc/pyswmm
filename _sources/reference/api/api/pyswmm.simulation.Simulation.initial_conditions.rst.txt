@@ -1,0 +1,6 @@
+Simulation.initial\_conditions
+==============================
+
+.. currentmodule:: pyswmm.simulation
+
+.. automethod:: Simulation.initial_conditions

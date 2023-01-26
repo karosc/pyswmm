@@ -1,0 +1,6 @@
+Storage.clog\_factor
+====================
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Storage.clog_factor

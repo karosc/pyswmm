@@ -1,0 +1,6 @@
+Simulation.step\_advance
+========================
+
+.. currentmodule:: pyswmm.simulation
+
+.. automethod:: Simulation.step_advance

@@ -1,0 +1,6 @@
+Pump.ups\_xsection\_area
+========================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Pump.ups_xsection_area

@@ -1,0 +1,6 @@
+Node.pollut\_quality
+====================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Node.pollut_quality

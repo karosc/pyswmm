@@ -1,0 +1,6 @@
+Surface.flux\_rate
+==================
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoproperty:: Surface.flux_rate

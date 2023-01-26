@@ -1,0 +1,6 @@
+Link.froude
+===========
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Link.froude

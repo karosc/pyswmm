@@ -1,0 +1,6 @@
+Conduit.inlet\_offset
+=====================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Conduit.inlet_offset

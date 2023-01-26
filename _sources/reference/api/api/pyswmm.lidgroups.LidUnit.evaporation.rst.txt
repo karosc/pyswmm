@@ -1,0 +1,6 @@
+LidUnit.evaporation
+===================
+
+.. currentmodule:: pyswmm.lidgroups
+
+.. autoproperty:: LidUnit.evaporation

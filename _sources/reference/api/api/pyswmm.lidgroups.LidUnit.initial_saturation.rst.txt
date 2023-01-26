@@ -1,0 +1,6 @@
+LidUnit.initial\_saturation
+===========================
+
+.. currentmodule:: pyswmm.lidgroups
+
+.. autoproperty:: LidUnit.initial_saturation

@@ -1,0 +1,6 @@
+﻿Output.close
+============
+
+.. currentmodule:: pyswmm.output
+
+.. automethod:: Output.close

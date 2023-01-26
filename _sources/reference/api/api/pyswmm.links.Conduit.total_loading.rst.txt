@@ -1,0 +1,6 @@
+Conduit.total\_loading
+======================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Conduit.total_loading

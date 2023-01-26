@@ -1,0 +1,6 @@
+Link.initial\_flow
+==================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Link.initial_flow

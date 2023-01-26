@@ -1,0 +1,6 @@
+RainGage.total\_precip
+======================
+
+.. currentmodule:: pyswmm.raingages
+
+.. autoproperty:: RainGage.total_precip

@@ -1,0 +1,6 @@
+Storage.inflow
+==============
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoproperty:: Storage.inflow

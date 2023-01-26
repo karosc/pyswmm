@@ -1,0 +1,6 @@
+Subcatchment.infiltration\_loss
+===============================
+
+.. currentmodule:: pyswmm.subcatchments
+
+.. autoproperty:: Subcatchment.infiltration_loss

@@ -1,0 +1,6 @@
+Storage.drain
+=============
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoproperty:: Storage.drain

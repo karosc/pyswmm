@@ -1,0 +1,6 @@
+Storage.storage\_statistics
+===========================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Storage.storage_statistics

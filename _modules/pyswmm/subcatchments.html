@@ -1,0 +1,1249 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pyswmm.subcatchments &#8212; pyswmm</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/pyswmm.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/pyswmm/subcatchments';</script>
+    <link rel="shortcut icon" href="../../_static/icon-logo-black.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../_static/type-logo-black.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../_static/type-logo-white.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../overview.html">
+                        Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../install.html">
+                        Installing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../reference/index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-external" href="https://www.pyswmm.org/examples">
+                        Examples
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../authors.html">
+                        Authors
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../cite.html">
+                        How to Cite
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/OpenWaterAnalytics/pyswmm" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pyswmm" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-solid fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/@pyswmm" title="YouTube" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-youtube"></i></span>
+            <label class="sr-only">YouTube</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/company/pyswmm/" title="LinkedIn" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.pyswmm.org" title="pyswmm.org" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><img src="../../_static/icon-logo-grey.png" class="icon-link-image" alt="pyswmm.org"/></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../overview.html">
+                        Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../install.html">
+                        Installing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../reference/index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-external" href="https://www.pyswmm.org/examples">
+                        Examples
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../authors.html">
+                        Authors
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../cite.html">
+                        How to Cite
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/OpenWaterAnalytics/pyswmm" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pyswmm" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-solid fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/@pyswmm" title="YouTube" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-youtube"></i></span>
+            <label class="sr-only">YouTube</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/company/pyswmm/" title="LinkedIn" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.pyswmm.org" title="pyswmm.org" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><img src="../../_static/icon-logo-grey.png" class="icon-link-image" alt="pyswmm.org"/></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+  <h1>Source code for pyswmm.subcatchments</h1><div class="highlight"><pre>
+<span></span> <span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="c1"># -----------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) 2014 Bryant E. McDonnell</span>
+<span class="c1">#</span>
+<span class="c1"># Licensed under the terms of the BSD2 License</span>
+<span class="c1"># See LICENSE.txt for details</span>
+<span class="c1"># -----------------------------------------------------------------------------</span>
+<span class="sd">&quot;&quot;&quot;Subcatchments module for the pythonic interface to SWMM5.&quot;&quot;&quot;</span>
+
+<span class="c1"># Local imports</span>
+<span class="kn">from</span> <span class="nn">pyswmm.swmm5</span> <span class="kn">import</span> <span class="n">PYSWMMException</span>
+<span class="kn">from</span> <span class="nn">pyswmm.toolkitapi</span> <span class="kn">import</span> <span class="n">ObjectType</span><span class="p">,</span> <span class="n">SubcParams</span><span class="p">,</span> <span class="n">SubcPollut</span><span class="p">,</span> <span class="n">SubcResults</span>
+
+
+<div class="viewcode-block" id="Subcatchments"><a class="viewcode-back" href="../../reference/api/pyswmm.subcatchments.Subcatchments.html#pyswmm.subcatchments.Subcatchments">[docs]</a><span class="k">class</span> <span class="nc">Subcatchments</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Subcatchment Iterator Methods.</span>
+
+<span class="sd">    :param object model: Open Model Instance</span>
+
+<span class="sd">    Examples:</span>
+
+<span class="sd">    &gt;&gt;&gt; from pyswmm import Simulation, Subcatchments</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">    ...     for subcatchment in Subcatchments(sim):</span>
+<span class="sd">    ...         print(subcatchment)</span>
+<span class="sd">    ...         print(subcatchment.subcatchmentid)</span>
+<span class="sd">    &lt;swmm5.Subcatchment object at 0x031B0350&gt;</span>
+<span class="sd">    S1</span>
+<span class="sd">    &lt;swmm5.Subcatchment object at 0x030693D0&gt;</span>
+<span class="sd">    S2</span>
+<span class="sd">    &lt;swmm5.Subcatchment object at 0x031B0350&gt;</span>
+<span class="sd">    S3</span>
+<span class="sd">    &lt;swmm5.Subcatchment object at 0x030693D0&gt;</span>
+<span class="sd">    S4</span>
+
+<span class="sd">    Iterating over Subcatchments Object</span>
+
+<span class="sd">    &gt;&gt;&gt; subcatchments = Subcatchments(sim)</span>
+<span class="sd">    &gt;&gt;&gt; for subcatchment in subcatchments:</span>
+<span class="sd">    ...     print(subcatchment.subcatchmentid)</span>
+<span class="sd">    S0</span>
+<span class="sd">    S1</span>
+<span class="sd">    S2</span>
+<span class="sd">    S3</span>
+
+<span class="sd">    Testing Existence</span>
+
+<span class="sd">    &gt;&gt;&gt; subcatchments = Subcatchments(sim)</span>
+<span class="sd">    &gt;&gt;&gt; &quot;S1&quot; in subcatchments</span>
+<span class="sd">    True</span>
+
+<span class="sd">    Initializing a subcatchment Object</span>
+
+<span class="sd">    &gt;&gt;&gt; subcatchments = Subcatchments(sim)</span>
+<span class="sd">    &gt;&gt;&gt; s1 = subcatchments[&#39;S1&#39;]</span>
+<span class="sd">    &gt;&gt;&gt; print(s1.area)</span>
+<span class="sd">    12</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; s1.area = 200</span>
+<span class="sd">    &gt;&gt;&gt; print(s1.area)</span>
+<span class="sd">    200</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">model</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">fileLoaded</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PYSWMMException</span><span class="p">(</span><span class="s2">&quot;SWMM Model Not Open&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">_model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cuindex</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nSubcatchments</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getProjectSize</span><span class="p">(</span>
+            <span class="n">ObjectType</span><span class="o">.</span><span class="n">SUBCATCH</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return number of subcatchments.</span>
+
+<span class="sd">        Use the expression &#39;len(Subcatchments)&#39;.</span>
+
+<span class="sd">        :return: Number of Subcatchments</span>
+<span class="sd">        :rtype: int</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getProjectSize</span><span class="p">(</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">SUBCATCH</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">subcatchmentid</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Checks if Subcatchment ID exists.</span>
+
+<span class="sd">        :return: ID Exists</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">ObjectIDexist</span><span class="p">(</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">SUBCATCH</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                         <span class="n">subcatchmentid</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">subcatchmentid</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__contains__</span><span class="p">(</span><span class="n">subcatchmentid</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">Subcatchment</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="p">,</span> <span class="n">subcatchmentid</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PYSWMMException</span><span class="p">(</span><span class="s2">&quot;Subcatchment ID Does not Exist&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="fm">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cuindex</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nSubcatchments</span><span class="p">:</span>
+            <span class="n">subcatchmentobject</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_subcatchmentid</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_cuindex</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Next Iteration</span>
+            <span class="k">return</span> <span class="n">subcatchmentobject</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">StopIteration</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">_subcatchmentid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Subcatchment ID.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getObjectId</span><span class="p">(</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">SUBCATCH</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                       <span class="bp">self</span><span class="o">.</span><span class="n">_cuindex</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Subcatchment"><a class="viewcode-back" href="../../reference/api/pyswmm.subcatchments.Subcatchment.html#pyswmm.subcatchments.Subcatchment">[docs]</a><span class="k">class</span> <span class="nc">Subcatchment</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Subcatchment Methods.</span>
+
+<span class="sd">    :param object model: Open Model Instance</span>
+<span class="sd">    :param str subcatchmentid: Subcatchment ID</span>
+
+<span class="sd">    Examples:</span>
+
+<span class="sd">    &gt;&gt;&gt; from pyswm import Simulation, Subcatchments</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">    ...     s1 = Subcatchments(sim)[&quot;S1&quot;]</span>
+<span class="sd">    ...     print(s1.rainfall)</span>
+<span class="sd">    ...     for step in sim:</span>
+<span class="sd">    ...         print(s1.rainfall)</span>
+<span class="sd">    0.04</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">subcatchmentid</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">model</span><span class="o">.</span><span class="n">fileLoaded</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PYSWMMException</span><span class="p">(</span><span class="s2">&quot;SWMM Model Not Open&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">subcatchmentid</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">getObjectIDList</span><span class="p">(</span>
+                <span class="n">ObjectType</span><span class="o">.</span><span class="n">SUBCATCH</span><span class="o">.</span><span class="n">value</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">PYSWMMException</span><span class="p">(</span><span class="s2">&quot;ID Not valid&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_subcatchmentid</span> <span class="o">=</span> <span class="n">subcatchmentid</span>
+
+    <span class="c1"># --- Get Parameters</span>
+    <span class="c1"># -------------------------------------------------------------------------</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">subcatchmentid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Subcatchment ID.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Subcatchments</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     s1 = Subcatchments(sim)[&quot;S1&quot;]</span>
+<span class="sd">        ...     print(s1.subcatchmentid)</span>
+<span class="sd">        S1</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_subcatchmentid</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">connection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Subcatchment Outlet Connection.</span>
+
+<span class="sd">        This function return the type of loading surface and the ID. The two</span>
+<span class="sd">        load to objects are nodes and other subcatchments.</span>
+
+<span class="sd">        +--------------+---+</span>
+<span class="sd">        | Node         | 2 |</span>
+<span class="sd">        +--------------+---+</span>
+<span class="sd">        | Subcatchment | 1 |</span>
+<span class="sd">        +--------------+---+</span>
+
+<span class="sd">        :return: (Loading Surface Type, ID)</span>
+<span class="sd">        :rtype: tuple</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Subcatchments</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     s1 = Subcatchments(sim)[&quot;S1&quot;]</span>
+<span class="sd">        ...     print(s1.connection)</span>
+<span class="sd">        (2, &#39;J2&#39;)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getSubcatchOutConnection</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_subcatchmentid</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">width</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get/set subcatchment width.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Subcatchments</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     s1 = Subcatchments(sim)[&quot;S1&quot;]</span>
+<span class="sd">        ...     print(s1.width)</span>
+<span class="sd">        100.0</span>
+
+<span class="sd">        Setting the value</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Subcatchments</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     s1 = Subcatchments(sim)[&quot;S1&quot;]</span>
+<span class="sd">        ...     print(s1.width)</span>
+<span class="sd">        ...     s1.width = 30</span>
+<span class="sd">        ...     print(s1.width)</span>
+<span class="sd">        100</span>
+<span class="sd">        30</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getSubcatchParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_subcatchmentid</span><span class="p">,</span>
+                                            <span class="n">SubcParams</span><span class="o">.</span><span class="n">width</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@width</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">width</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set Subcatchment Width.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setSubcatchParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_subcatchmentid</span><span class="p">,</span>
+                                     <span class="n">SubcParams</span><span class="o">.</span><span class="n">width</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get/set subcatchment area.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Subcatchments</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     s1 = Subcatchments(sim)[&quot;S1&quot;]</span>
+<span class="sd">        ...     print(s1.area)</span>
+<span class="sd">        10</span>
+
+<span class="sd">        Setting the value</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Subcatchments</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     s1 = Subcatchments(sim)[&quot;S1&quot;]</span>
+<span class="sd">        ...     print(s1.area)</span>
+<span class="sd">        ...     s1.area = 50</span>
+<span class="sd">        ...     print(s1.area)</span>
+<span class="sd">        10</span>
+<span class="sd">        50</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getSubcatchParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_subcatchmentid</span><span class="p">,</span>
+                                            <span class="n">SubcParams</span><span class="o">.</span><span class="n">area</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@area</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set Subcatchment area.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setSubcatchParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_subcatchmentid</span><span class="p">,</span>
+                                     <span class="n">SubcParams</span><span class="o">.</span><span class="n">area</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">percent_impervious</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get/set subcatchment percent impervious.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Subcatchments</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     s1 = Subcatchments(sim)[&quot;S1&quot;]</span>
+<span class="sd">        ...     print(s1.percent_impervious)</span>
+<span class="sd">        10</span>
+
+<span class="sd">        Setting the value</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Subcatchments</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     s1 = Subcatchments(sim)[&quot;S1&quot;]</span>
+<span class="sd">        ...     print(s1.percent_impervious)</span>
+<span class="sd">        ...     s1.percent_impervious = 50</span>
+<span class="sd">        ...     print(s1.percent_impervious)</span>
+<span class="sd">        10</span>
+<span class="sd">        50</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getSubcatchParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_subcatchmentid</span><span class="p">,</span>
+                                            <span class="n">SubcParams</span><span class="o">.</span><span class="n">fracImperv</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@percent_impervious</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">percent_impervious</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set Subcatchment percent impervious.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setSubcatchParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_subcatchmentid</span><span class="p">,</span>
+                                     <span class="n">SubcParams</span><span class="o">.</span><span class="n">fracImperv</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">slope</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get/set subcatchment slope.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Subcatchments</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     s1 = Subcatchments(sim)[&quot;S1&quot;]</span>
+<span class="sd">        ...     print(s1.slope)</span>
+<span class="sd">        0.01</span>
+
+<span class="sd">        Setting the value</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Subcatchments</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     s1 = Subcatchments(sim)[&quot;S1&quot;]</span>
+<span class="sd">        ...     print(s1.slope)</span>
+<span class="sd">        ...     s1.slope = 0.02</span>
+<span class="sd">        ...     print(s1.slope)</span>
+<span class="sd">        0.1</span>
+<span class="sd">        0.2</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getSubcatchParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_subcatchmentid</span><span class="p">,</span>
+                                            <span class="n">SubcParams</span><span class="o">.</span><span class="n">slope</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@slope</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">slope</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set Subcatchment Ponding Area.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setSubcatchParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_subcatchmentid</span><span class="p">,</span>
+                                     <span class="n">SubcParams</span><span class="o">.</span><span class="n">slope</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">curb_length</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get/set subcatchment curb length.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Subcatchments</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     s1 = Subcatchments(sim)[&quot;S1&quot;]</span>
+<span class="sd">        ...     print(s1.curb_length)</span>
+<span class="sd">        0</span>
+
+<span class="sd">        Setting the value</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Subcatchments</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     s1 = Subcatchments(sim)[&quot;S1&quot;]</span>
+<span class="sd">        ...     print(s1.curb_length)</span>
+<span class="sd">        ...     s1.curb_length = 100</span>
+<span class="sd">        ...     print(s1.curb_length)</span>
+<span class="sd">        0</span>
+<span class="sd">        100</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getSubcatchParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_subcatchmentid</span><span class="p">,</span>
+                                            <span class="n">SubcParams</span><span class="o">.</span><span class="n">curbLength</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@curb_length</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">curb_length</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set Subcatchment curb length.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setSubcatchParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_subcatchmentid</span><span class="p">,</span>
+                                     <span class="n">SubcParams</span><span class="o">.</span><span class="n">curbLength</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">rainfall</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Subcatchment Results for Rainfall.</span>
+
+<span class="sd">        If Simulation is not running this method will raise a warning and</span>
+<span class="sd">        return 0.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Subcatchments</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     s1 = Subcatchments(sim)[&quot;S1&quot;]</span>
+<span class="sd">        ...     for step in sim:</span>
+<span class="sd">        ...         print(s1.rainfall)</span>
+<span class="sd">        0</span>
+<span class="sd">        1.2</span>
+<span class="sd">        1.5</span>
+<span class="sd">        1.9</span>
+<span class="sd">        1.2</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getSubcatchResult</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_subcatchmentid</span><span class="p">,</span>
+                                             <span class="n">SubcResults</span><span class="o">.</span><span class="n">rainfall</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">evaporation_loss</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Subcatchment Results for evaporation loss.</span>
+
+<span class="sd">        If Simulation is not running this method will raise a warning and</span>
+<span class="sd">        return 0.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Subcatchments</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     s1 = Subcatchments(sim)[&quot;S1&quot;]</span>
+<span class="sd">        ...     for step in sim:</span>
+<span class="sd">        ...         print(s1.evaporation_loss)</span>
+<span class="sd">        0.01</span>
+<span class="sd">        0.01</span>
+<span class="sd">        0.01</span>
+<span class="sd">        0.01</span>
+<span class="sd">        0.01</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getSubcatchResult</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_subcatchmentid</span><span class="p">,</span>
+                                             <span class="n">SubcResults</span><span class="o">.</span><span class="n">evapLoss</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">infiltration_loss</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Subcatchment Results for Infiltration Loss.</span>
+
+<span class="sd">        If Simulation is not running this method will raise a warning and</span>
+<span class="sd">        return 0.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Subcatchments</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     s1 = Subcatchments(sim)[&quot;S1&quot;]</span>
+<span class="sd">        ...     for step in sim:</span>
+<span class="sd">        ...         print(s1.infiltration_loss)</span>
+<span class="sd">        0</span>
+<span class="sd">        0.01</span>
+<span class="sd">        0.01</span>
+<span class="sd">        0.01</span>
+<span class="sd">        0.01</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getSubcatchResult</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_subcatchmentid</span><span class="p">,</span>
+                                             <span class="n">SubcResults</span><span class="o">.</span><span class="n">infilLoss</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">runon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Subcatchment Results for Run On.</span>
+
+<span class="sd">        If Simulation is not running this method will raise a warning and</span>
+<span class="sd">        return 0.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Subcatchments</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     s1 = Subcatchments(sim)[&quot;S1&quot;]</span>
+<span class="sd">        ...     for step in sim:</span>
+<span class="sd">        ...         print(s1.runon)</span>
+<span class="sd">        0</span>
+<span class="sd">        1.2</span>
+<span class="sd">        1.5</span>
+<span class="sd">        1.9</span>
+<span class="sd">        1.2</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getSubcatchResult</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_subcatchmentid</span><span class="p">,</span>
+                                             <span class="n">SubcResults</span><span class="o">.</span><span class="n">runon</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">runoff</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Subcatchment Results for Run Off Rate.</span>
+
+<span class="sd">        If Simulation is not running this method will raise a warning and</span>
+<span class="sd">        return 0.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Subcatchments</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     s1 = Subcatchments(sim)[&quot;S1&quot;]</span>
+<span class="sd">        ...     for step in sim:</span>
+<span class="sd">        ...         print(s1.runoff)</span>
+<span class="sd">        0</span>
+<span class="sd">        0</span>
+<span class="sd">        0.01</span>
+<span class="sd">        0</span>
+<span class="sd">        0</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getSubcatchResult</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_subcatchmentid</span><span class="p">,</span>
+                                             <span class="n">SubcResults</span><span class="o">.</span><span class="n">newRunoff</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">snow_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Subcatchment Results for Snow Depth.</span>
+
+<span class="sd">        If Simulation is not running this method will raise a warning and</span>
+<span class="sd">        return 0.</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Subcatchments</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/data/model_weir_setting.inp&#39;) as sim:</span>
+<span class="sd">        ...     s1 = Subcatchments(sim)[&quot;S1&quot;]</span>
+<span class="sd">        ...     for step in sim:</span>
+<span class="sd">        ...         print(s1.snow_depth)</span>
+<span class="sd">        0</span>
+<span class="sd">        0.5</span>
+<span class="sd">        0.51</span>
+<span class="sd">        0.52</span>
+<span class="sd">        0.49</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getSubcatchResult</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_subcatchmentid</span><span class="p">,</span>
+                                             <span class="n">SubcResults</span><span class="o">.</span><span class="n">newSnowDepth</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">buildup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Pollutant Results for Surface Buildup on a Subcatchment.</span>
+
+<span class="sd">        If Simulation is not running this method will raise a warning and</span>
+<span class="sd">        return 0.</span>
+
+<span class="sd">        :return: Group of Subcatchment Surface Buildup Values.</span>
+<span class="sd">        :rtype: dict</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Subcatchments</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/buildup-test.inp&#39;) as sim:</span>
+<span class="sd">        ...     s1 = Subcatchments(sim)[&quot;S1&quot;]</span>
+<span class="sd">        ...     for step in sim:</span>
+<span class="sd">        ...         print(s1.buildup)</span>
+<span class="sd">        {&#39;test-pollutant&#39;: 8.0}</span>
+<span class="sd">        {&#39;test-pollutant&#39;: 8.0}</span>
+<span class="sd">        {&#39;test-pollutant&#39;: 7.998}</span>
+<span class="sd">        {&#39;test-pollutant&#39;: 7.991}</span>
+<span class="sd">        {&#39;test-pollutant&#39;: 7.981}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">out_dict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">pollut_ids</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getObjectIDList</span><span class="p">(</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">POLLUT</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+        <span class="n">buildup_array</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getSubcatchPollut</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_subcatchmentid</span><span class="p">,</span>
+                                                      <span class="n">SubcPollut</span><span class="o">.</span><span class="n">buildup</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pollut_ids</span><span class="p">)):</span>
+            <span class="n">out_dict</span><span class="p">[</span><span class="n">pollut_ids</span><span class="p">[</span><span class="n">ind</span><span class="p">]]</span> <span class="o">=</span> <span class="n">buildup_array</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">out_dict</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">conc_ponded</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Pollutant Results for Current Concentration of Pollutant in Ponded</span>
+<span class="sd">        Water on a Subcatchment.</span>
+
+<span class="sd">        If Simulation is not running this method will raise a warning and</span>
+<span class="sd">        return 0.</span>
+
+<span class="sd">        :return: Group of Subcatchment Ponded Water Quality Values.</span>
+<span class="sd">        :rtype: dict</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Subcatchments</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/buildup-test.inp&#39;) as sim:</span>
+<span class="sd">        ...     s1 = Subcatchments(sim)[&quot;S1&quot;]</span>
+<span class="sd">        ...     for step in sim:</span>
+<span class="sd">        ...         print(s1.conc_ponded)</span>
+<span class="sd">        {&#39;test-pollut1&#39;: 0.0, &#39;test-pollut2&#39;: 0.0}</span>
+<span class="sd">        {&#39;test-pollut1&#39;: 0.0, &#39;test-pollut2&#39;: 0.0}</span>
+<span class="sd">        {&#39;test-pollut1&#39;: 0.0, &#39;test-pollut2&#39;: 0.0}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">out_dict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">pollut_ids</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getObjectIDList</span><span class="p">(</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">POLLUT</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+        <span class="n">cPonded_array</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getSubcatchPollut</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_subcatchmentid</span><span class="p">,</span> <span class="n">SubcPollut</span><span class="o">.</span><span class="n">concPonded</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pollut_ids</span><span class="p">)):</span>
+            <span class="n">out_dict</span><span class="p">[</span><span class="n">pollut_ids</span><span class="p">[</span><span class="n">ind</span><span class="p">]]</span> <span class="o">=</span> <span class="n">cPonded_array</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">out_dict</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">pollut_quality</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Current Pollutant Water Quality Results from Subcatchment Runoff.</span>
+
+<span class="sd">        If Simulation is not running this method will raise a warning and</span>
+<span class="sd">        return 0.</span>
+
+<span class="sd">        :return: Group of Subcatchment Runoff Pollutant Quality Values.</span>
+<span class="sd">        :rtype: dict</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Subcatchments</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/buildup-test.inp&#39;) as sim:</span>
+<span class="sd">        ...     s1 = Subcatchments(sim)[&quot;S1&quot;]</span>
+<span class="sd">        ...     for step in sim:</span>
+<span class="sd">        ...         print(s1.pollut_quality)</span>
+<span class="sd">        {&#39;TSS&#39;: 0.0, &#39;Lead&#39;: 0.0}</span>
+<span class="sd">        {&#39;TSS&#39;: 0.0, &#39;Lead&#39;: 0.0}</span>
+<span class="sd">        {&#39;TSS&#39;: 0.0, &#39;Lead&#39;: 0.0}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">out_dict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">pollut_ids</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getObjectIDList</span><span class="p">(</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">POLLUT</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+        <span class="n">subcqual_array</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getSubcatchPollut</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_subcatchmentid</span><span class="p">,</span>
+                                                      <span class="n">SubcPollut</span><span class="o">.</span><span class="n">subcQual</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pollut_ids</span><span class="p">)):</span>
+            <span class="n">out_dict</span><span class="p">[</span><span class="n">pollut_ids</span><span class="p">[</span><span class="n">ind</span><span class="p">]]</span> <span class="o">=</span> <span class="n">subcqual_array</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">out_dict</span>
+        
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">runoff_total_loading</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Total Pollutant Loading from Subcatchment Runoff.</span>
+
+<span class="sd">        If Simulation is not running this method will raise a warning and</span>
+<span class="sd">        return 0.</span>
+
+<span class="sd">        :return: Group of Subcatchment Runoff Pollutant Loading Values.</span>
+<span class="sd">        :rtype: dict</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Simulation, Subcatchments</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Simulation(&#39;tests/buildup-test.inp&#39;) as sim:</span>
+<span class="sd">        ...     s1 = Subcatchments(sim)[&quot;S1&quot;]</span>
+<span class="sd">        ...     for step in sim:</span>
+<span class="sd">        ...         print(s1.runoff_total_loading)</span>
+<span class="sd">        {&#39;TSS&#39;: 0.01, &#39;Lead&#39;: 0.001}</span>
+<span class="sd">        {&#39;TSS&#39;: 0.02, &#39;Lead&#39;: 0.002}</span>
+<span class="sd">        {&#39;TSS&#39;: 0.03, &#39;Lead&#39;: 0.003}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">out_dict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">pollut_ids</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getObjectIDList</span><span class="p">(</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">POLLUT</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+        <span class="n">totalload_array</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getSubcatchPollut</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_subcatchmentid</span><span class="p">,</span>
+                                                      <span class="n">SubcPollut</span><span class="o">.</span><span class="n">subcTotalLoad</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pollut_ids</span><span class="p">)):</span>
+            <span class="n">out_dict</span><span class="p">[</span><span class="n">pollut_ids</span><span class="p">[</span><span class="n">ind</span><span class="p">]]</span> <span class="o">=</span> <span class="n">totalload_array</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">out_dict</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">statistics</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Subcatchment Flow Stats. The stats returned are rolling/cumulative.</span>
+<span class="sd">        Indeces are as follows:</span>
+
+<span class="sd">        +-------------------+</span>
+<span class="sd">        | precipitation     |</span>
+<span class="sd">        +-------------------+</span>
+<span class="sd">        | runon             |</span>
+<span class="sd">        +-------------------+</span>
+<span class="sd">        | evaporation       |</span>
+<span class="sd">        +-------------------+</span>
+<span class="sd">        | infiltration      |</span>
+<span class="sd">        +-------------------+</span>
+<span class="sd">        | runoff            |</span>
+<span class="sd">        +-------------------+</span>
+<span class="sd">        | peak_runoff_rate  |</span>
+<span class="sd">        +-------------------+</span>
+
+<span class="sd">        :return: Group of Stats</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">subcatch_statistics</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">subcatchmentid</span><span class="p">)</span></div>
+</pre></div>
+
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div id="searchbox"></div>
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2016, Bryant E. McDonnell (EmNet LLC).<br>
+
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

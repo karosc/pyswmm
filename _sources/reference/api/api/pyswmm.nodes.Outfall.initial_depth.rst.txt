@@ -1,0 +1,6 @@
+Outfall.initial\_depth
+======================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Outfall.initial_depth

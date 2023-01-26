@@ -1,0 +1,6 @@
+Pump.pollut\_quality
+====================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Pump.pollut_quality

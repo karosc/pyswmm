@@ -1,0 +1,6 @@
+Surface.thickness
+=================
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Surface.thickness

@@ -1,0 +1,37 @@
+﻿Surface
+=======
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoclass:: Surface
+
+   
+   .. .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: api/
+      :nosignatures:
+      
+   
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree: api/
+   
+      ~Surface.alpha
+      ~Surface.roughness
+      ~Surface.side_slope
+      ~Surface.slope
+      ~Surface.thickness
+      ~Surface.void_fraction
+   
+   

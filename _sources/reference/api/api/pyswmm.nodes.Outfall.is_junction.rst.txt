@@ -1,0 +1,6 @@
+Outfall.is\_junction
+====================
+
+.. currentmodule:: pyswmm.nodes
+
+.. automethod:: Outfall.is_junction

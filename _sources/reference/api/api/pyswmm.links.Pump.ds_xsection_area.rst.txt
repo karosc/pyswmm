@@ -1,0 +1,6 @@
+Pump.ds\_xsection\_area
+=======================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Pump.ds_xsection_area

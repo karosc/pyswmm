@@ -1,0 +1,6 @@
+Pavement.thickness
+==================
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Pavement.thickness

@@ -1,0 +1,25 @@
+﻿Subcatchments
+=============
+
+.. currentmodule:: pyswmm.subcatchments
+
+.. autoclass:: Subcatchments
+
+   
+   .. .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: api/
+      :nosignatures:
+      
+   
+      
+   
+   
+
+   
+   
+   

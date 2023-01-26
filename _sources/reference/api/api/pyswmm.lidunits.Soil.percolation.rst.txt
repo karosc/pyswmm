@@ -1,0 +1,6 @@
+Soil.percolation
+================
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoproperty:: Soil.percolation

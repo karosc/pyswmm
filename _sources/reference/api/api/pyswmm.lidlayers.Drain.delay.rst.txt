@@ -1,0 +1,6 @@
+Drain.delay
+===========
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Drain.delay

@@ -1,0 +1,6 @@
+Conduit.is\_weir
+================
+
+.. currentmodule:: pyswmm.links
+
+.. automethod:: Conduit.is_weir

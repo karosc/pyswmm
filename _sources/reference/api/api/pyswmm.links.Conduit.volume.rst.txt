@@ -1,0 +1,6 @@
+Conduit.volume
+==============
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Conduit.volume

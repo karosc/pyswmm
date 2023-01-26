@@ -1,0 +1,6 @@
+WaterBalance.inflow
+===================
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoproperty:: WaterBalance.inflow

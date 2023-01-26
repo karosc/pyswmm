@@ -1,0 +1,6 @@
+Link.is\_orifice
+================
+
+.. currentmodule:: pyswmm.links
+
+.. automethod:: Link.is_orifice

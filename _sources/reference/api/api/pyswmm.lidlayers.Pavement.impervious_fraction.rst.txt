@@ -1,0 +1,6 @@
+Pavement.impervious\_fraction
+=============================
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Pavement.impervious_fraction

@@ -1,0 +1,6 @@
+Conduit.ds\_xsection\_area
+==========================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Conduit.ds_xsection_area

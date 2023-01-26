@@ -1,0 +1,6 @@
+Outfall.outfall\_statistics
+===========================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Outfall.outfall_statistics

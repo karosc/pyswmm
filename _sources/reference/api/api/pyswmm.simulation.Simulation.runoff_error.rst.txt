@@ -1,0 +1,6 @@
+Simulation.runoff\_error
+========================
+
+.. currentmodule:: pyswmm.simulation
+
+.. autoproperty:: Simulation.runoff_error

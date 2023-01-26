@@ -1,0 +1,6 @@
+Soil.wilting\_point
+===================
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Soil.wilting_point

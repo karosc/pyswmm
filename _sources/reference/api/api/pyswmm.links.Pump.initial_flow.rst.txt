@@ -1,0 +1,6 @@
+Pump.initial\_flow
+==================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Pump.initial_flow

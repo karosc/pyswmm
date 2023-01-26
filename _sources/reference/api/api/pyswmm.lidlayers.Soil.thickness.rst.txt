@@ -1,0 +1,6 @@
+Soil.thickness
+==============
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Soil.thickness

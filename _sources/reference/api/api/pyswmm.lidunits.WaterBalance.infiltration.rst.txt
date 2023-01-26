@@ -1,0 +1,6 @@
+WaterBalance.infiltration
+=========================
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoproperty:: WaterBalance.infiltration

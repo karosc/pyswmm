@@ -1,0 +1,6 @@
+Soil.moisture
+=============
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoproperty:: Soil.moisture

@@ -1,0 +1,67 @@
+﻿Storage
+=======
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoclass:: Storage
+
+   
+   .. .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: api/
+      :nosignatures:
+      
+   
+      
+      
+         ~Storage.generated_inflow
+       
+      
+         ~Storage.is_divider
+       
+      
+         ~Storage.is_junction
+       
+      
+         ~Storage.is_outfall
+       
+      
+         ~Storage.is_storage
+       
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree: api/
+   
+      ~Storage.cumulative_inflow
+      ~Storage.depth
+      ~Storage.flooding
+      ~Storage.full_depth
+      ~Storage.head
+      ~Storage.hydraulic_retention_time
+      ~Storage.inflow_quality
+      ~Storage.initial_depth
+      ~Storage.invert_elevation
+      ~Storage.lateral_inflow
+      ~Storage.losses
+      ~Storage.nodeid
+      ~Storage.pollut_quality
+      ~Storage.ponding_area
+      ~Storage.reactor_quality
+      ~Storage.statistics
+      ~Storage.storage_statistics
+      ~Storage.surcharge_depth
+      ~Storage.total_inflow
+      ~Storage.total_outflow
+      ~Storage.volume
+   
+   

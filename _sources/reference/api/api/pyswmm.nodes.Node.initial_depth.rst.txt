@@ -1,0 +1,6 @@
+Node.initial\_depth
+===================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Node.initial_depth

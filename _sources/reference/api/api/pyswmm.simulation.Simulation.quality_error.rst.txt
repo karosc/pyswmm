@@ -1,0 +1,6 @@
+Simulation.quality\_error
+=========================
+
+.. currentmodule:: pyswmm.simulation
+
+.. autoproperty:: Simulation.quality_error

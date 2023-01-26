@@ -1,0 +1,6 @@
+Pump.current\_setting
+=====================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Pump.current_setting

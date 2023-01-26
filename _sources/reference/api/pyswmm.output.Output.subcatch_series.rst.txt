@@ -1,0 +1,6 @@
+﻿Output.subcatch\_series
+=======================
+
+.. currentmodule:: pyswmm.output
+
+.. automethod:: Output.subcatch_series

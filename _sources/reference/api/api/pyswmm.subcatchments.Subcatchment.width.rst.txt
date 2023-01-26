@@ -1,0 +1,6 @@
+Subcatchment.width
+==================
+
+.. currentmodule:: pyswmm.subcatchments
+
+.. autoproperty:: Subcatchment.width

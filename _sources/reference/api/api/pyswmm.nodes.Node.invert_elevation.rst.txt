@@ -1,0 +1,6 @@
+Node.invert\_elevation
+======================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Node.invert_elevation

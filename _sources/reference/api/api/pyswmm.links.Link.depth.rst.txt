@@ -1,0 +1,6 @@
+Link.depth
+==========
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Link.depth

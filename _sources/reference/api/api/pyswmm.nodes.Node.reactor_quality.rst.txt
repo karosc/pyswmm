@@ -1,0 +1,6 @@
+Node.reactor\_quality
+=====================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Node.reactor_quality

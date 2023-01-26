@@ -1,0 +1,49 @@
+﻿Subcatchment
+============
+
+.. currentmodule:: pyswmm.subcatchments
+
+.. autoclass:: Subcatchment
+
+   
+   .. .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: api/
+      :nosignatures:
+      
+   
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree: api/
+   
+      ~Subcatchment.area
+      ~Subcatchment.buildup
+      ~Subcatchment.conc_ponded
+      ~Subcatchment.connection
+      ~Subcatchment.curb_length
+      ~Subcatchment.evaporation_loss
+      ~Subcatchment.infiltration_loss
+      ~Subcatchment.percent_impervious
+      ~Subcatchment.pollut_quality
+      ~Subcatchment.rainfall
+      ~Subcatchment.runoff
+      ~Subcatchment.runoff_total_loading
+      ~Subcatchment.runon
+      ~Subcatchment.slope
+      ~Subcatchment.snow_depth
+      ~Subcatchment.statistics
+      ~Subcatchment.subcatchmentid
+      ~Subcatchment.width
+   
+   

@@ -1,0 +1,6 @@
+Conduit.ups\_xsection\_area
+===========================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Conduit.ups_xsection_area

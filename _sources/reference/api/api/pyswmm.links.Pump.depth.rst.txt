@@ -1,0 +1,6 @@
+Pump.depth
+==========
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Pump.depth

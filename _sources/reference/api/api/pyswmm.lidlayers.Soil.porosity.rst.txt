@@ -1,0 +1,6 @@
+Soil.porosity
+=============
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Soil.porosity

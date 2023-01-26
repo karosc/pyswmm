@@ -1,0 +1,6 @@
+Surface.depth
+=============
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoproperty:: Surface.depth

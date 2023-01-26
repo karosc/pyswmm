@@ -1,0 +1,6 @@
+Soil.field\_capacity
+====================
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Soil.field_capacity

@@ -1,0 +1,6 @@
+WaterBalance.surface\_flow
+==========================
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoproperty:: WaterBalance.surface_flow

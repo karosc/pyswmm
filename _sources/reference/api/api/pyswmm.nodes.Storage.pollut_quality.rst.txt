@@ -1,0 +1,6 @@
+Storage.pollut\_quality
+=======================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Storage.pollut_quality

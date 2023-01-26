@@ -1,0 +1,6 @@
+Subcatchment.rainfall
+=====================
+
+.. currentmodule:: pyswmm.subcatchments
+
+.. autoproperty:: Subcatchment.rainfall

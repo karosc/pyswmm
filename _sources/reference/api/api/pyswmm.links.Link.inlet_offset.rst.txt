@@ -1,0 +1,6 @@
+Link.inlet\_offset
+==================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Link.inlet_offset

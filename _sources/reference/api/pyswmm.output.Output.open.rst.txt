@@ -1,0 +1,6 @@
+﻿Output.open
+===========
+
+.. currentmodule:: pyswmm.output
+
+.. automethod:: Output.open

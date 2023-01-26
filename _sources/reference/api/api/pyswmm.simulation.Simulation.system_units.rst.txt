@@ -1,0 +1,6 @@
+Simulation.system\_units
+========================
+
+.. currentmodule:: pyswmm.simulation
+
+.. autoproperty:: Simulation.system_units

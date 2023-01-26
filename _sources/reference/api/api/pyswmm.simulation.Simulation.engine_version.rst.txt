@@ -1,0 +1,6 @@
+Simulation.engine\_version
+==========================
+
+.. currentmodule:: pyswmm.simulation
+
+.. autoproperty:: Simulation.engine_version

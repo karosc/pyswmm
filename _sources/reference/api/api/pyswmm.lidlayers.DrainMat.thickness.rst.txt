@@ -1,0 +1,6 @@
+DrainMat.thickness
+==================
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: DrainMat.thickness

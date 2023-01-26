@@ -1,0 +1,6 @@
+﻿Output.node\_series
+===================
+
+.. currentmodule:: pyswmm.output
+
+.. automethod:: Output.node_series

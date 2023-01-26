@@ -1,0 +1,6 @@
+Storage.ponding\_area
+=====================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Storage.ponding_area

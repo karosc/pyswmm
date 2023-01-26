@@ -1,0 +1,6 @@
+LidUnit.lid\_control
+====================
+
+.. currentmodule:: pyswmm.lidgroups
+
+.. autoproperty:: LidUnit.lid_control

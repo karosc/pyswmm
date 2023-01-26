@@ -1,0 +1,6 @@
+﻿Output.units
+============
+
+.. currentmodule:: pyswmm.output
+
+.. autoproperty:: Output.units

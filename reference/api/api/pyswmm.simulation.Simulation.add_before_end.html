@@ -1,0 +1,1034 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Simulation.add_before_end &#8212; pyswmm</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyswmm.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/api/api/pyswmm.simulation.Simulation.add_before_end';</script>
+    <link rel="shortcut icon" href="../../../_static/icon-logo-black.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Simulation.add_before_start" href="pyswmm.simulation.Simulation.add_before_start.html" />
+    <link rel="prev" title="Simulation.add_after_step" href="pyswmm.simulation.Simulation.add_after_step.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../../_static/type-logo-black.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../../_static/type-logo-white.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../overview.html">
+                        Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../install.html">
+                        Installing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-external" href="https://www.pyswmm.org/examples">
+                        Examples
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../authors.html">
+                        Authors
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../cite.html">
+                        How to Cite
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/OpenWaterAnalytics/pyswmm" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pyswmm" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-solid fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/@pyswmm" title="YouTube" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-youtube"></i></span>
+            <label class="sr-only">YouTube</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/company/pyswmm/" title="LinkedIn" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.pyswmm.org" title="pyswmm.org" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><img src="../../../_static/icon-logo-grey.png" class="icon-link-image" alt="pyswmm.org"/></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../overview.html">
+                        Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../install.html">
+                        Installing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-external" href="https://www.pyswmm.org/examples">
+                        Examples
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../authors.html">
+                        Authors
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../cite.html">
+                        How to Cite
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/OpenWaterAnalytics/pyswmm" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pyswmm" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-solid fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/@pyswmm" title="YouTube" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-youtube"></i></span>
+            <label class="sr-only">YouTube</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/company/pyswmm/" title="LinkedIn" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.pyswmm.org" title="pyswmm.org" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><img src="../../../_static/icon-logo-grey.png" class="icon-link-image" alt="pyswmm.org"/></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Section navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">
+    Section Navigation
+  </p>
+  <div class="bd-toc-item navbar-nav">
+    <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../simulation.html">Simulation Module</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../pyswmm.simulation.Simulation.html">Simulation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.add_after_close.html">Simulation.add_after_close</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.add_after_end.html">Simulation.add_after_end</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.add_after_step.html">Simulation.add_after_step</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Simulation.add_before_end</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.add_before_start.html">Simulation.add_before_start</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.add_before_step.html">Simulation.add_before_step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.after_close.html">Simulation.after_close</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.after_end.html">Simulation.after_end</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.after_step.html">Simulation.after_step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.before_end.html">Simulation.before_end</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.before_start.html">Simulation.before_start</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.before_step.html">Simulation.before_step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.close.html">Simulation.close</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.execute.html">Simulation.execute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.initial_conditions.html">Simulation.initial_conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.report.html">Simulation.report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.start.html">Simulation.start</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.step_advance.html">Simulation.step_advance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.terminate_simulation.html">Simulation.terminate_simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.current_time.html">Simulation.current_time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.end_time.html">Simulation.end_time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.engine_version.html">Simulation.engine_version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.flow_routing_error.html">Simulation.flow_routing_error</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.flow_units.html">Simulation.flow_units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.percent_complete.html">Simulation.percent_complete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.quality_error.html">Simulation.quality_error</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.report_start.html">Simulation.report_start</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.runoff_error.html">Simulation.runoff_error</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.start_time.html">Simulation.start_time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.simulation.Simulation.system_units.html">Simulation.system_units</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../nodes.html">Nodes Module</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.nodes.Nodes.html">Nodes</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../pyswmm.nodes.Node.html">Node</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.generated_inflow.html">Node.generated_inflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.is_divider.html">Node.is_divider</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.is_junction.html">Node.is_junction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.is_outfall.html">Node.is_outfall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.is_storage.html">Node.is_storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.cumulative_inflow.html">Node.cumulative_inflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.depth.html">Node.depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.flooding.html">Node.flooding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.full_depth.html">Node.full_depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.head.html">Node.head</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.hydraulic_retention_time.html">Node.hydraulic_retention_time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.inflow_quality.html">Node.inflow_quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.initial_depth.html">Node.initial_depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.invert_elevation.html">Node.invert_elevation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.lateral_inflow.html">Node.lateral_inflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.losses.html">Node.losses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.nodeid.html">Node.nodeid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.pollut_quality.html">Node.pollut_quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.ponding_area.html">Node.ponding_area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.reactor_quality.html">Node.reactor_quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.statistics.html">Node.statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.surcharge_depth.html">Node.surcharge_depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.total_inflow.html">Node.total_inflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.total_outflow.html">Node.total_outflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Node.volume.html">Node.volume</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../pyswmm.nodes.Outfall.html">Outfall</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.generated_inflow.html">Outfall.generated_inflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.is_divider.html">Outfall.is_divider</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.is_junction.html">Outfall.is_junction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.is_outfall.html">Outfall.is_outfall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.is_storage.html">Outfall.is_storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.outfall_stage.html">Outfall.outfall_stage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.cumulative_inflow.html">Outfall.cumulative_inflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.depth.html">Outfall.depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.flooding.html">Outfall.flooding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.full_depth.html">Outfall.full_depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.head.html">Outfall.head</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.hydraulic_retention_time.html">Outfall.hydraulic_retention_time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.inflow_quality.html">Outfall.inflow_quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.initial_depth.html">Outfall.initial_depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.invert_elevation.html">Outfall.invert_elevation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.lateral_inflow.html">Outfall.lateral_inflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.losses.html">Outfall.losses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.nodeid.html">Outfall.nodeid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.outfall_statistics.html">Outfall.outfall_statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.pollut_quality.html">Outfall.pollut_quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.ponding_area.html">Outfall.ponding_area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.reactor_quality.html">Outfall.reactor_quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.statistics.html">Outfall.statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.surcharge_depth.html">Outfall.surcharge_depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.total_inflow.html">Outfall.total_inflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.total_outflow.html">Outfall.total_outflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Outfall.volume.html">Outfall.volume</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../pyswmm.nodes.Storage.html">Storage</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.generated_inflow.html">Storage.generated_inflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.is_divider.html">Storage.is_divider</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.is_junction.html">Storage.is_junction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.is_outfall.html">Storage.is_outfall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.is_storage.html">Storage.is_storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.cumulative_inflow.html">Storage.cumulative_inflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.depth.html">Storage.depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.flooding.html">Storage.flooding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.full_depth.html">Storage.full_depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.head.html">Storage.head</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.hydraulic_retention_time.html">Storage.hydraulic_retention_time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.inflow_quality.html">Storage.inflow_quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.initial_depth.html">Storage.initial_depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.invert_elevation.html">Storage.invert_elevation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.lateral_inflow.html">Storage.lateral_inflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.losses.html">Storage.losses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.nodeid.html">Storage.nodeid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.pollut_quality.html">Storage.pollut_quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.ponding_area.html">Storage.ponding_area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.reactor_quality.html">Storage.reactor_quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.statistics.html">Storage.statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.storage_statistics.html">Storage.storage_statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.surcharge_depth.html">Storage.surcharge_depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.total_inflow.html">Storage.total_inflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.total_outflow.html">Storage.total_outflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.nodes.Storage.volume.html">Storage.volume</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../links.html">Links Module</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.links.Links.html">Links</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../pyswmm.links.Link.html">Link</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.is_conduit.html">Link.is_conduit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.is_orifice.html">Link.is_orifice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.is_outlet.html">Link.is_outlet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.is_pump.html">Link.is_pump</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.is_weir.html">Link.is_weir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.average_head_loss.html">Link.average_head_loss</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.connections.html">Link.connections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.current_setting.html">Link.current_setting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.depth.html">Link.depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.ds_xsection_area.html">Link.ds_xsection_area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.flow.html">Link.flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.flow_limit.html">Link.flow_limit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.froude.html">Link.froude</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.initial_flow.html">Link.initial_flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.inlet_head_loss.html">Link.inlet_head_loss</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.inlet_node.html">Link.inlet_node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.inlet_offset.html">Link.inlet_offset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.linkid.html">Link.linkid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.outlet_head_loss.html">Link.outlet_head_loss</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.outlet_node.html">Link.outlet_node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.outlet_offset.html">Link.outlet_offset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.pollut_quality.html">Link.pollut_quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.reactor_quality.html">Link.reactor_quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.seepage_rate.html">Link.seepage_rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.target_setting.html">Link.target_setting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.total_loading.html">Link.total_loading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.ups_xsection_area.html">Link.ups_xsection_area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Link.volume.html">Link.volume</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../pyswmm.links.Conduit.html">Conduit</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.is_conduit.html">Conduit.is_conduit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.is_orifice.html">Conduit.is_orifice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.is_outlet.html">Conduit.is_outlet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.is_pump.html">Conduit.is_pump</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.is_weir.html">Conduit.is_weir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.average_head_loss.html">Conduit.average_head_loss</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.conduit_statistics.html">Conduit.conduit_statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.connections.html">Conduit.connections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.current_setting.html">Conduit.current_setting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.depth.html">Conduit.depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.ds_xsection_area.html">Conduit.ds_xsection_area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.flow.html">Conduit.flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.flow_limit.html">Conduit.flow_limit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.froude.html">Conduit.froude</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.initial_flow.html">Conduit.initial_flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.inlet_head_loss.html">Conduit.inlet_head_loss</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.inlet_node.html">Conduit.inlet_node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.inlet_offset.html">Conduit.inlet_offset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.linkid.html">Conduit.linkid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.outlet_head_loss.html">Conduit.outlet_head_loss</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.outlet_node.html">Conduit.outlet_node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.outlet_offset.html">Conduit.outlet_offset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.pollut_quality.html">Conduit.pollut_quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.reactor_quality.html">Conduit.reactor_quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.seepage_rate.html">Conduit.seepage_rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.target_setting.html">Conduit.target_setting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.total_loading.html">Conduit.total_loading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.ups_xsection_area.html">Conduit.ups_xsection_area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Conduit.volume.html">Conduit.volume</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../pyswmm.links.Pump.html">Pump</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.is_conduit.html">Pump.is_conduit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.is_orifice.html">Pump.is_orifice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.is_outlet.html">Pump.is_outlet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.is_pump.html">Pump.is_pump</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.is_weir.html">Pump.is_weir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.average_head_loss.html">Pump.average_head_loss</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.connections.html">Pump.connections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.current_setting.html">Pump.current_setting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.depth.html">Pump.depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.ds_xsection_area.html">Pump.ds_xsection_area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.flow.html">Pump.flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.flow_limit.html">Pump.flow_limit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.froude.html">Pump.froude</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.initial_flow.html">Pump.initial_flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.inlet_head_loss.html">Pump.inlet_head_loss</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.inlet_node.html">Pump.inlet_node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.inlet_offset.html">Pump.inlet_offset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.linkid.html">Pump.linkid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.outlet_head_loss.html">Pump.outlet_head_loss</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.outlet_node.html">Pump.outlet_node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.outlet_offset.html">Pump.outlet_offset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.pollut_quality.html">Pump.pollut_quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.pump_statistics.html">Pump.pump_statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.reactor_quality.html">Pump.reactor_quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.seepage_rate.html">Pump.seepage_rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.target_setting.html">Pump.target_setting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.total_loading.html">Pump.total_loading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.ups_xsection_area.html">Pump.ups_xsection_area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.links.Pump.volume.html">Pump.volume</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../subcatchments.html">Subcatchments Module</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.subcatchments.Subcatchments.html">Subcatchments</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../pyswmm.subcatchments.Subcatchment.html">Subcatchment</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.subcatchments.Subcatchment.area.html">Subcatchment.area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.subcatchments.Subcatchment.buildup.html">Subcatchment.buildup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.subcatchments.Subcatchment.conc_ponded.html">Subcatchment.conc_ponded</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.subcatchments.Subcatchment.connection.html">Subcatchment.connection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.subcatchments.Subcatchment.curb_length.html">Subcatchment.curb_length</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.subcatchments.Subcatchment.evaporation_loss.html">Subcatchment.evaporation_loss</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.subcatchments.Subcatchment.infiltration_loss.html">Subcatchment.infiltration_loss</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.subcatchments.Subcatchment.percent_impervious.html">Subcatchment.percent_impervious</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.subcatchments.Subcatchment.pollut_quality.html">Subcatchment.pollut_quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.subcatchments.Subcatchment.rainfall.html">Subcatchment.rainfall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.subcatchments.Subcatchment.runoff.html">Subcatchment.runoff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.subcatchments.Subcatchment.runoff_total_loading.html">Subcatchment.runoff_total_loading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.subcatchments.Subcatchment.runon.html">Subcatchment.runon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.subcatchments.Subcatchment.slope.html">Subcatchment.slope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.subcatchments.Subcatchment.snow_depth.html">Subcatchment.snow_depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.subcatchments.Subcatchment.statistics.html">Subcatchment.statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.subcatchments.Subcatchment.subcatchmentid.html">Subcatchment.subcatchmentid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.subcatchments.Subcatchment.width.html">Subcatchment.width</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../raingages.html">Raingages Module</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.raingages.RainGages.html">RainGages</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../pyswmm.raingages.RainGage.html">RainGage</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.raingages.RainGage.rainfall.html">RainGage.rainfall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.raingages.RainGage.raingageid.html">RainGage.raingageid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.raingages.RainGage.snowfall.html">RainGage.snowfall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.raingages.RainGage.total_precip.html">RainGage.total_precip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../system.html">System Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lidcontrols.html">LID Controls</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../lidgroups.html">LID Groups</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.lidgroups.LidGroups.html">LidGroups</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../pyswmm.lidgroups.LidGroup.html">LidGroup</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidgroups.LidGroup.flow_to_pervious.html">LidGroup.flow_to_pervious</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidgroups.LidGroup.new_drain_flow.html">LidGroup.new_drain_flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidgroups.LidGroup.old_drain_flow.html">LidGroup.old_drain_flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidgroups.LidGroup.pervious_area.html">LidGroup.pervious_area</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../pyswmm.lidgroups.LidUnit.html">LidUnit</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidgroups.LidUnit.drain_node.html">LidUnit.drain_node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidgroups.LidUnit.drain_subcatchment.html">LidUnit.drain_subcatchment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidgroups.LidUnit.dry_time.html">LidUnit.dry_time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidgroups.LidUnit.evaporation.html">LidUnit.evaporation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidgroups.LidUnit.from_impervious.html">LidUnit.from_impervious</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidgroups.LidUnit.from_pervious.html">LidUnit.from_pervious</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidgroups.LidUnit.full_width.html">LidUnit.full_width</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidgroups.LidUnit.index.html">LidUnit.index</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidgroups.LidUnit.initial_saturation.html">LidUnit.initial_saturation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidgroups.LidUnit.lid_control.html">LidUnit.lid_control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidgroups.LidUnit.native_infiltration.html">LidUnit.native_infiltration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidgroups.LidUnit.new_drain_flow.html">LidUnit.new_drain_flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidgroups.LidUnit.number.html">LidUnit.number</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidgroups.LidUnit.old_drain_flow.html">LidUnit.old_drain_flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidgroups.LidUnit.subcatchment.html">LidUnit.subcatchment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidgroups.LidUnit.to_pervious.html">LidUnit.to_pervious</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidgroups.LidUnit.unit_area.html">LidUnit.unit_area</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../lidlayers.html">LID Layers</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../pyswmm.lidlayers.Surface.html">Surface</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Surface.alpha.html">Surface.alpha</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Surface.roughness.html">Surface.roughness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Surface.side_slope.html">Surface.side_slope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Surface.slope.html">Surface.slope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Surface.thickness.html">Surface.thickness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Surface.void_fraction.html">Surface.void_fraction</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../pyswmm.lidlayers.Soil.html">Soil</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Soil.field_capacity.html">Soil.field_capacity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Soil.k_saturated.html">Soil.k_saturated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Soil.k_slope.html">Soil.k_slope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Soil.porosity.html">Soil.porosity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Soil.suction_head.html">Soil.suction_head</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Soil.thickness.html">Soil.thickness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Soil.wilting_point.html">Soil.wilting_point</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../pyswmm.lidlayers.Storage.html">Storage</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Storage.clog_factor.html">Storage.clog_factor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Storage.k_saturated.html">Storage.k_saturated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Storage.thickness.html">Storage.thickness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Storage.void_fraction.html">Storage.void_fraction</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../pyswmm.lidlayers.Pavement.html">Pavement</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Pavement.clog_factor.html">Pavement.clog_factor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Pavement.impervious_fraction.html">Pavement.impervious_fraction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Pavement.k_saturated.html">Pavement.k_saturated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Pavement.regeneration.html">Pavement.regeneration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Pavement.regeneration_degree.html">Pavement.regeneration_degree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Pavement.thickness.html">Pavement.thickness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Pavement.void_fraction.html">Pavement.void_fraction</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../pyswmm.lidlayers.Drain.html">Drain</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Drain.close_head.html">Drain.close_head</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Drain.coefficient.html">Drain.coefficient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Drain.delay.html">Drain.delay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Drain.exponent.html">Drain.exponent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Drain.offset.html">Drain.offset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.Drain.open_head.html">Drain.open_head</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../pyswmm.lidlayers.DrainMat.html">DrainMat</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.DrainMat.alpha.html">DrainMat.alpha</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.DrainMat.roughness.html">DrainMat.roughness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.DrainMat.thickness.html">DrainMat.thickness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidlayers.DrainMat.void_fraction.html">DrainMat.void_fraction</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../lidunits.html">LID Units</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../pyswmm.lidunits.Surface.html">Surface</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-26"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.Surface.depth.html">Surface.depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.Surface.evaporation.html">Surface.evaporation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.Surface.flux_rate.html">Surface.flux_rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.Surface.infiltration.html">Surface.infiltration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.Surface.inflow.html">Surface.inflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.Surface.outflow.html">Surface.outflow</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../pyswmm.lidunits.Pavement.html">Pavement</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-27"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.Pavement.depth.html">Pavement.depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.Pavement.evaporation.html">Pavement.evaporation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.Pavement.flux_rate.html">Pavement.flux_rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.Pavement.percolation.html">Pavement.percolation</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../pyswmm.lidunits.Storage.html">Storage</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-28"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.Storage.depth.html">Storage.depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.Storage.drain.html">Storage.drain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.Storage.evaporation.html">Storage.evaporation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.Storage.exfiltration.html">Storage.exfiltration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.Storage.flux_rate.html">Storage.flux_rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.Storage.inflow.html">Storage.inflow</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../pyswmm.lidunits.Soil.html">Soil</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-29"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.Soil.evaporation.html">Soil.evaporation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.Soil.flux_rate.html">Soil.flux_rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.Soil.moisture.html">Soil.moisture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.Soil.percolation.html">Soil.percolation</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../pyswmm.lidunits.WaterBalance.html">WaterBalance</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-30"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.WaterBalance.drain_flow.html">WaterBalance.drain_flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.WaterBalance.evaporation.html">WaterBalance.evaporation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.WaterBalance.final_volume.html">WaterBalance.final_volume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.WaterBalance.infiltration.html">WaterBalance.infiltration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.WaterBalance.inflow.html">WaterBalance.inflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.WaterBalance.initial_volume.html">WaterBalance.initial_volume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyswmm.lidunits.WaterBalance.surface_flow.html">WaterBalance.surface_flow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../output.html">Output Module</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-31"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.output.Output.close.html">Output.close</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.output.Output.link_attribute.html">Output.link_attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.output.Output.link_result.html">Output.link_result</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.output.Output.link_series.html">Output.link_series</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.output.Output.node_attribute.html">Output.node_attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.output.Output.node_result.html">Output.node_result</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.output.Output.node_series.html">Output.node_series</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.output.Output.object_name.html">Output.object_name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.output.Output.open.html">Output.open</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.output.Output.subcatch_attribute.html">Output.subcatch_attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.output.Output.subcatch_result.html">Output.subcatch_result</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.output.Output.subcatch_series.html">Output.subcatch_series</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.output.Output.system_result.html">Output.system_result</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.output.Output.system_series.html">Output.system_series</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.output.Output.verify_index.html">Output.verify_index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.output.Output.verify_time.html">Output.verify_time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.output.Output.links.html">Output.links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.output.Output.nodes.html">Output.nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.output.Output.pollutants.html">Output.pollutants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.output.Output.project_size.html">Output.project_size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.output.Output.subcatchments.html">Output.subcatchments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.output.Output.times.html">Output.times</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.output.Output.units.html">Output.units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyswmm.output.Output.version.html">Output.version</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../legal.html">License</a></li>
+</ul>
+
+  </div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+  <section id="simulation-add-before-end">
+<h1>Simulation.add_before_end<a class="headerlink" href="#simulation-add-before-end" title="Permalink to this heading">#</a></h1>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyswmm.simulation.Simulation.add_before_end">
+<span class="sig-prename descclassname"><span class="pre">Simulation.</span></span><span class="sig-name descname"><span class="pre">add_before_end</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pyswmm/simulation.html#Simulation.add_before_end"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyswmm.simulation.Simulation.add_before_end" title="Permalink to this definition">#</a></dt>
+<dd><p>Add callback function/method/object to execute after
+the simulation ends. Needs to be callable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>callback</strong> (<em>func</em>) – Callable Object</p>
+</dd>
+</dl>
+<p>(See self.add_before_start() for more details)</p>
+</dd></dl>
+
+</section>
+
+
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="pyswmm.simulation.Simulation.add_after_step.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Simulation.add_after_step</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="pyswmm.simulation.Simulation.add_before_start.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">Simulation.add_before_start</p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
+  </a>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pyswmm.simulation.Simulation.add_before_end">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Simulation.add_before_end()
+    </span>
+   </code>
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+<div class="toc-item">
+  
+<div id="searchbox"></div>
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+<div class="toc-item">
+  
+<div class="tocsection sourcelink">
+    <a href="../../../_sources/reference/api/api/pyswmm.simulation.Simulation.add_before_end.rst.txt">
+        <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+</div>
+
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2016, Bryant E. McDonnell (EmNet LLC).<br>
+
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

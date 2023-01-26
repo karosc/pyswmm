@@ -1,0 +1,6 @@
+LidUnit.dry\_time
+=================
+
+.. currentmodule:: pyswmm.lidgroups
+
+.. autoproperty:: LidUnit.dry_time

@@ -1,0 +1,6 @@
+﻿Output.project\_size
+====================
+
+.. currentmodule:: pyswmm.output
+
+.. autoproperty:: Output.project_size

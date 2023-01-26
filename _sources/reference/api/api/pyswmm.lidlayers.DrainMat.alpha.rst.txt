@@ -1,0 +1,6 @@
+DrainMat.alpha
+==============
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: DrainMat.alpha

@@ -1,0 +1,6 @@
+Link.seepage\_rate
+==================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Link.seepage_rate

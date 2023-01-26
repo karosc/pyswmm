@@ -1,0 +1,6 @@
+Subcatchment.statistics
+=======================
+
+.. currentmodule:: pyswmm.subcatchments
+
+.. autoproperty:: Subcatchment.statistics

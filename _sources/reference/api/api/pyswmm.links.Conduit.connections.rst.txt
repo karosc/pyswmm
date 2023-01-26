@@ -1,0 +1,6 @@
+Conduit.connections
+===================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Conduit.connections

@@ -1,0 +1,6 @@
+Pavement.percolation
+====================
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoproperty:: Pavement.percolation

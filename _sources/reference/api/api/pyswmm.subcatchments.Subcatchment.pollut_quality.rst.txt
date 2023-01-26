@@ -1,0 +1,6 @@
+Subcatchment.pollut\_quality
+============================
+
+.. currentmodule:: pyswmm.subcatchments
+
+.. autoproperty:: Subcatchment.pollut_quality

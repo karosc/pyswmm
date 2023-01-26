@@ -1,0 +1,6 @@
+Outfall.invert\_elevation
+=========================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Outfall.invert_elevation

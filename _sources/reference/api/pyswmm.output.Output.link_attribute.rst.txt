@@ -1,0 +1,6 @@
+﻿Output.link\_attribute
+======================
+
+.. currentmodule:: pyswmm.output
+
+.. automethod:: Output.link_attribute

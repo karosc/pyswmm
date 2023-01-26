@@ -1,0 +1,38 @@
+﻿WaterBalance
+============
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoclass:: WaterBalance
+
+   
+   .. .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: api/
+      :nosignatures:
+      
+   
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree: api/
+   
+      ~WaterBalance.drain_flow
+      ~WaterBalance.evaporation
+      ~WaterBalance.final_volume
+      ~WaterBalance.infiltration
+      ~WaterBalance.inflow
+      ~WaterBalance.initial_volume
+      ~WaterBalance.surface_flow
+   
+   

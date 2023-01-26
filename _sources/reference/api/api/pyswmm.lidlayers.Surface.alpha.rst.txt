@@ -1,0 +1,6 @@
+Surface.alpha
+=============
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Surface.alpha

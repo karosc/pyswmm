@@ -1,0 +1,6 @@
+Pump.average\_head\_loss
+========================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Pump.average_head_loss

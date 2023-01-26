@@ -1,0 +1,6 @@
+Simulation.end\_time
+====================
+
+.. currentmodule:: pyswmm.simulation
+
+.. autoproperty:: Simulation.end_time

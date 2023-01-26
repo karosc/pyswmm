@@ -1,0 +1,6 @@
+Pavement.regeneration
+=====================
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Pavement.regeneration

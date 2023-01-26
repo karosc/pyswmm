@@ -1,0 +1,6 @@
+Link.is\_weir
+=============
+
+.. currentmodule:: pyswmm.links
+
+.. automethod:: Link.is_weir

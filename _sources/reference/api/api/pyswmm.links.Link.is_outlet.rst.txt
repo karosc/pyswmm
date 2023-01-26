@@ -1,0 +1,6 @@
+Link.is\_outlet
+===============
+
+.. currentmodule:: pyswmm.links
+
+.. automethod:: Link.is_outlet

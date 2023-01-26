@@ -1,0 +1,6 @@
+Surface.outflow
+===============
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoproperty:: Surface.outflow

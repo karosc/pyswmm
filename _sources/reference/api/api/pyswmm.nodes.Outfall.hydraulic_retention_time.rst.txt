@@ -1,0 +1,6 @@
+Outfall.hydraulic\_retention\_time
+==================================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Outfall.hydraulic_retention_time

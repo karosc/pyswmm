@@ -1,0 +1,6 @@
+Pavement.clog\_factor
+=====================
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Pavement.clog_factor

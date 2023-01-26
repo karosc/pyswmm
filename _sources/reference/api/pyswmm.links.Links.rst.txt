@@ -1,0 +1,25 @@
+﻿Links
+=====
+
+.. currentmodule:: pyswmm.links
+
+.. autoclass:: Links
+
+   
+   .. .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: api/
+      :nosignatures:
+      
+   
+      
+   
+   
+
+   
+   
+   

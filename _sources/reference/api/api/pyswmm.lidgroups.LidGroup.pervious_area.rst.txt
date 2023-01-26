@@ -1,0 +1,6 @@
+LidGroup.pervious\_area
+=======================
+
+.. currentmodule:: pyswmm.lidgroups
+
+.. autoproperty:: LidGroup.pervious_area

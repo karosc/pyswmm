@@ -1,0 +1,6 @@
+Link.reactor\_quality
+=====================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Link.reactor_quality

@@ -1,0 +1,6 @@
+Outfall.surcharge\_depth
+========================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Outfall.surcharge_depth

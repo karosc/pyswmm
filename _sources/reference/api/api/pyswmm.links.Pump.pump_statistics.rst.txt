@@ -1,0 +1,6 @@
+Pump.pump\_statistics
+=====================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Pump.pump_statistics

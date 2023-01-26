@@ -1,0 +1,6 @@
+WaterBalance.evaporation
+========================
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoproperty:: WaterBalance.evaporation

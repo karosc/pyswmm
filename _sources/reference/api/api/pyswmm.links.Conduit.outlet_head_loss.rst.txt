@@ -1,0 +1,6 @@
+Conduit.outlet\_head\_loss
+==========================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Conduit.outlet_head_loss

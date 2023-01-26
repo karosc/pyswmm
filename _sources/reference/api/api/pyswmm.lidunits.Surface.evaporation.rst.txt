@@ -1,0 +1,6 @@
+Surface.evaporation
+===================
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoproperty:: Surface.evaporation

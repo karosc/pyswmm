@@ -1,0 +1,6 @@
+Surface.infiltration
+====================
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoproperty:: Surface.infiltration

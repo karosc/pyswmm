@@ -1,0 +1,6 @@
+Outfall.lateral\_inflow
+=======================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Outfall.lateral_inflow

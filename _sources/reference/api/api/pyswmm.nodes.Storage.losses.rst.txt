@@ -1,0 +1,6 @@
+Storage.losses
+==============
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Storage.losses

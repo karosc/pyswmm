@@ -1,0 +1,6 @@
+RainGage.rainfall
+=================
+
+.. currentmodule:: pyswmm.raingages
+
+.. autoproperty:: RainGage.rainfall

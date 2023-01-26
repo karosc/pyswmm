@@ -1,0 +1,6 @@
+Link.outlet\_node
+=================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Link.outlet_node

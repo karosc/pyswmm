@@ -1,0 +1,6 @@
+LidUnit.native\_infiltration
+============================
+
+.. currentmodule:: pyswmm.lidgroups
+
+.. autoproperty:: LidUnit.native_infiltration

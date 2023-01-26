@@ -1,0 +1,6 @@
+Surface.void\_fraction
+======================
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Surface.void_fraction

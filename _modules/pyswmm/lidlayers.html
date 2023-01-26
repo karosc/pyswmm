@@ -1,0 +1,1368 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pyswmm.lidlayers &#8212; pyswmm</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/pyswmm.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/pyswmm/lidlayers';</script>
+    <link rel="shortcut icon" href="../../_static/icon-logo-black.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../_static/type-logo-black.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../_static/type-logo-white.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../overview.html">
+                        Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../install.html">
+                        Installing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../reference/index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-external" href="https://www.pyswmm.org/examples">
+                        Examples
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../authors.html">
+                        Authors
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../cite.html">
+                        How to Cite
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/OpenWaterAnalytics/pyswmm" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pyswmm" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-solid fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/@pyswmm" title="YouTube" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-youtube"></i></span>
+            <label class="sr-only">YouTube</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/company/pyswmm/" title="LinkedIn" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.pyswmm.org" title="pyswmm.org" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><img src="../../_static/icon-logo-grey.png" class="icon-link-image" alt="pyswmm.org"/></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../overview.html">
+                        Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../install.html">
+                        Installing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../reference/index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-external" href="https://www.pyswmm.org/examples">
+                        Examples
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../authors.html">
+                        Authors
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../cite.html">
+                        How to Cite
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/OpenWaterAnalytics/pyswmm" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pyswmm" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-solid fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/@pyswmm" title="YouTube" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-youtube"></i></span>
+            <label class="sr-only">YouTube</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/company/pyswmm/" title="LinkedIn" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.pyswmm.org" title="pyswmm.org" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><img src="../../_static/icon-logo-grey.png" class="icon-link-image" alt="pyswmm.org"/></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+  <h1>Source code for pyswmm.lidlayers</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="c1"># -----------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) 2018 Jennifer Wu</span>
+<span class="c1">#</span>
+<span class="c1"># Licensed under the terms of the BSD2 License</span>
+<span class="c1"># See LICENSE.txt for details</span>
+<span class="c1"># -----------------------------------------------------------------------------</span>
+<span class="kn">from</span> <span class="nn">pyswmm.toolkitapi</span> <span class="kn">import</span> <span class="n">LidLayers</span><span class="p">,</span> <span class="n">LidLayersProperty</span>
+
+
+<div class="viewcode-block" id="Surface"><a class="viewcode-back" href="../../reference/api/pyswmm.lidlayers.Surface.html#pyswmm.lidlayers.Surface">[docs]</a><span class="k">class</span> <span class="nc">Surface</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Methods and properties of the surface layer associated with an LID </span>
+
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Layer              | Parameter          | Setter Before Sim  | Setter During Sim  |</span>
+<span class="sd">    +====================+====================+====================+====================+</span>
+<span class="sd">    | Surface            | thickness          | enabled            | disabled           |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Surface            | void_fraction      | enabled            | disabled           |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Surface            | roughness          | enabled            | enabled            |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Surface            | slope              | enabled            | disabled           |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Surface            | side_slope         | enabled            | disabled           |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Surface            | alpha              | enabled            | disabled           |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">lidcontrol</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrol</span> <span class="o">=</span> <span class="n">lidcontrol</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span> <span class="o">=</span> <span class="n">lidcontrol</span><span class="o">.</span><span class="n">_lidcontrolid</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">thickness</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control surface layer thickness</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">surface</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">thickness</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@thickness</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">thickness</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control surface layer thickness&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">surface</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">thickness</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">void_fraction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control surface layer available fraction of storage volume</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">surface</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">voidFrac</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@void_fraction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">void_fraction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control surface layer available fraction of storage volume&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">surface</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">voidFrac</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">roughness</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control surface layer surface Mannings n</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">surface</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">roughness</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@roughness</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">roughness</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control surface layer surface Mannings n&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">surface</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">roughness</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">slope</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control surface layer land surface slope (fraction)</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">surface</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">surfSlope</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@slope</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">slope</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control surface layer land surface slope (fraction)&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">surface</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">surfSlope</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">side_slope</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control surface layer swale side slope (run/rise)</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">surface</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">sideSlope</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@side_slope</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">side_slope</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control surface layer swale side slope (run/rise)&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">surface</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">sideSlope</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">alpha</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control surface layer swale side slope (run/rise)</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">surface</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">alpha</span><span class="o">.</span><span class="n">value</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Soil"><a class="viewcode-back" href="../../reference/api/pyswmm.lidlayers.Soil.html#pyswmm.lidlayers.Soil">[docs]</a><span class="k">class</span> <span class="nc">Soil</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Methods and properties of the soil layer associated with an LID </span>
+
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Layer              | Parameter          | Setter Before Sim  | Setter During Sim  |</span>
+<span class="sd">    +====================+====================+====================+====================+</span>
+<span class="sd">    | Soil               | thickness          | enabled            | disabled           |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Soil               | porosity           | enabled            | disabled           |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Soil               | field_capacity     | enabled            | disabled           |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Soil               | wilting_point      | enabled            | disabled           |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Soil               | k_saturated        | enabled            | disabled           |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Soil               | k_slope            | enabled            | disabled           |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Soil               | suction_head       | enabled            | disabled           |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">lidcontrol</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrol</span> <span class="o">=</span> <span class="n">lidcontrol</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span> <span class="o">=</span> <span class="n">lidcontrol</span><span class="o">.</span><span class="n">_lidcontrolid</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">thickness</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control soil layer thickness</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">soil</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">thickness</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@thickness</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">thickness</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control soil layer thickness &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">soil</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">thickness</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">porosity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control soil layer void volume / total volume</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">soil</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">porosity</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@porosity</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">porosity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control soil layer void volume / total volume&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">soil</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">porosity</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">field_capacity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control soil layer field capacity</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">soil</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">fieldCap</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@field_capacity</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">field_capacity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control soil layer field capacity&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">soil</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">fieldCap</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">wilting_point</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control soil layer wilting point</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">soil</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">wiltPoint</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@wilting_point</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">wilting_point</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control soil layer wilting point&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">soil</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">wiltPoint</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">k_saturated</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control soil layer saturated hydraulic conductivity</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">soil</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">kSat</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@k_saturated</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">k_saturated</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control soil layer saturated hydraulic conductivity&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">soil</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">kSat</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">k_slope</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control soil layer slope of log(k) v. moisture content curve</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">soil</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">kSlope</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@k_slope</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">k_slope</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control soil layer slope of log(k) v. moisture content curve&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">soil</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">kSlope</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">suction_head</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control soil layer suction head at wetting front</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">soil</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">suction</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@suction_head</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">suction_head</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control soil layer suction head at wetting front&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">soil</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">suction</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Storage"><a class="viewcode-back" href="../../reference/api/pyswmm.lidlayers.Storage.html#pyswmm.lidlayers.Storage">[docs]</a><span class="k">class</span> <span class="nc">Storage</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Methods and properties of the storage layer associated with an LID </span>
+
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Layer              | Parameter          | Setter Before Sim  | Setter During Sim  |</span>
+<span class="sd">    +====================+====================+====================+====================+</span>
+<span class="sd">    | Storage            | thickness          | enabled            | disabled           |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Storage            | void_fraction      | enabled            | disabled           |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Storage            | k_saturated        | enabled            | disabled           |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Storage            | clog_factor        | enabled            | enabled            |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">lidcontrol</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrol</span> <span class="o">=</span> <span class="n">lidcontrol</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span> <span class="o">=</span> <span class="n">lidcontrol</span><span class="o">.</span><span class="n">_lidcontrolid</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">thickness</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control storage layer thickness</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">thickness</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@thickness</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">thickness</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control storage layer thickness&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">thickness</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">void_fraction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control storage layer void volume / total volume</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">voidFrac</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@void_fraction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">void_fraction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control storage layer void volume / total volume&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">voidFrac</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">k_saturated</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control storage layer saturated hydraulic conductivity</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">kSat</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@k_saturated</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">k_saturated</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control storage layer saturated hydraulic conductivity&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">kSat</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">clog_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control storage layer clogging factor</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">clogFactor</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@clog_factor</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">clog_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control storage layer clogging factor&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">clogFactor</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Pavement"><a class="viewcode-back" href="../../reference/api/pyswmm.lidlayers.Pavement.html#pyswmm.lidlayers.Pavement">[docs]</a><span class="k">class</span> <span class="nc">Pavement</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Methods and properties of the pavement layer associated with an LID </span>
+
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Layer              | Parameter          | Setter Before Sim  | Setter During Sim  |</span>
+<span class="sd">    +====================+====================+====================+====================+</span>
+<span class="sd">    | Pavement           | thickness          | enabled            | disabled           |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Pavement           | void_fraction      | enabled            | disabled           |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Pavement           | impervious_fraction| enabled            | disabled           |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Pavement           | k_saturated        | enabled            | disabled           |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Pavement           | clog_factor        | enabled            | enabled            |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Pavement           | regeneration       | enabled            | disabled           |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Pavement           | regeneration_degree| enabled            | disabled           |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">lidcontrol</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrol</span> <span class="o">=</span> <span class="n">lidcontrol</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span> <span class="o">=</span> <span class="n">lidcontrol</span><span class="o">.</span><span class="n">_lidcontrolid</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">thickness</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control pavement layer thickness</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">pavement</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">thickness</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@thickness</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">thickness</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get lid control pavement layer thickness&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">pavement</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">thickness</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">void_fraction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control pavement layer void volume / total volume</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">pavement</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">voidFrac</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@void_fraction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">void_fraction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control pavement layer void volume / total volume&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">pavement</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">voidFrac</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">impervious_fraction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control pavement layer impervious area fraction</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">pavement</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">impervFrac</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@impervious_fraction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">impervious_fraction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control pavement layer impervious area fraction&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">pavement</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">impervFrac</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">k_saturated</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control pavement layer permeability</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">pavement</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">kSat</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@k_saturated</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">k_saturated</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get lid control pavement layer permeability &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">pavement</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">kSat</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">clog_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control pavement layer clogging factor</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">pavement</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">clogFactor</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@clog_factor</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">clog_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get lid control pavement layer clogging factor&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_sim</span><span class="o">.</span><span class="n">_isStarted</span><span class="p">,</span>
+                                        <span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">pavement</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">clogFactor</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">regeneration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control pavement layer clogging regeneration interval (days)</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">pavement</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">regenDays</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@regeneration</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">regeneration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get lid control pavement layer clogging regeneration interval (days)&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">pavement</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">regenDays</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">regeneration_degree</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control pavement layer clogging regeneration degree</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">pavement</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">regenDegree</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@regeneration_degree</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">regeneration_degree</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get lid control pavement layer clogging regeneration degree&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">pavement</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">regenDegree</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Drain"><a class="viewcode-back" href="../../reference/api/pyswmm.lidlayers.Drain.html#pyswmm.lidlayers.Drain">[docs]</a><span class="k">class</span> <span class="nc">Drain</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Methods and properties of the under drain layer associated with an LID </span>
+
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Layer              | Parameter          | Setter Before Sim  | Setter During Sim  |</span>
+<span class="sd">    +====================+====================+====================+====================+</span>
+<span class="sd">    | Drain              | coefficient        | enabled            | enabled            |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Drain              | exponent           | enabled            | enabled            |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Drain              | offset             | enabled            | enabled            |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Drain              | delay              | enabled            | enabled            |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Drain              | open_head          | enabled            | enabled            |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Drain              | close_head         | enabled            | enabled            |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">lidcontrol</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrol</span> <span class="o">=</span> <span class="n">lidcontrol</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span> <span class="o">=</span> <span class="n">lidcontrol</span><span class="o">.</span><span class="n">_lidcontrolid</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">coefficient</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control drain layer underdrain flow coefficient</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">drain</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">coeff</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@coefficient</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">coefficient</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control drain layer underdrain flow coefficient&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">drain</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">coeff</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">exponent</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control drain layer underdrain head exponent</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">drain</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">expon</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@exponent</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">exponent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control drain layer underdrain head exponent&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">drain</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">expon</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">offset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control drain layer offset height of underdrain</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">drain</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">offset</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@offset</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">offset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control drain layer offset height of underdrain&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">drain</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">offset</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">delay</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control drain layer rain barrel drain delay time (sec)</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">drain</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">delay</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@delay</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">delay</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control drain layer rain barrel drain delay time (sec)&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">drain</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">delay</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">open_head</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control drain layer head when drain opens (ft)</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">drain</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">hOpen</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@open_head</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">open_head</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control drain layer head when drain opens (ft)&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">drain</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">hOpen</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">close_head</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control drain layer head when drain closes (ft)</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">drain</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">hClose</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@close_head</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">close_head</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control drain layer drain closes (ft)&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">drain</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">hClose</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DrainMat"><a class="viewcode-back" href="../../reference/api/pyswmm.lidlayers.DrainMat.html#pyswmm.lidlayers.DrainMat">[docs]</a><span class="k">class</span> <span class="nc">DrainMat</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Methods and properties of the drain mat layer associated with an LID </span>
+
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | Layer              | Parameter          | Setter Before Sim  | Setter During Sim  |</span>
+<span class="sd">    +====================+====================+====================+====================+</span>
+<span class="sd">    | DrainMat           | thickness          | enabled            | disabled           |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | DrainMat           | void_fraction      | enabled            | disabled           |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | DrainMat           | roughness          | enabled            | enabled            |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    | DrainMat           | alpha              | enabled            | disabled           |</span>
+<span class="sd">    +--------------------+--------------------+--------------------+--------------------+</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">lidcontrol</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrol</span> <span class="o">=</span> <span class="n">lidcontrol</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span> <span class="o">=</span> <span class="n">lidcontrol</span><span class="o">.</span><span class="n">_lidcontrolid</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">thickness</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control drainmat layer thickness</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">drainMat</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">thickness</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@thickness</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">thickness</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control drainmat layer thickness&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">drainMat</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">thickness</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">void_fraction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control drainmat layer void volume / total volume</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">drainMat</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">voidFrac</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@void_fraction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">void_fraction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control drainmat layer void volume / total volume&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">drainMat</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">voidFrac</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">roughness</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control drainmat layer Mannings n for green roof drainage mats</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">drainMat</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">roughness</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@roughness</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">roughness</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lid control drainmat layer Mannings n for green roof drainage mats&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">drainMat</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">roughness</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">param</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">alpha</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get lid control drainmat layer slope/roughness term in Manning equation</span>
+
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: double</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lidcontrolid</span><span class="p">,</span>
+                                        <span class="n">LidLayers</span><span class="o">.</span><span class="n">drainMat</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                        <span class="n">LidLayersProperty</span><span class="o">.</span><span class="n">alpha</span><span class="o">.</span><span class="n">value</span><span class="p">)</span></div>
+</pre></div>
+
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div id="searchbox"></div>
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2016, Bryant E. McDonnell (EmNet LLC).<br>
+
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+Subcatchment.slope
+==================
+
+.. currentmodule:: pyswmm.subcatchments
+
+.. autoproperty:: Subcatchment.slope

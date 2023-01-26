@@ -1,0 +1,6 @@
+Simulation.flow\_routing\_error
+===============================
+
+.. currentmodule:: pyswmm.simulation
+
+.. autoproperty:: Simulation.flow_routing_error

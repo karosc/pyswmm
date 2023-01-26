@@ -1,0 +1,6 @@
+Conduit.linkid
+==============
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Conduit.linkid

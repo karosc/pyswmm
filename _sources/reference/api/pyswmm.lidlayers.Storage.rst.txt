@@ -1,0 +1,35 @@
+﻿Storage
+=======
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoclass:: Storage
+
+   
+   .. .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: api/
+      :nosignatures:
+      
+   
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree: api/
+   
+      ~Storage.clog_factor
+      ~Storage.k_saturated
+      ~Storage.thickness
+      ~Storage.void_fraction
+   
+   

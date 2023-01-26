@@ -1,0 +1,6 @@
+Simulation.report
+=================
+
+.. currentmodule:: pyswmm.simulation
+
+.. automethod:: Simulation.report

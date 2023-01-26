@@ -1,0 +1,6 @@
+﻿Output.verify\_index
+====================
+
+.. currentmodule:: pyswmm.output
+
+.. automethod:: Output.verify_index

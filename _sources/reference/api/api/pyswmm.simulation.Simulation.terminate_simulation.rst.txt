@@ -1,0 +1,6 @@
+Simulation.terminate\_simulation
+================================
+
+.. currentmodule:: pyswmm.simulation
+
+.. automethod:: Simulation.terminate_simulation

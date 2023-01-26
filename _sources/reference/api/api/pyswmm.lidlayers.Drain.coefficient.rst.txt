@@ -1,0 +1,6 @@
+Drain.coefficient
+=================
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Drain.coefficient

@@ -1,0 +1,6 @@
+Storage.total\_outflow
+======================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Storage.total_outflow

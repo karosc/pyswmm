@@ -1,0 +1,6 @@
+Pavement.k\_saturated
+=====================
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Pavement.k_saturated

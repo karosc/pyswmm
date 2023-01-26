@@ -1,0 +1,6 @@
+Subcatchment.snow\_depth
+========================
+
+.. currentmodule:: pyswmm.subcatchments
+
+.. autoproperty:: Subcatchment.snow_depth

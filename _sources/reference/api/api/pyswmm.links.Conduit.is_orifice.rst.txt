@@ -1,0 +1,6 @@
+Conduit.is\_orifice
+===================
+
+.. currentmodule:: pyswmm.links
+
+.. automethod:: Conduit.is_orifice

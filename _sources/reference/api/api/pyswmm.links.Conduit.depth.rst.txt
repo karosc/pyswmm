@@ -1,0 +1,6 @@
+Conduit.depth
+=============
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Conduit.depth

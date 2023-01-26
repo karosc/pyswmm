@@ -1,0 +1,70 @@
+﻿Outfall
+=======
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoclass:: Outfall
+
+   
+   .. .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: api/
+      :nosignatures:
+      
+   
+      
+      
+         ~Outfall.generated_inflow
+       
+      
+         ~Outfall.is_divider
+       
+      
+         ~Outfall.is_junction
+       
+      
+         ~Outfall.is_outfall
+       
+      
+         ~Outfall.is_storage
+       
+      
+         ~Outfall.outfall_stage
+       
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree: api/
+   
+      ~Outfall.cumulative_inflow
+      ~Outfall.depth
+      ~Outfall.flooding
+      ~Outfall.full_depth
+      ~Outfall.head
+      ~Outfall.hydraulic_retention_time
+      ~Outfall.inflow_quality
+      ~Outfall.initial_depth
+      ~Outfall.invert_elevation
+      ~Outfall.lateral_inflow
+      ~Outfall.losses
+      ~Outfall.nodeid
+      ~Outfall.outfall_statistics
+      ~Outfall.pollut_quality
+      ~Outfall.ponding_area
+      ~Outfall.reactor_quality
+      ~Outfall.statistics
+      ~Outfall.surcharge_depth
+      ~Outfall.total_inflow
+      ~Outfall.total_outflow
+      ~Outfall.volume
+   
+   

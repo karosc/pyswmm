@@ -1,0 +1,6 @@
+Link.outlet\_offset
+===================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Link.outlet_offset

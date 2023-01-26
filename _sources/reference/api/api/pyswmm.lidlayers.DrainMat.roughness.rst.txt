@@ -1,0 +1,6 @@
+DrainMat.roughness
+==================
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: DrainMat.roughness

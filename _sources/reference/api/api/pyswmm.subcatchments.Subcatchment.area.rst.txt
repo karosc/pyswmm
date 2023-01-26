@@ -1,0 +1,6 @@
+Subcatchment.area
+=================
+
+.. currentmodule:: pyswmm.subcatchments
+
+.. autoproperty:: Subcatchment.area

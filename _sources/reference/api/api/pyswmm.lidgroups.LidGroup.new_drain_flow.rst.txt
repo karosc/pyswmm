@@ -1,0 +1,6 @@
+LidGroup.new\_drain\_flow
+=========================
+
+.. currentmodule:: pyswmm.lidgroups
+
+.. autoproperty:: LidGroup.new_drain_flow

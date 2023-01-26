@@ -1,0 +1,6 @@
+Outfall.volume
+==============
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Outfall.volume

@@ -1,0 +1,6 @@
+Drain.offset
+============
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Drain.offset

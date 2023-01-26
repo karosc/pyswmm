@@ -1,0 +1,6 @@
+Conduit.seepage\_rate
+=====================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Conduit.seepage_rate

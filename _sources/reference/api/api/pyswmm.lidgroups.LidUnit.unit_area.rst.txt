@@ -1,0 +1,6 @@
+LidUnit.unit\_area
+==================
+
+.. currentmodule:: pyswmm.lidgroups
+
+.. autoproperty:: LidUnit.unit_area

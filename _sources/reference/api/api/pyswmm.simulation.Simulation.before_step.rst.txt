@@ -1,0 +1,6 @@
+Simulation.before\_step
+=======================
+
+.. currentmodule:: pyswmm.simulation
+
+.. automethod:: Simulation.before_step

@@ -1,0 +1,6 @@
+Outfall.pollut\_quality
+=======================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Outfall.pollut_quality

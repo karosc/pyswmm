@@ -1,0 +1,6 @@
+Link.flow\_limit
+================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Link.flow_limit

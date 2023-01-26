@@ -1,0 +1,6 @@
+Pump.volume
+===========
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Pump.volume

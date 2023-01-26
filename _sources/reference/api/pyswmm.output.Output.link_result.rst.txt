@@ -1,0 +1,6 @@
+﻿Output.link\_result
+===================
+
+.. currentmodule:: pyswmm.output
+
+.. automethod:: Output.link_result

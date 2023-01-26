@@ -1,0 +1,38 @@
+﻿Pavement
+========
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoclass:: Pavement
+
+   
+   .. .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: api/
+      :nosignatures:
+      
+   
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree: api/
+   
+      ~Pavement.clog_factor
+      ~Pavement.impervious_fraction
+      ~Pavement.k_saturated
+      ~Pavement.regeneration
+      ~Pavement.regeneration_degree
+      ~Pavement.thickness
+      ~Pavement.void_fraction
+   
+   

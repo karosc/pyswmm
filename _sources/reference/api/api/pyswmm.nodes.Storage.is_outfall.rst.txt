@@ -1,0 +1,6 @@
+Storage.is\_outfall
+===================
+
+.. currentmodule:: pyswmm.nodes
+
+.. automethod:: Storage.is_outfall

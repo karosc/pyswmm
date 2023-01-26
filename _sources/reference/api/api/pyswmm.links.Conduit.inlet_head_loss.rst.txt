@@ -1,0 +1,6 @@
+Conduit.inlet\_head\_loss
+=========================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Conduit.inlet_head_loss

@@ -1,0 +1,37 @@
+﻿Storage
+=======
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoclass:: Storage
+
+   
+   .. .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: api/
+      :nosignatures:
+      
+   
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree: api/
+   
+      ~Storage.depth
+      ~Storage.drain
+      ~Storage.evaporation
+      ~Storage.exfiltration
+      ~Storage.flux_rate
+      ~Storage.inflow
+   
+   

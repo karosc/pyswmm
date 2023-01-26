@@ -1,0 +1,6 @@
+Pump.froude
+===========
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Pump.froude

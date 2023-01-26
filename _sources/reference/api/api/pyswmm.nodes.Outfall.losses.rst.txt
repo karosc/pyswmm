@@ -1,0 +1,6 @@
+Outfall.losses
+==============
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Outfall.losses

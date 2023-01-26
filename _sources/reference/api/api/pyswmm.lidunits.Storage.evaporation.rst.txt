@@ -1,0 +1,6 @@
+Storage.evaporation
+===================
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoproperty:: Storage.evaporation

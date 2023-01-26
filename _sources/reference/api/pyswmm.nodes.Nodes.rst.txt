@@ -1,0 +1,25 @@
+﻿Nodes
+=====
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoclass:: Nodes
+
+   
+   .. .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: api/
+      :nosignatures:
+      
+   
+      
+   
+   
+
+   
+   
+   

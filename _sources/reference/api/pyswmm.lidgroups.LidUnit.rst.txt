@@ -1,0 +1,48 @@
+﻿LidUnit
+=======
+
+.. currentmodule:: pyswmm.lidgroups
+
+.. autoclass:: LidUnit
+
+   
+   .. .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: api/
+      :nosignatures:
+      
+   
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree: api/
+   
+      ~LidUnit.drain_node
+      ~LidUnit.drain_subcatchment
+      ~LidUnit.dry_time
+      ~LidUnit.evaporation
+      ~LidUnit.from_impervious
+      ~LidUnit.from_pervious
+      ~LidUnit.full_width
+      ~LidUnit.index
+      ~LidUnit.initial_saturation
+      ~LidUnit.lid_control
+      ~LidUnit.native_infiltration
+      ~LidUnit.new_drain_flow
+      ~LidUnit.number
+      ~LidUnit.old_drain_flow
+      ~LidUnit.subcatchment
+      ~LidUnit.to_pervious
+      ~LidUnit.unit_area
+   
+   

@@ -1,0 +1,6 @@
+LidUnit.number
+==============
+
+.. currentmodule:: pyswmm.lidgroups
+
+.. autoproperty:: LidUnit.number

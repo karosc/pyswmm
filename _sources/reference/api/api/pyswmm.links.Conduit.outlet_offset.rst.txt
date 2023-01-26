@@ -1,0 +1,6 @@
+Conduit.outlet\_offset
+======================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Conduit.outlet_offset

@@ -1,0 +1,6 @@
+Link.average\_head\_loss
+========================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Link.average_head_loss

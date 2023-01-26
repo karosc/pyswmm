@@ -1,0 +1,35 @@
+﻿LidGroup
+========
+
+.. currentmodule:: pyswmm.lidgroups
+
+.. autoclass:: LidGroup
+
+   
+   .. .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: api/
+      :nosignatures:
+      
+   
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree: api/
+   
+      ~LidGroup.flow_to_pervious
+      ~LidGroup.new_drain_flow
+      ~LidGroup.old_drain_flow
+      ~LidGroup.pervious_area
+   
+   

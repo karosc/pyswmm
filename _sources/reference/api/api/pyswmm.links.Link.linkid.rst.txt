@@ -1,0 +1,6 @@
+Link.linkid
+===========
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Link.linkid

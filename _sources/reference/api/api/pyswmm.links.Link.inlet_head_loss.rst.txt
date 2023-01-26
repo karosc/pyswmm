@@ -1,0 +1,6 @@
+Link.inlet\_head\_loss
+======================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Link.inlet_head_loss

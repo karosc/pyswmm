@@ -1,0 +1,6 @@
+Conduit.current\_setting
+========================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Conduit.current_setting

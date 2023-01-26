@@ -1,0 +1,6 @@
+Storage.nodeid
+==============
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Storage.nodeid

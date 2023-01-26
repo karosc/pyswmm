@@ -1,0 +1,6 @@
+Surface.slope
+=============
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Surface.slope

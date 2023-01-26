@@ -1,0 +1,1520 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pyswmm.output &#8212; pyswmm</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/pyswmm.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/pyswmm/output';</script>
+    <link rel="shortcut icon" href="../../_static/icon-logo-black.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../_static/type-logo-black.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../_static/type-logo-white.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../overview.html">
+                        Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../install.html">
+                        Installing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../reference/index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-external" href="https://www.pyswmm.org/examples">
+                        Examples
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../authors.html">
+                        Authors
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../cite.html">
+                        How to Cite
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/OpenWaterAnalytics/pyswmm" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pyswmm" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-solid fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/@pyswmm" title="YouTube" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-youtube"></i></span>
+            <label class="sr-only">YouTube</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/company/pyswmm/" title="LinkedIn" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.pyswmm.org" title="pyswmm.org" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><img src="../../_static/icon-logo-grey.png" class="icon-link-image" alt="pyswmm.org"/></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../overview.html">
+                        Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../install.html">
+                        Installing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../reference/index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-external" href="https://www.pyswmm.org/examples">
+                        Examples
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../authors.html">
+                        Authors
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../cite.html">
+                        How to Cite
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/OpenWaterAnalytics/pyswmm" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pyswmm" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-solid fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/@pyswmm" title="YouTube" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-youtube"></i></span>
+            <label class="sr-only">YouTube</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/company/pyswmm/" title="LinkedIn" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.pyswmm.org" title="pyswmm.org" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><img src="../../_static/icon-logo-grey.png" class="icon-link-image" alt="pyswmm.org"/></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+  <h1>Source code for pyswmm.output</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="c1"># -----------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) 2021 Jennifer Wu</span>
+<span class="c1">#</span>
+<span class="c1"># Licensed under the terms of the BSD2 License</span>
+<span class="c1"># See LICENSE.txt for details</span>
+<span class="c1"># -----------------------------------------------------------------------------</span>
+<span class="kn">from</span> <span class="nn">pyswmm.errors</span> <span class="kn">import</span> <span class="n">OutputException</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">NoReturn</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span>
+
+<span class="c1"># Third party imports</span>
+<span class="kn">from</span> <span class="nn">swmm.toolkit</span> <span class="kn">import</span> <span class="n">output</span><span class="p">,</span> <span class="n">shared_enum</span>
+<span class="kn">from</span> <span class="nn">julian</span> <span class="kn">import</span> <span class="n">from_jd</span>
+
+
+<span class="k">def</span> <span class="nf">output_open_handler</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Checks if output file is open before running function.</span>
+
+<span class="sd">    :param func : function method of Output class</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">inner_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">loaded</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">inner_function</span>
+
+
+<div class="viewcode-block" id="Output"><a class="viewcode-back" href="../../reference/output.html#pyswmm.output.Output">[docs]</a><span class="k">class</span> <span class="nc">Output</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Output Methods.</span>
+<span class="sd">    Base class for a SWMM Output binary file.</span>
+<span class="sd">    The output object provides several options to process timeseries within output binary file.</span>
+
+<span class="sd">    :param binfile: model binary file path</span>
+
+<span class="sd">    Examples:</span>
+
+<span class="sd">    &gt;&gt;&gt; from pyswmm import Output</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; with Output(&#39;tests/data/model_full_features.out&#39;) as out:</span>
+<span class="sd">    ...     print(len(out.subcatchments))</span>
+<span class="sd">    ...     print(len(out.nodes))</span>
+<span class="sd">    ...     print(len(out.links))</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; 3</span>
+<span class="sd">    &gt;&gt;&gt; 4</span>
+<span class="sd">    &gt;&gt;&gt; 3</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binfile</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize the Output class.</span>
+<span class="sd">        :param binfile: model binary file path</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">binfile</span> <span class="o">=</span> <span class="n">binfile</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">handle</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">loaded</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delete_handle</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">period</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">report</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">end</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_times</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_project_size</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_subcatchments</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nodes</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_links</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pollutants</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="Output.verify_index"><a class="viewcode-back" href="../../reference/api/pyswmm.output.Output.verify_index.html#pyswmm.output.Output.verify_index">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">verify_index</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">index_dict</span><span class="p">,</span> <span class="n">index_type</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Validate the index of a model element passed to Output methods. Used to</span>
+<span class="sd">        convert model element names to their index in the out file.</span>
+
+<span class="sd">        :param index: The name or index of the model element listed in the index_dict dict</span>
+<span class="sd">        :type index: Union[str, int]</span>
+<span class="sd">        :param index_dict: The dict against which to validate the index</span>
+<span class="sd">                           (one of self.nodes, self.links, self.subcatchments)</span>
+<span class="sd">        :type index_dict: dict</span>
+<span class="sd">        :param index_type: The type of model element (e.g. node, link, etc.)</span>
+<span class="sd">                           Only used to print the exception if an attribute cannot be found</span>
+<span class="sd">        :type index_type: str</span>
+<span class="sd">        :raises OutputException: Exception if element cannot be found in dict</span>
+<span class="sd">        :return: The integer index of the requested element</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">arg_index</span> <span class="o">=</span> <span class="n">index</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">index</span> <span class="o">=</span> <span class="n">index_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">index</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">OutputException</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">index_type</span><span class="si">}</span><span class="s2"> ID: </span><span class="si">{</span><span class="n">arg_index</span><span class="si">}</span><span class="s2"> does not exist in model output.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">index</span></div>
+
+<div class="viewcode-block" id="Output.verify_time"><a class="viewcode-back" href="../../reference/api/pyswmm.output.Output.verify_time.html#pyswmm.output.Output.verify_time">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">verify_time</span><span class="p">(</span>
+        <span class="n">time_index</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">datetime</span><span class="p">,</span> <span class="nb">int</span><span class="p">]],</span>
+        <span class="n">time_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
+        <span class="n">start</span><span class="p">:</span> <span class="n">datetime</span><span class="p">,</span>
+        <span class="n">end</span><span class="p">:</span> <span class="n">datetime</span><span class="p">,</span>
+        <span class="n">report</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">default_time</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">datetime</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Validate time parameter passed to Output methods. Used to convert a datetime value to</span>
+<span class="sd">        the period index in model time.</span>
+
+<span class="sd">        :param time_index: The datetime to validate</span>
+<span class="sd">        :type time_index: Optional[Union[datetime, int]]</span>
+<span class="sd">        :param time_list: A list of datetimes against which to validate time_index</span>
+<span class="sd">        :type time_list: list</span>
+<span class="sd">        :param start: The starting datetime in the out file</span>
+<span class="sd">                      (only used to print the exception if the datetime cannot be found)</span>
+<span class="sd">        :type start: datetime</span>
+<span class="sd">        :param end: The ending datetime in the out file</span>
+<span class="sd">                    (only used to print the exception if the datetime cannot be found)</span>
+<span class="sd">        :type end: datetime</span>
+<span class="sd">        :param report: The reporting interval in the out file</span>
+<span class="sd">                       (only used to print the exception if the datetime cannot be found)</span>
+<span class="sd">        :type report: int</span>
+<span class="sd">        :param default_time: The default time_index to use of time_index is None</span>
+<span class="sd">        :type default_time: Union[datetime, int]</span>
+<span class="sd">        :raises OutputException: Exception raised of time_index cannot be found intime_index</span>
+<span class="sd">        :return: The integer index of the datetime given</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">arg_time_index</span> <span class="o">=</span> <span class="n">time_index</span>
+
+        <span class="k">if</span> <span class="n">time_index</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">time_index</span> <span class="o">=</span> <span class="n">default_time</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">time_index</span><span class="p">,</span> <span class="n">datetime</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">time_index</span> <span class="ow">in</span> <span class="n">time_list</span><span class="p">:</span>
+                    <span class="n">time_index</span> <span class="o">=</span> <span class="n">time_list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">time_index</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">time_index</span> <span class="o">=</span> <span class="kc">None</span>
+
+            <span class="k">if</span> <span class="n">time_index</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">datetime_format</span> <span class="o">=</span> <span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S&quot;</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">arg_time_index</span><span class="si">}</span><span class="s2"> does not exist in model output reporting time steps.&quot;</span>
+                <span class="n">msg</span> <span class="o">+=</span> <span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot; The reporting time range is </span><span class="si">{</span><span class="n">start</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">datetime_format</span><span class="p">)</span><span class="si">}</span><span class="s2"> to &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">end</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">datetime_format</span><span class="p">)</span><span class="si">}</span><span class="s2"> at increments of &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">report</span><span class="si">}</span><span class="s2"> seconds.&quot;</span>
+                <span class="p">)</span>
+                <span class="k">raise</span> <span class="n">OutputException</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">time_index</span></div>
+
+<div class="viewcode-block" id="Output.open"><a class="viewcode-back" href="../../reference/api/pyswmm.output.Output.open.html#pyswmm.output.Output.open">[docs]</a>    <span class="k">def</span> <span class="nf">open</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Open a binary file</span>
+
+<span class="sd">        :return: True if binary file was opened successfully</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">handle</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">handle</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">loaded</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">loaded</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="n">output</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handle</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">binfile</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">=</span> <span class="n">from_jd</span><span class="p">(</span><span class="n">output</span><span class="o">.</span><span class="n">get_start_date</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handle</span><span class="p">)</span> <span class="o">+</span> <span class="mf">2415018.5</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">microsecond</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">report</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">get_times</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handle</span><span class="p">,</span> <span class="n">shared_enum</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">REPORT_STEP</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">period</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">get_times</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handle</span><span class="p">,</span> <span class="n">shared_enum</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">NUM_PERIODS</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">period</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="Output.close"><a class="viewcode-back" href="../../reference/api/pyswmm.output.Output.close.html#pyswmm.output.Output.close">[docs]</a>    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Close an opened binary file</span>
+
+<span class="sd">        :returns: True if binary file was closed successfully</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">handle</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">loaded</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">loaded</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">delete_handle</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="n">output</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handle</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+    <span class="c1"># method used for context manager with statement</span>
+    <span class="k">def</span> <span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="c1"># method used for context manager with statement</span>
+    <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">arg</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NoReturn</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">times</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns list of reporting timestep stored in model binary file</span>
+
+<span class="sd">        :returns: list of datetime values for each reporting timestep</span>
+<span class="sd">        :rtype: list</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Output</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Output(&#39;tests/data/model_full_features.out&#39;) as out:</span>
+<span class="sd">        ...     times = out.times</span>
+<span class="sd">        ...     for time in times:</span>
+<span class="sd">        ...         print(time)</span>
+<span class="sd">        &gt;&gt;&gt; 2015-11-01 14:01:00</span>
+<span class="sd">        &gt;&gt;&gt; 2015-11-01 14:02:00</span>
+<span class="sd">        &gt;&gt;&gt; 2015-11-01 14:03:00</span>
+<span class="sd">        &gt;&gt;&gt; 2015-11-01 14:04:00</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_times</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_load_times</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_times</span>
+
+    <span class="nd">@output_open_handler</span>
+    <span class="k">def</span> <span class="nf">_load_times</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NoReturn</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Load model reporting times into self._times&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_times</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">period</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_times</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">)</span> <span class="o">*</span> <span class="n">step</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">project_size</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns project size for model elements in the following order:</span>
+<span class="sd">        [subcatchment, node, link, system, pollutant]</span>
+
+<span class="sd">        :returns: list of numbers of each model type</span>
+<span class="sd">                  [nSubcatchments, nNodes, nLinks, nSystems(1), nPollutants]</span>
+<span class="sd">        :rtype: list</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Output</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Output(&#39;tests/data/model_full_features.out&#39;) as out:</span>
+<span class="sd">        ...     print(out.project_size)</span>
+<span class="sd">        &gt;&gt;&gt; [3, 4, 3, 1, 0]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_project_size</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_load_project_size</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_project_size</span>
+
+    <span class="nd">@output_open_handler</span>
+    <span class="k">def</span> <span class="nf">_load_project_size</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NoReturn</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Load model size into self._project_size&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_project_size</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">get_proj_size</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handle</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">subcatchments</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a dict of subcatchments stored in SWMM output binary file</span>
+
+<span class="sd">        :returns: dict of model subcatchment names with their indices as values</span>
+<span class="sd">        :rtype: dict</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Output</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Output(&#39;tests/data/model_full_features.out&#39;) as out:</span>
+<span class="sd">        ...     print(out.subcatchments)</span>
+<span class="sd">        &gt;&gt;&gt; {&#39;S1&#39;: 0, &#39;S2&#39;: 1, &#39;S3&#39;: 2}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_subcatchments</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_load_subcatchments</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_subcatchments</span>
+
+    <span class="nd">@output_open_handler</span>
+    <span class="k">def</span> <span class="nf">_load_subcatchments</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NoReturn</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Load model size into self._project_size&quot;&quot;&quot;</span>
+        <span class="n">total</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">project_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_subcatchments</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">object_name</span><span class="p">(</span><span class="n">shared_enum</span><span class="o">.</span><span class="n">ElementType</span><span class="o">.</span><span class="n">SUBCATCH</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span> <span class="n">index</span>
+            <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+        <span class="p">}</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nodes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a dict of nodes stored in SWMM output binary file</span>
+
+<span class="sd">        :returns: dict of model node names with their indices as values</span>
+<span class="sd">        :rtype: dict</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Output</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Output(&#39;tests/data/model_full_features.out&#39;) as out:</span>
+<span class="sd">        ...     print(out.nodes)</span>
+<span class="sd">        &gt;&gt;&gt; {&#39;J1&#39;: 0, &#39;J3&#39;: 1, &#39;J4&#39;: 2, &#39;J2&#39;: 3}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nodes</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_load_nodes</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nodes</span>
+
+    <span class="nd">@output_open_handler</span>
+    <span class="k">def</span> <span class="nf">_load_nodes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NoReturn</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Load model nodes into self._nodes&quot;&quot;&quot;</span>
+        <span class="n">total</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">project_size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nodes</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">object_name</span><span class="p">(</span><span class="n">shared_enum</span><span class="o">.</span><span class="n">ElementType</span><span class="o">.</span><span class="n">NODE</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span> <span class="n">index</span>
+            <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+        <span class="p">}</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">links</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return a dict of links stored in SWMM output binary file</span>
+
+<span class="sd">        :returns: dict of model link names with their indices as values</span>
+<span class="sd">        :rtype: dict</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Output</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Output(&#39;tests/data/model_full_features.out&#39;) as out:</span>
+<span class="sd">        ...     print(out.links)</span>
+<span class="sd">        &gt;&gt;&gt; {&#39;C1:C2&#39;: 0, &#39;C2&#39;: 1, &#39;C3&#39;: 2}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_links</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_load_links</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_links</span>
+
+    <span class="nd">@output_open_handler</span>
+    <span class="k">def</span> <span class="nf">_load_links</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NoReturn</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Load model links into self._links&quot;&quot;&quot;</span>
+        <span class="n">total</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">project_size</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_links</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">object_name</span><span class="p">(</span><span class="n">shared_enum</span><span class="o">.</span><span class="n">ElementType</span><span class="o">.</span><span class="n">LINK</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span> <span class="n">index</span>
+            <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+        <span class="p">}</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">pollutants</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a dict of pollutants stored in SWMM output binary file</span>
+
+<span class="sd">        :returns: dict of pollutant names with their indices as values</span>
+<span class="sd">        :rtype: dict</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Output</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Output(&#39;tests/data/model_full_features.out&#39;) as out:</span>
+<span class="sd">        ...     print(out.pollutants)</span>
+<span class="sd">        &gt;&gt;&gt; {}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pollutants</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_load_pollutants</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pollutants</span>
+
+    <span class="nd">@output_open_handler</span>
+    <span class="k">def</span> <span class="nf">_load_pollutants</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NoReturn</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Load model size into self._project_size&quot;&quot;&quot;</span>
+        <span class="n">total</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">project_size</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pollutants</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">object_name</span><span class="p">(</span><span class="n">shared_enum</span><span class="o">.</span><span class="n">ElementType</span><span class="o">.</span><span class="n">POLLUT</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span> <span class="n">index</span>
+            <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+        <span class="p">}</span>
+
+    <span class="nd">@property</span>
+    <span class="nd">@output_open_handler</span>
+    <span class="k">def</span> <span class="nf">units</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return SWMM output binary file units for unit system, flow, and pollutants</span>
+
+<span class="sd">        :returns: dict indicating units for unit system, flow, and pollutant</span>
+<span class="sd">        :rtype: dict</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Output</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Output(&#39;tests/data/model_full_features.out&#39;) as out:</span>
+<span class="sd">        ...     print(out.units)</span>
+<span class="sd">        &gt;&gt;&gt; {&#39;system&#39;: &#39;US&#39;, &#39;flow&#39;: &#39;CFS&#39;, &#39;pollutant&#39;: &#39;NONE&#39;}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">units_mapping</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+            <span class="n">system</span><span class="o">=</span><span class="n">shared_enum</span><span class="o">.</span><span class="n">UnitSystem</span><span class="p">,</span>
+            <span class="n">flow</span><span class="o">=</span><span class="n">shared_enum</span><span class="o">.</span><span class="n">FlowUnits</span><span class="p">,</span>
+            <span class="n">pollutant</span><span class="o">=</span><span class="n">shared_enum</span><span class="o">.</span><span class="n">ConcUnits</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">attribute</span><span class="p">:</span> <span class="n">units_mapping</span><span class="p">[</span><span class="n">attribute</span><span class="p">](</span><span class="n">unit</span><span class="p">)</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">unit</span><span class="p">,</span> <span class="n">attribute</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span>
+            <span class="n">output</span><span class="o">.</span><span class="n">get_units</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handle</span><span class="p">),</span>
+            <span class="n">units_mapping</span><span class="o">.</span><span class="n">keys</span><span class="p">())}</span>
+
+    <span class="nd">@property</span>
+    <span class="nd">@output_open_handler</span>
+    <span class="k">def</span> <span class="nf">version</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return SWMM version used to generate SWMM output binary file results</span>
+
+<span class="sd">        :returns: integer representation of SWMM version used to make out file</span>
+<span class="sd">        :rtype: int</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Output</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Output(&#39;tests/data/model_full_features.out&#39;) as out:</span>
+<span class="sd">        ...     print(out.unit)</span>
+<span class="sd">        &gt;&gt;&gt; 51013</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">output</span><span class="o">.</span><span class="n">get_version</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handle</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Output.object_name"><a class="viewcode-back" href="../../reference/api/pyswmm.output.Output.object_name.html#pyswmm.output.Output.object_name">[docs]</a>    <span class="nd">@output_open_handler</span>
+    <span class="k">def</span> <span class="nf">object_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">object_type</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get object name from SWMM output binary file using object index and object type</span>
+
+<span class="sd">        :param object_type: object type from swmm.toolkit.shared_enum.ElementType:</span>
+<span class="sd">                            SUBCATCH=0, NODE=1, LINK=2, SYSTEM=3, POLLUT=4</span>
+<span class="sd">        :type object_type: int</span>
+<span class="sd">        :param index: object index</span>
+<span class="sd">        :type index: int</span>
+<span class="sd">        :returns: object name</span>
+<span class="sd">        :rtype: str</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from swmm.toolkit.shared_enum import ElementType</span>
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Output</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Output(&#39;tests/data/model_full_features.out&#39;) as out:</span>
+<span class="sd">        ...     print(out.object_name(ElementType.SUBCATCH, 0))</span>
+<span class="sd">        ...     print(out.object_name(ElementType.NODE, 0))</span>
+<span class="sd">        ...     print(out.object_name(ElementType.LINK, 0))</span>
+<span class="sd">        &gt;&gt;&gt; S1</span>
+<span class="sd">        &gt;&gt;&gt; J1</span>
+<span class="sd">        &gt;&gt;&gt; C1:C2</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">output</span><span class="o">.</span><span class="n">get_elem_name</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handle</span><span class="p">,</span> <span class="n">object_type</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Output.subcatch_series"><a class="viewcode-back" href="../../reference/api/pyswmm.output.Output.subcatch_series.html#pyswmm.output.Output.subcatch_series">[docs]</a>    <span class="nd">@output_open_handler</span>
+    <span class="k">def</span> <span class="nf">subcatch_series</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
+        <span class="n">attribute</span><span class="p">:</span> <span class="n">shared_enum</span><span class="o">.</span><span class="n">SubcatchAttribute</span><span class="p">,</span>
+        <span class="n">start_index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">datetime</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">end_index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">datetime</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get subcatchment time series results for particular attribute. Specify series</span>
+<span class="sd">        start index and end index to get desired time range.</span>
+
+<span class="sd">        Note: you can use pandas to convert dict to a pandas Series object with dict keys as index</span>
+
+<span class="sd">        :param index: subcatchment index or name</span>
+<span class="sd">        :type index: Union[int, str]</span>
+<span class="sd">        :param attribute: attribute from swmm.toolkit.shared_enum.SubcatchAttribute: RAINFALL, SNOW_DEPTH, EVAP_LOSS,</span>
+<span class="sd">                          INFIL_LOSS, RUNOFF_RATE, GW_OUTFLOW_RATE, GW_TABLE_ELEV, SOIL_MOISTURE, POLLUT_CONC_0</span>
+<span class="sd">        :type attribute: swmm.toolkit.shared_enum.SubcatchAttribute</span>
+<span class="sd">        :param start_index: start datetime or index from which to return series, defaults to None</span>
+<span class="sd">        :type start_index: Union[int, datetime, None], optional</span>
+<span class="sd">        :param end_index: end datetime or index from which to return series, defaults to None</span>
+<span class="sd">        :type end_index: Union[int, datetime, None], optional</span>
+<span class="sd">        :return: dict of attribute values with between start_index and end_index</span>
+<span class="sd">                 with reporting timesteps as keys {datetime : value}</span>
+<span class="sd">        :rtype: dict</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from swmm.toolkit.shared_enum import SubcatchAttribute</span>
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Output</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Output(&#39;tests/data/model_full_features.out&#39;) as out:</span>
+<span class="sd">        ...     ts = out.subcatch_series(&#39;S1&#39;, SubcatchAttribute.RUNOFF_RATE, datetime(2015, 11, 1, 15), datetime(2015, 11, 1, 16))</span>
+<span class="sd">        ...     for index in ts:</span>
+<span class="sd">        ...         print(index, ts[index])</span>
+<span class="sd">        &gt;&gt;&gt; 2015-11-01 15:00:00 0.004305889364331961</span>
+<span class="sd">        &gt;&gt;&gt; 2015-11-01 15:01:00 0.004312679171562195</span>
+<span class="sd">        &gt;&gt;&gt; 2015-11-01 15:02:00 0.004319469444453716</span>
+<span class="sd">        &gt;&gt;&gt; 2015-11-01 15:03:00 0.00432625925168395</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">verify_index</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">subcatchments</span><span class="p">,</span> <span class="s2">&quot;subcatchment&quot;</span><span class="p">)</span>
+        <span class="n">start_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">verify_time</span><span class="p">(</span>
+            <span class="n">start_index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">times</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">,</span> <span class="mi">0</span>
+        <span class="p">)</span>
+        <span class="n">end_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">verify_time</span><span class="p">(</span>
+            <span class="n">end_index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">times</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">period</span>
+        <span class="p">)</span>
+
+        <span class="n">values</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">get_subcatch_series</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">handle</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">attribute</span><span class="p">,</span> <span class="n">start_index</span><span class="p">,</span> <span class="n">end_index</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="n">time</span><span class="p">:</span> <span class="n">value</span>
+            <span class="k">for</span> <span class="n">time</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">times</span><span class="p">[</span><span class="n">start_index</span><span class="p">:</span><span class="n">end_index</span><span class="p">],</span> <span class="n">values</span><span class="p">)</span>
+        <span class="p">}</span></div>
+
+<div class="viewcode-block" id="Output.node_series"><a class="viewcode-back" href="../../reference/api/pyswmm.output.Output.node_series.html#pyswmm.output.Output.node_series">[docs]</a>    <span class="nd">@output_open_handler</span>
+    <span class="k">def</span> <span class="nf">node_series</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
+        <span class="n">attribute</span><span class="p">:</span> <span class="n">shared_enum</span><span class="o">.</span><span class="n">NodeAttribute</span><span class="p">,</span>
+        <span class="n">start_index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">datetime</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">end_index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">datetime</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get node time series results for particular attribute. Specify series</span>
+<span class="sd">        start index and end index to get desired time range.</span>
+
+<span class="sd">        Note: you can use pandas to convert dict to a pandas Series object with dict keys as index</span>
+
+<span class="sd">        :param index: node index or name</span>
+<span class="sd">        :type index: Union[int, str]</span>
+<span class="sd">        :param attribute: attribute from swmm.toolkit.shared_enum.NodeAttribute: INVERT_DEPTH, HYDRAULIC_HEAD,</span>
+<span class="sd">                          PONDED_VOLUME, LATERAL_INFLOW, TOTAL_INFLOW, FLOODING_LOSSES, POLLUT_CONC_0</span>
+<span class="sd">        :type attribute: swmm.toolkit.shared_enum.NodeAttribute</span>
+<span class="sd">        :param start_index: start datetime or index from which to return series, defaults to None</span>
+<span class="sd">        :type start_index: Union[int, datetime, None], optional</span>
+<span class="sd">        :param end_index: end datetime or index from which to return series, defaults to None</span>
+<span class="sd">        :type end_index: Union[int, datetime, None], optional</span>
+<span class="sd">        :return: dict of attribute values with between start_index and end_index</span>
+<span class="sd">                 with reporting timesteps as keys</span>
+<span class="sd">        :rtype: dict {datetime : value}</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from swmm.toolkit.shared_enum import NodeAttribute</span>
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Output</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Output(&#39;tests/data/model_full_features.out&#39;) as out:</span>
+<span class="sd">        ...     ts = out.node_series(&#39;J1&#39;, NodeAttribute.INVERT_DEPTH, datetime(2015, 11, 1, 15), datetime(2015, 11, 1, 16))</span>
+<span class="sd">        ...     for index in ts:</span>
+<span class="sd">        ...         print(index, ts[index])</span>
+<span class="sd">        &gt;&gt;&gt; 2015-11-01 15:00:00 15.0</span>
+<span class="sd">        &gt;&gt;&gt; 2015-11-01 15:01:00 15.0</span>
+<span class="sd">        &gt;&gt;&gt; 2015-11-01 15:02:00 15.0</span>
+<span class="sd">        &gt;&gt;&gt; 2015-11-01 15:03:00 15.0</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">verify_index</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span><span class="p">,</span> <span class="s2">&quot;node&quot;</span><span class="p">)</span>
+        <span class="n">start_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">verify_time</span><span class="p">(</span>
+            <span class="n">start_index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">times</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">,</span> <span class="mi">0</span>
+        <span class="p">)</span>
+        <span class="n">end_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">verify_time</span><span class="p">(</span>
+            <span class="n">end_index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">times</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">period</span>
+        <span class="p">)</span>
+
+        <span class="n">values</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">get_node_series</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">handle</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">attribute</span><span class="p">,</span> <span class="n">start_index</span><span class="p">,</span> <span class="n">end_index</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="n">time</span><span class="p">:</span> <span class="n">value</span>
+            <span class="k">for</span> <span class="n">time</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">times</span><span class="p">[</span><span class="n">start_index</span><span class="p">:</span><span class="n">end_index</span><span class="p">],</span> <span class="n">values</span><span class="p">)</span>
+        <span class="p">}</span></div>
+
+<div class="viewcode-block" id="Output.link_series"><a class="viewcode-back" href="../../reference/api/pyswmm.output.Output.link_series.html#pyswmm.output.Output.link_series">[docs]</a>    <span class="nd">@output_open_handler</span>
+    <span class="k">def</span> <span class="nf">link_series</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
+        <span class="n">attribute</span><span class="p">:</span> <span class="n">shared_enum</span><span class="o">.</span><span class="n">LinkAttribute</span><span class="p">,</span>
+        <span class="n">start_index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">datetime</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">end_index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">datetime</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get link time series results for particular attribute. Specify series</span>
+<span class="sd">        start index and end index to get desired time range.</span>
+
+<span class="sd">        Note: you can use pandas to convert dict to a pandas Series object with dict keys as index</span>
+
+<span class="sd">        :param index: link index or name</span>
+<span class="sd">        :type index: Union[int, str]</span>
+<span class="sd">        :param attribute: attribute from swmm.toolkit.shared_enum.LinkAttribute: FLOW_RATE, FLOW_DEPTH,</span>
+<span class="sd">                          FLOW_VELOCITY, FLOW_VOLUME, CAPACITY, POLLUT_CONC_0</span>
+<span class="sd">        :type attribute: swmm.toolkit.shared_enum.LinkAttribute</span>
+<span class="sd">        :param start_index: start datetime or index from which to return series, defaults to None</span>
+<span class="sd">        :type start_index: Union[int, datetime, None], optional</span>
+<span class="sd">        :param end_index: end datetime or index from which to return series, defaults to None</span>
+<span class="sd">        :type end_index: Union[int, datetime, None], optional</span>
+<span class="sd">        :return: dict of attribute values with between start_index and end_index</span>
+<span class="sd">                 with reporting timesteps as keys</span>
+<span class="sd">        :rtype: dict {datetime : value}</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from swmm.toolkit.shared_enum import LinkAttribute</span>
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Output</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Output(&#39;tests/data/model_full_features.out&#39;) as out:</span>
+<span class="sd">        ...     ts = out.link_series(&#39;C2&#39;, LinkAttribute.FLOW_RATE, datetime(2015, 11, 1, 15), datetime(2015, 11, 1, 16))</span>
+<span class="sd">        ...     for index in ts:</span>
+<span class="sd">        ...         print(index, ts[index])</span>
+<span class="sd">        &gt;&gt;&gt; 2015-11-01 15:00:00 8.226319313049316</span>
+<span class="sd">        &gt;&gt;&gt; 2015-11-01 15:01:00 8.226363182067871</span>
+<span class="sd">        &gt;&gt;&gt; 2015-11-01 15:02:00 8.226407051086426</span>
+<span class="sd">        &gt;&gt;&gt; 2015-11-01 15:03:00 8.22645092010498</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">verify_index</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">links</span><span class="p">,</span> <span class="s2">&quot;link&quot;</span><span class="p">)</span>
+        <span class="n">start_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">verify_time</span><span class="p">(</span>
+            <span class="n">start_index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">times</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">,</span> <span class="mi">0</span>
+        <span class="p">)</span>
+        <span class="n">end_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">verify_time</span><span class="p">(</span>
+            <span class="n">end_index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">times</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">period</span>
+        <span class="p">)</span>
+
+        <span class="n">values</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">get_link_series</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">handle</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">attribute</span><span class="p">,</span> <span class="n">start_index</span><span class="p">,</span> <span class="n">end_index</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="n">time</span><span class="p">:</span> <span class="n">value</span>
+            <span class="k">for</span> <span class="n">time</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">times</span><span class="p">[</span><span class="n">start_index</span><span class="p">:</span><span class="n">end_index</span><span class="p">],</span> <span class="n">values</span><span class="p">)</span>
+        <span class="p">}</span></div>
+
+<div class="viewcode-block" id="Output.system_series"><a class="viewcode-back" href="../../reference/api/pyswmm.output.Output.system_series.html#pyswmm.output.Output.system_series">[docs]</a>    <span class="nd">@output_open_handler</span>
+    <span class="k">def</span> <span class="nf">system_series</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">attribute</span><span class="p">:</span> <span class="n">shared_enum</span><span class="o">.</span><span class="n">SystemAttribute</span><span class="p">,</span>
+        <span class="n">start_index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">datetime</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">end_index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">datetime</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get system time series results for particular attribute. Specify series</span>
+<span class="sd">        start index and end index to get desired time range.</span>
+
+<span class="sd">        Note: you can use pandas to convert dict to a pandas Series object with dict keys as index</span>
+
+<span class="sd">        :param attribute: attribute from swmm.toolkit.shared_enum.SystemAttribute: AIR_TEMP, RAINFALL, SNOW_DEPTH,</span>
+<span class="sd">                          EVAP_INFIL_LOSS, RUNOFF_FLOW, DRY_WEATHER_INFLOW, GW_INFLOW, RDII_INFLOW, DIRECT_INFLOW,</span>
+<span class="sd">                          TOTAL_LATERAL_INFLOW, FLOOD_LOSSES, OUTFALL_FLOWS, VOLUME_STORED, EVAP_RATE</span>
+<span class="sd">        :type attribute: swmm.toolkit.shared_enum.SystemAttribute</span>
+<span class="sd">        :param start_index: start datetime or index from which to return series, defaults to None</span>
+<span class="sd">        :type start_index: Union[int, datetime, None], optional</span>
+<span class="sd">        :param end_index: end datetime or index from which to return series, defaults to None</span>
+<span class="sd">        :type end_index: Union[int, datetime, None], optional</span>
+<span class="sd">        :return: dict of attribute values with between start_index and end_index</span>
+<span class="sd">                 with reporting timesteps as keys</span>
+<span class="sd">        :rtype: dict {datetime : value}</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from swmm.toolkit.shared_enum import SystemAttribute</span>
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Output</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Output(&#39;tests/data/model_full_features.out&#39;) as out:</span>
+<span class="sd">        ...     ts = out.system_series(SystemAttribute.RUNOFF_FLOW, datetime(2015, 11, 1, 15), datetime(2015, 11, 1, 16))</span>
+<span class="sd">        ...     for index in ts:</span>
+<span class="sd">        ...         print(index, ts[index])</span>
+<span class="sd">        &gt;&gt;&gt; 2015-11-01 15:00:00 0.02255748212337494</span>
+<span class="sd">        &gt;&gt;&gt; 2015-11-01 15:01:00 0.022702988237142563</span>
+<span class="sd">        &gt;&gt;&gt; 2015-11-01 15:02:00 0.022848498076200485</span>
+<span class="sd">        &gt;&gt;&gt; 2015-11-01 15:03:00 0.022994007915258408</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">start_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">verify_time</span><span class="p">(</span>
+            <span class="n">start_index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">times</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">,</span> <span class="mi">0</span>
+        <span class="p">)</span>
+        <span class="n">end_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">verify_time</span><span class="p">(</span>
+            <span class="n">end_index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">times</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">period</span>
+        <span class="p">)</span>
+
+        <span class="n">values</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">get_system_series</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">handle</span><span class="p">,</span> <span class="n">attribute</span><span class="p">,</span> <span class="n">start_index</span><span class="p">,</span> <span class="n">end_index</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="n">time</span><span class="p">:</span> <span class="n">value</span>
+            <span class="k">for</span> <span class="n">time</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">times</span><span class="p">[</span><span class="n">start_index</span><span class="p">:</span><span class="n">end_index</span><span class="p">],</span> <span class="n">values</span><span class="p">)</span>
+        <span class="p">}</span></div>
+
+<div class="viewcode-block" id="Output.subcatch_attribute"><a class="viewcode-back" href="../../reference/api/pyswmm.output.Output.subcatch_attribute.html#pyswmm.output.Output.subcatch_attribute">[docs]</a>    <span class="nd">@output_open_handler</span>
+    <span class="k">def</span> <span class="nf">subcatch_attribute</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">attribute</span><span class="p">:</span> <span class="n">shared_enum</span><span class="o">.</span><span class="n">SubcatchAttribute</span><span class="p">,</span>
+        <span class="n">time_index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">datetime</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        For all subcatchments at given time, get a particular attribute.</span>
+
+<span class="sd">        :param attribute: attribute from swmm.toolkit.shared_enum.SubcatchAttribute: RAINFALL, SNOW_DEPTH, EVAP_LOSS,</span>
+<span class="sd">                          INFIL_LOSS, RUNOFF_RATE, GW_OUTFLOW_RATE, GW_TABLE_ELEV, SOIL_MOISTURE, POLLUT_CONC_0</span>
+<span class="sd">        :type attribute: swmm.toolkit.shared_enum.SubcatchAttribute</span>
+<span class="sd">        :param time_index: datetime or simulation index, defaults to None</span>
+<span class="sd">        :type time_index: Union[int, datetime, None]</span>
+<span class="sd">        :returns: dict of attribute value for all subcatchments at given timestep</span>
+<span class="sd">        :rtype: dict {subcatchment: value}</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from swmm.toolkit.shared_enum import SubcatchAttribute</span>
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Output</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Output(&#39;tests/data/model_full_features.out&#39;) as out:</span>
+<span class="sd">        ...     data = out.subcatch_attribute(SubcatchAttribute.RUNOFF_RATE, datetime(2015, 11, 1, 16))</span>
+<span class="sd">        ...     for object in data:</span>
+<span class="sd">        ...         print(object, data[object])</span>
+<span class="sd">        &gt;&gt;&gt; S1 0.004410634282976389</span>
+<span class="sd">        &gt;&gt;&gt; S2 0.008775550872087479</span>
+<span class="sd">        &gt;&gt;&gt; S3 0.012964698486030102</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">time_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">verify_time</span><span class="p">(</span>
+            <span class="n">time_index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">times</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">,</span> <span class="mi">0</span>
+        <span class="p">)</span>
+
+        <span class="n">values</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">get_subcatch_attribute</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handle</span><span class="p">,</span> <span class="n">time_index</span><span class="p">,</span> <span class="n">attribute</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">sub</span><span class="p">:</span> <span class="n">value</span> <span class="k">for</span> <span class="n">sub</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">subcatchments</span><span class="p">,</span> <span class="n">values</span><span class="p">)}</span></div>
+
+<div class="viewcode-block" id="Output.node_attribute"><a class="viewcode-back" href="../../reference/api/pyswmm.output.Output.node_attribute.html#pyswmm.output.Output.node_attribute">[docs]</a>    <span class="nd">@output_open_handler</span>
+    <span class="k">def</span> <span class="nf">node_attribute</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">attribute</span><span class="p">:</span> <span class="n">shared_enum</span><span class="o">.</span><span class="n">NodeAttribute</span><span class="p">,</span>
+        <span class="n">time_index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">datetime</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        For all nodes at given time, get a particular attribute.</span>
+
+<span class="sd">        :param attribute: attribute from swmm.toolkit.shared_enum.NodeAttribute: INVERT_DEPTH, HYDRAULIC_HEAD,</span>
+<span class="sd">                          PONDED_VOLUME, LATERAL_INFLOW, TOTAL_INFLOW, FLOODING_LOSSES, POLLUT_CONC_0</span>
+<span class="sd">        :type attribute: swmm.toolkit.shared_enum.NodeAttribute</span>
+<span class="sd">        :param time_index: datetime or simulation index, defaults to None</span>
+<span class="sd">        :type time_index: Union[int, datetime, None]</span>
+<span class="sd">        :returns: dict of attribute values for all nodes at given timestep</span>
+<span class="sd">        :rtype: dict {node:value}</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from swmm.toolkit.shared_enum import NodeAttribute</span>
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Output</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Output(&#39;tests/data/model_full_features.out&#39;) as out:</span>
+<span class="sd">        ...     data = out.node_attribute(NodeAttribute.INVERT_DEPTH, datetime(2015, 11, 1, 16))</span>
+<span class="sd">        ...     for object in data:</span>
+<span class="sd">        ...         print(object, data[object])</span>
+<span class="sd">        &gt;&gt;&gt; J1 15.0</span>
+<span class="sd">        &gt;&gt;&gt; J3 1.9746614694595337</span>
+<span class="sd">        &gt;&gt;&gt; J4 0.0</span>
+<span class="sd">        &gt;&gt;&gt; J2 0.0009783204877749085</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">time_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">verify_time</span><span class="p">(</span>
+            <span class="n">time_index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">times</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">,</span> <span class="mi">0</span>
+        <span class="p">)</span>
+
+        <span class="n">values</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">get_node_attribute</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handle</span><span class="p">,</span> <span class="n">time_index</span><span class="p">,</span> <span class="n">attribute</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">node</span><span class="p">:</span> <span class="n">value</span> <span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nodes</span><span class="p">,</span> <span class="n">values</span><span class="p">)}</span></div>
+
+<div class="viewcode-block" id="Output.link_attribute"><a class="viewcode-back" href="../../reference/api/pyswmm.output.Output.link_attribute.html#pyswmm.output.Output.link_attribute">[docs]</a>    <span class="nd">@output_open_handler</span>
+    <span class="k">def</span> <span class="nf">link_attribute</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">attribute</span><span class="p">:</span> <span class="n">shared_enum</span><span class="o">.</span><span class="n">LinkAttribute</span><span class="p">,</span>
+        <span class="n">time_index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">datetime</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        For all links at given time, get a particular attribute.</span>
+
+<span class="sd">        :param attribute: attribute from swmm.toolkit.shared_enum.LinkAttribute: FLOW_RATE, FLOW_DEPTH,</span>
+<span class="sd">                          FLOW_VELOCITY, FLOW_VOLUME, CAPACITY, POLLUT_CONC_0</span>
+<span class="sd">        :type attribute: swmm.toolkit.shared_enum.LinkAttribute</span>
+<span class="sd">        :param time_index: datetime or simulation index, defaults to None</span>
+<span class="sd">        :type time_index: Union[int, datetime, None]</span>
+<span class="sd">        :returns: dict of attribute values for all nodes at given timestep</span>
+<span class="sd">        :rtype: dict {link : value}</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from swmm.toolkit.shared_enum import LinkAttribute</span>
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Output</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Output(&#39;tests/data/model_full_features.out&#39;) as out:</span>
+<span class="sd">        ...     data = out.link_attribute(LinkAttribute.FLOW_RATE, datetime(2015, 11, 1, 16))</span>
+<span class="sd">        ...     for object in data:</span>
+<span class="sd">        ...         print(object, data[object])</span>
+<span class="sd">        &gt;&gt;&gt; C1:C2 7.218499660491943</span>
+<span class="sd">        &gt;&gt;&gt; C2 8.227274894714355</span>
+<span class="sd">        &gt;&gt;&gt; C3 9.240239143371582</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">time_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">verify_time</span><span class="p">(</span>
+            <span class="n">time_index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">times</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">,</span> <span class="mi">0</span>
+        <span class="p">)</span>
+
+        <span class="n">values</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">get_link_attribute</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handle</span><span class="p">,</span> <span class="n">time_index</span><span class="p">,</span> <span class="n">attribute</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">link</span><span class="p">:</span> <span class="n">value</span> <span class="k">for</span> <span class="n">link</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">links</span><span class="p">,</span> <span class="n">values</span><span class="p">)}</span></div>
+
+    <span class="c1"># @output_open_handler</span>
+    <span class="c1"># def system_attribute(</span>
+    <span class="c1">#     self,</span>
+    <span class="c1">#     attribute: shared_enum.SystemAttribute,</span>
+    <span class="c1">#     time_index: Union[int, datetime, None] = None,</span>
+    <span class="c1"># ):</span>
+    <span class="c1">#     &quot;&quot;&quot;</span>
+    <span class="c1">#     At given time, get a particular system attribute.</span>
+    <span class="c1">#</span>
+    <span class="c1">#     :param attribute: attribute from swmm.toolkit.shared_enum.SystemAttribute: AIR_TEMP, RAINFALL,</span>
+    <span class="c1">#                       SNOW_DEPTH, EVAP_INFIL_LOSS, RUNOFF_FLOW, DRY_WEATHER_INFLOW, GW_INFLOW, RDII_INFLOW,</span>
+    <span class="c1">#                       DIRECT_INFLOW, TOTAL_LATERAL_INFLOW, FLOOD_LOSSES, OUTFALL_FLOWS, VOLUME_STORED, EVAP_RATE</span>
+    <span class="c1">#     :type attribute: swmm.toolkit.shared_enum.SystemAttribute</span>
+    <span class="c1">#     :param time_index: datetime or simulation index, defaults to None</span>
+    <span class="c1">#     :type time_index: Union[int, datetime, None]</span>
+    <span class="c1">#     :returns: dict of attribute value for system at given timestep</span>
+    <span class="c1">#     :rtype: dict of {&quot;system&quot;,value}</span>
+    <span class="c1">#</span>
+    <span class="c1">#     Not usable due to error in swmm toolkit</span>
+    <span class="c1">#     &quot;&quot;&quot;</span>
+    <span class="c1">#</span>
+    <span class="c1">#     time_index = self.verify_time(</span>
+    <span class="c1">#         time_index, self.times, self.start, self.end, self.report, 0</span>
+    <span class="c1">#     )</span>
+    <span class="c1">#</span>
+    <span class="c1">#     value = output.get_system_attribute(self.handle, time_index, attribute)</span>
+    <span class="c1">#     return {&quot;system&quot;: value}</span>
+
+<div class="viewcode-block" id="Output.subcatch_result"><a class="viewcode-back" href="../../reference/api/pyswmm.output.Output.subcatch_result.html#pyswmm.output.Output.subcatch_result">[docs]</a>    <span class="nd">@output_open_handler</span>
+    <span class="k">def</span> <span class="nf">subcatch_result</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">time_index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">datetime</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        For a subcatchment at given time, get all attributes.</span>
+
+<span class="sd">        :param index: subcatchment name or index</span>
+<span class="sd">        :type index: Union[int, str]</span>
+<span class="sd">        :param time_index: datetime or simulation index, defaults to None</span>
+<span class="sd">        :type time_index: Union[int, datetime, None]</span>
+<span class="sd">        :returns: dict of attributes for a subcatchment at given timestep</span>
+<span class="sd">        :rtype: dict {attribute:value}</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Output</span>
+<span class="sd">        &gt;&gt;&gt; from datetime import datetime</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Output(&#39;tests/data/model_full_features.out&#39;) as out:</span>
+<span class="sd">        ...     data = out.subcatch_result(&#39;S1&#39;, datetime(2015, 11, 1, 15))</span>
+<span class="sd">        ...     for attribute in data:</span>
+<span class="sd">        ...         print(attribute, data[attribute])</span>
+<span class="sd">        &gt;&gt;&gt; SubcatchAttribute.RAINFALL 0.017500000074505806</span>
+<span class="sd">        &gt;&gt;&gt; SubcatchAttribute.SNOW_DEPTH 0.0</span>
+<span class="sd">        &gt;&gt;&gt; SubcatchAttribute.EVAP_LOSS 0.0</span>
+<span class="sd">        &gt;&gt;&gt; SubcatchAttribute.INFIL_LOSS 0.0</span>
+<span class="sd">        &gt;&gt;&gt; SubcatchAttribute.RUNOFF_RATE 0.004305889364331961</span>
+<span class="sd">        &gt;&gt;&gt; SubcatchAttribute.GW_OUTFLOW_RATE 0.0</span>
+<span class="sd">        &gt;&gt;&gt; SubcatchAttribute.GW_TABLE_ELEV 0.0</span>
+<span class="sd">        &gt;&gt;&gt; SubcatchAttribute.SOIL_MOISTURE 0.0</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">verify_index</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">subcatchments</span><span class="p">,</span> <span class="s2">&quot;subcatchment&quot;</span><span class="p">)</span>
+        <span class="n">time_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">verify_time</span><span class="p">(</span>
+            <span class="n">time_index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">times</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">,</span> <span class="mi">0</span>
+        <span class="p">)</span>
+
+        <span class="n">values</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">get_subcatch_result</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handle</span><span class="p">,</span> <span class="n">time_index</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="n">attr</span><span class="p">:</span> <span class="n">value</span> <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">shared_enum</span><span class="o">.</span><span class="n">SubcatchAttribute</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
+        <span class="p">}</span></div>
+
+<div class="viewcode-block" id="Output.node_result"><a class="viewcode-back" href="../../reference/api/pyswmm.output.Output.node_result.html#pyswmm.output.Output.node_result">[docs]</a>    <span class="nd">@output_open_handler</span>
+    <span class="k">def</span> <span class="nf">node_result</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">time_index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">datetime</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        For a node at given time, get all attributes.</span>
+
+<span class="sd">        :param index: node name or index</span>
+<span class="sd">        :type index: Union[int, str]</span>
+<span class="sd">        :param time_index: datetime or simulation index, defaults to None</span>
+<span class="sd">        :type time_index: Union[int, datetime, None]</span>
+<span class="sd">        :returns: dict of attributes for a node at given timestep</span>
+<span class="sd">        :rtype: dict {attribute:value}</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Output</span>
+<span class="sd">        &gt;&gt;&gt; from datetime import datetime</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Output(&#39;tests/data/model_full_features.out&#39;) as out:</span>
+<span class="sd">        ...     data = out.node_result(&#39;J1&#39;, datetime(2015, 11, 1, 15))</span>
+<span class="sd">        ...     for attribute in data:</span>
+<span class="sd">        ...         print(attribute, data[attribute])</span>
+<span class="sd">        &gt;&gt;&gt; NodeAttribute.INVERT_DEPTH 15.0</span>
+<span class="sd">        &gt;&gt;&gt; NodeAttribute.HYDRAULIC_HEAD 35.72800064086914</span>
+<span class="sd">        &gt;&gt;&gt; NodeAttribute.PONDED_VOLUME 0.0</span>
+<span class="sd">        &gt;&gt;&gt; NodeAttribute.LATERAL_INFLOW 9.004305839538574</span>
+<span class="sd">        &gt;&gt;&gt; NodeAttribute.TOTAL_INFLOW 9.004305839538574</span>
+<span class="sd">        &gt;&gt;&gt; NodeAttribute.FLOODING_LOSSES 1.7858062982559204</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">verify_index</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span><span class="p">,</span> <span class="s2">&quot;node&quot;</span><span class="p">)</span>
+        <span class="n">time_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">verify_time</span><span class="p">(</span>
+            <span class="n">time_index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">times</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">,</span> <span class="mi">0</span>
+        <span class="p">)</span>
+
+        <span class="n">values</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">get_node_result</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handle</span><span class="p">,</span> <span class="n">time_index</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">attr</span><span class="p">:</span> <span class="n">value</span> <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">shared_enum</span><span class="o">.</span><span class="n">NodeAttribute</span><span class="p">,</span> <span class="n">values</span><span class="p">)}</span></div>
+
+<div class="viewcode-block" id="Output.link_result"><a class="viewcode-back" href="../../reference/api/pyswmm.output.Output.link_result.html#pyswmm.output.Output.link_result">[docs]</a>    <span class="nd">@output_open_handler</span>
+    <span class="k">def</span> <span class="nf">link_result</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">time_index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">datetime</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        For a link at given time, get all attributes.</span>
+
+<span class="sd">        :param index: link name or index</span>
+<span class="sd">        :type index: Union[int, str]</span>
+<span class="sd">        :param time_index: datetime or simulation index, defaults to None</span>
+<span class="sd">        :type time_index: Union[int, datetime, None]</span>
+<span class="sd">        :returns: dict of attributes for a link at given timestep</span>
+<span class="sd">        :rtype: dict {attribute:value}</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Output</span>
+<span class="sd">        &gt;&gt;&gt; from datetime import datetime</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Output(&#39;tests/data/model_full_features.out&#39;) as out:</span>
+<span class="sd">        ...     data = out.link_result(&#39;C2&#39;, datetime(2015, 11, 1, 15))</span>
+<span class="sd">        ...     for attribute in data:</span>
+<span class="sd">        ...         print(attribute, data[attribute])</span>
+<span class="sd">        &gt;&gt;&gt; LinkAttribute.FLOW_RATE 8.226319313049316</span>
+<span class="sd">        &gt;&gt;&gt; LinkAttribute.FLOW_DEPTH 0.0</span>
+<span class="sd">        &gt;&gt;&gt; LinkAttribute.FLOW_VELOCITY 0.0</span>
+<span class="sd">        &gt;&gt;&gt; LinkAttribute.FLOW_VOLUME 0.0</span>
+<span class="sd">        &gt;&gt;&gt; LinkAttribute.CAPACITY 1.0</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">verify_index</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">links</span><span class="p">,</span> <span class="s2">&quot;link&quot;</span><span class="p">)</span>
+        <span class="n">time_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">verify_time</span><span class="p">(</span>
+            <span class="n">time_index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">times</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">,</span> <span class="mi">0</span>
+        <span class="p">)</span>
+
+        <span class="n">values</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">get_link_result</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handle</span><span class="p">,</span> <span class="n">time_index</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">attr</span><span class="p">:</span> <span class="n">value</span> <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">shared_enum</span><span class="o">.</span><span class="n">LinkAttribute</span><span class="p">,</span> <span class="n">values</span><span class="p">)}</span></div>
+
+<div class="viewcode-block" id="Output.system_result"><a class="viewcode-back" href="../../reference/api/pyswmm.output.Output.system_result.html#pyswmm.output.Output.system_result">[docs]</a>    <span class="nd">@output_open_handler</span>
+    <span class="k">def</span> <span class="nf">system_result</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time_index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">datetime</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        At a given time, get all system attributes.</span>
+
+<span class="sd">        :param time_index: datetime or simulation index, defaults to None</span>
+<span class="sd">        :type time_index: Union[int, datetime, None]</span>
+<span class="sd">        :returns: dict of attributes for the system at given timestep</span>
+<span class="sd">        :rtype: dict {attribute:value}</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyswmm import Output</span>
+<span class="sd">        &gt;&gt;&gt; from datetime import datetime</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; with Output(&#39;tests/data/model_full_features.out&#39;) as out:</span>
+<span class="sd">        ...     data = out.system_result(datetime(2015, 11, 1, 15))</span>
+<span class="sd">        ...     for attribute in data:</span>
+<span class="sd">        ...         print(attribute, data[attribute])</span>
+<span class="sd">        &gt;&gt;&gt; SystemAttribute.AIR_TEMP 70.0</span>
+<span class="sd">        &gt;&gt;&gt; SystemAttribute.RAINFALL 0.017500001937150955</span>
+<span class="sd">        &gt;&gt;&gt; SystemAttribute.SNOW_DEPTH 0.0</span>
+<span class="sd">        &gt;&gt;&gt; SystemAttribute.EVAP_INFIL_LOSS 0.0</span>
+<span class="sd">        &gt;&gt;&gt; SystemAttribute.RUNOFF_FLOW 0.02255748212337494</span>
+<span class="sd">        &gt;&gt;&gt; SystemAttribute.DRY_WEATHER_INFLOW 8.0</span>
+<span class="sd">        &gt;&gt;&gt; SystemAttribute.GW_INFLOW 0.0</span>
+<span class="sd">        &gt;&gt;&gt; SystemAttribute.RDII_INFLOW 0.0</span>
+<span class="sd">        &gt;&gt;&gt; SystemAttribute.DIRECT_INFLOW 3.0</span>
+<span class="sd">        &gt;&gt;&gt; SystemAttribute.TOTAL_LATERAL_INFLOW 11.022557258605957</span>
+<span class="sd">        &gt;&gt;&gt; SystemAttribute.FLOOD_LOSSES 1.7858062982559204</span>
+<span class="sd">        &gt;&gt;&gt; SystemAttribute.OUTFALL_FLOWS 9.23674488067627</span>
+<span class="sd">        &gt;&gt;&gt; SystemAttribute.VOLUME_STORED 97.05753326416016</span>
+<span class="sd">        &gt;&gt;&gt; SystemAttribute.EVAP_RATE 0.0</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">dummy_index</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">time_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">verify_time</span><span class="p">(</span>
+            <span class="n">time_index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">times</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">,</span> <span class="mi">0</span>
+        <span class="p">)</span>
+
+        <span class="n">values</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">get_system_result</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handle</span><span class="p">,</span> <span class="n">time_index</span><span class="p">,</span> <span class="n">dummy_index</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">attr</span><span class="p">:</span> <span class="n">value</span> <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">shared_enum</span><span class="o">.</span><span class="n">SystemAttribute</span><span class="p">,</span> <span class="n">values</span><span class="p">)}</span></div></div>
+</pre></div>
+
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div id="searchbox"></div>
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2016, Bryant E. McDonnell (EmNet LLC).<br>
+
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

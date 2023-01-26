@@ -1,0 +1,6 @@
+Conduit.inlet\_node
+===================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Conduit.inlet_node

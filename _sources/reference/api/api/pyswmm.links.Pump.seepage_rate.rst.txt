@@ -1,0 +1,6 @@
+Pump.seepage\_rate
+==================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Pump.seepage_rate

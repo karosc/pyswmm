@@ -1,0 +1,6 @@
+Storage.k\_saturated
+====================
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Storage.k_saturated

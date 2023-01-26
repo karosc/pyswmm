@@ -1,0 +1,6 @@
+Conduit.outlet\_node
+====================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Conduit.outlet_node

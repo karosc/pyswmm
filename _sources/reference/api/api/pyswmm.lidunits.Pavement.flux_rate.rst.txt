@@ -1,0 +1,6 @@
+Pavement.flux\_rate
+===================
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoproperty:: Pavement.flux_rate

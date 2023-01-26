@@ -1,0 +1,6 @@
+﻿Output.system\_result
+=====================
+
+.. currentmodule:: pyswmm.output
+
+.. automethod:: Output.system_result

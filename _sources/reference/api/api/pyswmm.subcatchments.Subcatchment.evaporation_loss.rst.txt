@@ -1,0 +1,6 @@
+Subcatchment.evaporation\_loss
+==============================
+
+.. currentmodule:: pyswmm.subcatchments
+
+.. autoproperty:: Subcatchment.evaporation_loss

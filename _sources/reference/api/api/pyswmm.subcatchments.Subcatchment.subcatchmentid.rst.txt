@@ -1,0 +1,6 @@
+Subcatchment.subcatchmentid
+===========================
+
+.. currentmodule:: pyswmm.subcatchments
+
+.. autoproperty:: Subcatchment.subcatchmentid

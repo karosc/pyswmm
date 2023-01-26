@@ -1,0 +1,6 @@
+Outfall.is\_outfall
+===================
+
+.. currentmodule:: pyswmm.nodes
+
+.. automethod:: Outfall.is_outfall

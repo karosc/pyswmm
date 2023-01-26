@@ -1,0 +1,6 @@
+Outfall.outfall\_stage
+======================
+
+.. currentmodule:: pyswmm.nodes
+
+.. automethod:: Outfall.outfall_stage

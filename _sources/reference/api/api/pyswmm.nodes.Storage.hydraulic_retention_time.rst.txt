@@ -1,0 +1,6 @@
+Storage.hydraulic\_retention\_time
+==================================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Storage.hydraulic_retention_time

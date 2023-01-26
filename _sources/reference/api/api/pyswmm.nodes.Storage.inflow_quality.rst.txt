@@ -1,0 +1,6 @@
+Storage.inflow\_quality
+=======================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Storage.inflow_quality

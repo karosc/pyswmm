@@ -1,0 +1,6 @@
+LidGroup.flow\_to\_pervious
+===========================
+
+.. currentmodule:: pyswmm.lidgroups
+
+.. autoproperty:: LidGroup.flow_to_pervious

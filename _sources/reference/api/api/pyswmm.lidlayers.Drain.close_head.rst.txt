@@ -1,0 +1,6 @@
+Drain.close\_head
+=================
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Drain.close_head

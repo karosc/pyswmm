@@ -1,0 +1,6 @@
+Storage.depth
+=============
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoproperty:: Storage.depth

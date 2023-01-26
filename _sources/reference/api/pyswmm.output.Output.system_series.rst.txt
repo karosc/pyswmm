@@ -1,0 +1,6 @@
+﻿Output.system\_series
+=====================
+
+.. currentmodule:: pyswmm.output
+
+.. automethod:: Output.system_series

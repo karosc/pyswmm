@@ -1,0 +1,6 @@
+Link.target\_setting
+====================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Link.target_setting

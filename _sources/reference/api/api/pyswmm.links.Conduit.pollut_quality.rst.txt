@@ -1,0 +1,6 @@
+Conduit.pollut\_quality
+=======================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Conduit.pollut_quality

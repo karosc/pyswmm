@@ -1,0 +1,6 @@
+Conduit.froude
+==============
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Conduit.froude

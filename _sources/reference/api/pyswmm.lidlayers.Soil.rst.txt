@@ -1,0 +1,38 @@
+﻿Soil
+====
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoclass:: Soil
+
+   
+   .. .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: api/
+      :nosignatures:
+      
+   
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree: api/
+   
+      ~Soil.field_capacity
+      ~Soil.k_saturated
+      ~Soil.k_slope
+      ~Soil.porosity
+      ~Soil.suction_head
+      ~Soil.thickness
+      ~Soil.wilting_point
+   
+   

@@ -1,0 +1,6 @@
+WaterBalance.drain\_flow
+========================
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoproperty:: WaterBalance.drain_flow

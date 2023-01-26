@@ -1,0 +1,6 @@
+Storage.volume
+==============
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Storage.volume

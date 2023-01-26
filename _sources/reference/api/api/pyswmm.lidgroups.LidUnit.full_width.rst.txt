@@ -1,0 +1,6 @@
+LidUnit.full\_width
+===================
+
+.. currentmodule:: pyswmm.lidgroups
+
+.. autoproperty:: LidUnit.full_width

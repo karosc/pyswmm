@@ -1,0 +1,6 @@
+Outfall.cumulative\_inflow
+==========================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Outfall.cumulative_inflow

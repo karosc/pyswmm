@@ -1,0 +1,6 @@
+Pump.total\_loading
+===================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Pump.total_loading

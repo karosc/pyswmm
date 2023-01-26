@@ -1,0 +1,6 @@
+Pavement.depth
+==============
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoproperty:: Pavement.depth

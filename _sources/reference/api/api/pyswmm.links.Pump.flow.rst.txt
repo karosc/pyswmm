@@ -1,0 +1,6 @@
+Pump.flow
+=========
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Pump.flow

@@ -1,0 +1,6 @@
+Subcatchment.connection
+=======================
+
+.. currentmodule:: pyswmm.subcatchments
+
+.. autoproperty:: Subcatchment.connection

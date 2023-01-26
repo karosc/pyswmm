@@ -1,0 +1,6 @@
+Pavement.void\_fraction
+=======================
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Pavement.void_fraction

@@ -1,0 +1,6 @@
+LidUnit.from\_pervious
+======================
+
+.. currentmodule:: pyswmm.lidgroups
+
+.. autoproperty:: LidUnit.from_pervious

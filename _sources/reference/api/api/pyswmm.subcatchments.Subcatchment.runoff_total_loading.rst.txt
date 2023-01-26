@@ -1,0 +1,6 @@
+Subcatchment.runoff\_total\_loading
+===================================
+
+.. currentmodule:: pyswmm.subcatchments
+
+.. autoproperty:: Subcatchment.runoff_total_loading

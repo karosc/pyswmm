@@ -1,0 +1,70 @@
+﻿Conduit
+=======
+
+.. currentmodule:: pyswmm.links
+
+.. autoclass:: Conduit
+
+   
+   .. .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: api/
+      :nosignatures:
+      
+   
+      
+      
+         ~Conduit.is_conduit
+       
+      
+         ~Conduit.is_orifice
+       
+      
+         ~Conduit.is_outlet
+       
+      
+         ~Conduit.is_pump
+       
+      
+         ~Conduit.is_weir
+       
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree: api/
+   
+      ~Conduit.average_head_loss
+      ~Conduit.conduit_statistics
+      ~Conduit.connections
+      ~Conduit.current_setting
+      ~Conduit.depth
+      ~Conduit.ds_xsection_area
+      ~Conduit.flow
+      ~Conduit.flow_limit
+      ~Conduit.froude
+      ~Conduit.initial_flow
+      ~Conduit.inlet_head_loss
+      ~Conduit.inlet_node
+      ~Conduit.inlet_offset
+      ~Conduit.linkid
+      ~Conduit.outlet_head_loss
+      ~Conduit.outlet_node
+      ~Conduit.outlet_offset
+      ~Conduit.pollut_quality
+      ~Conduit.reactor_quality
+      ~Conduit.seepage_rate
+      ~Conduit.target_setting
+      ~Conduit.total_loading
+      ~Conduit.ups_xsection_area
+      ~Conduit.volume
+   
+   

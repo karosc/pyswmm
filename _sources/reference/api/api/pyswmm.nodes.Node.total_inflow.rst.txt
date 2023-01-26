@@ -1,0 +1,6 @@
+Node.total\_inflow
+==================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Node.total_inflow

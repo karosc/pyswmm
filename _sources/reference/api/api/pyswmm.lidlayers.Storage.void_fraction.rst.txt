@@ -1,0 +1,6 @@
+Storage.void\_fraction
+======================
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Storage.void_fraction

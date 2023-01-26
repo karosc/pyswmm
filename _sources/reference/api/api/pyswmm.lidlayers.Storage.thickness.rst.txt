@@ -1,0 +1,6 @@
+Storage.thickness
+=================
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Storage.thickness

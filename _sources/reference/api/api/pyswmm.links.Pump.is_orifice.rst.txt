@@ -1,0 +1,6 @@
+Pump.is\_orifice
+================
+
+.. currentmodule:: pyswmm.links
+
+.. automethod:: Pump.is_orifice

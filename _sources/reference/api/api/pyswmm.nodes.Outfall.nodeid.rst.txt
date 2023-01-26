@@ -1,0 +1,6 @@
+Outfall.nodeid
+==============
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Outfall.nodeid

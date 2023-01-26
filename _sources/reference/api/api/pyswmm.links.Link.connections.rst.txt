@@ -1,0 +1,6 @@
+Link.connections
+================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Link.connections

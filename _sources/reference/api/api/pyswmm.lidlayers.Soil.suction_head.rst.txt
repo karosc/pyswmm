@@ -1,0 +1,6 @@
+Soil.suction\_head
+==================
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Soil.suction_head

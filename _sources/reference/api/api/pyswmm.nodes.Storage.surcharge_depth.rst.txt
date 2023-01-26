@@ -1,0 +1,6 @@
+Storage.surcharge\_depth
+========================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Storage.surcharge_depth

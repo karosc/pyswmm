@@ -1,0 +1,6 @@
+Simulation.flow\_units
+======================
+
+.. currentmodule:: pyswmm.simulation
+
+.. autoproperty:: Simulation.flow_units

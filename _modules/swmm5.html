@@ -1,0 +1,2148 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>swmm5 &#8212; pyswmm</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/pyswmm.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/swmm5';</script>
+    <link rel="shortcut icon" href="../_static/icon-logo-black.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../_static/type-logo-black.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/type-logo-white.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../overview.html">
+                        Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../install.html">
+                        Installing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../reference/index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-external" href="https://www.pyswmm.org/examples">
+                        Examples
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../authors.html">
+                        Authors
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cite.html">
+                        How to Cite
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/OpenWaterAnalytics/pyswmm" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pyswmm" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-solid fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/@pyswmm" title="YouTube" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-youtube"></i></span>
+            <label class="sr-only">YouTube</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/company/pyswmm/" title="LinkedIn" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.pyswmm.org" title="pyswmm.org" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><img src="../_static/icon-logo-grey.png" class="icon-link-image" alt="pyswmm.org"/></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../overview.html">
+                        Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../install.html">
+                        Installing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../reference/index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-external" href="https://www.pyswmm.org/examples">
+                        Examples
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../authors.html">
+                        Authors
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cite.html">
+                        How to Cite
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/OpenWaterAnalytics/pyswmm" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pyswmm" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-solid fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/@pyswmm" title="YouTube" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-youtube"></i></span>
+            <label class="sr-only">YouTube</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/company/pyswmm/" title="LinkedIn" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.pyswmm.org" title="pyswmm.org" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><img src="../_static/icon-logo-grey.png" class="icon-link-image" alt="pyswmm.org"/></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+  <h1>Source code for swmm5</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="c1"># -----------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) 2014 Bryant E. McDonnell</span>
+<span class="c1">#</span>
+<span class="c1"># Licensed under the terms of the BSD2 License</span>
+<span class="c1"># See LICENSE.txt for details</span>
+<span class="c1"># -----------------------------------------------------------------------------</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Python extensions for the SWMM5 Programmers toolkit.</span>
+
+<span class="sd">Open Water Analytics (http://wateranalytics.org/)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1"># Standard library imports</span>
+<span class="kn">import</span> <span class="nn">distutils.version</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="c1"># Third party imports</span>
+<span class="kn">from</span> <span class="nn">swmm.toolkit</span> <span class="kn">import</span> <span class="n">solver</span>
+
+<span class="c1"># Local imports</span>
+<span class="kn">import</span> <span class="nn">pyswmm.toolkitapi</span> <span class="k">as</span> <span class="nn">tka</span>
+
+
+<div class="viewcode-block" id="SWMMException"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.SWMMException">[docs]</a><span class="k">class</span> <span class="nc">SWMMException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Custom exception class for SWMM errors.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">error_code</span><span class="p">,</span> <span class="n">error_message</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">warning</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">args</span> <span class="o">=</span> <span class="p">(</span><span class="n">error_code</span><span class="p">,</span> <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">error_message</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span></div>
+
+
+<div class="viewcode-block" id="PYSWMMException"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PYSWMMException">[docs]</a><span class="k">class</span> <span class="nc">PYSWMMException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Custom exception class for PySWMM errors.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">error_message</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">warning</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">error_message</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span></div>
+
+
+<div class="viewcode-block" id="PySWMM"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM">[docs]</a><span class="k">class</span> <span class="nc">PySWMM</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Wrapper class to lead SWMM DLL object.</span>
+
+<span class="sd">    This allow performing operations on the SWMM object that is created when</span>
+<span class="sd">    the file is being loaded.</span>
+
+<span class="sd">    PySWMM can be run in two different modes:</span>
+
+<span class="sd">    Mode 1: Execute simulation without any intervention</span>
+
+<span class="sd">    * Open the Input file using swmm_open()</span>
+<span class="sd">    * Execute the simlation without intervening swmmExec()</span>
+<span class="sd">    * then close calling swmm_close()</span>
+
+<span class="sd">    Examples:</span>
+
+<span class="sd">    &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">    &gt;&gt;&gt; swmm_model.swmmExec()</span>
+<span class="sd">    &gt;&gt;&gt; swmm_model.swmm_close()</span>
+
+<span class="sd">    ---or---</span>
+
+<span class="sd">    Mode 2: Step through the entire simulation manually by (This mode allows</span>
+<span class="sd">    the user to invervene and stream simulation data as well as set parameters</span>
+<span class="sd">    and use outside controls approaches)</span>
+
+<span class="sd">    * swmm_open()</span>
+<span class="sd">    * swmm_start()</span>
+<span class="sd">    * swmm_step() or swmm_stride() until it returns 0</span>
+<span class="sd">    * swmm_end()</span>
+<span class="sd">    * swmm_report()</span>
+<span class="sd">    * swmm_close()</span>
+
+<span class="sd">    Examples:</span>
+
+<span class="sd">    &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">    &gt;&gt;&gt; swmm_model.swmm_start()</span>
+<span class="sd">    &gt;&gt;&gt; while(True):</span>
+<span class="sd">    ...     time = swmm_model.swmm_step() # or swmm_stride()</span>
+<span class="sd">    ...     if (time &lt;= 0.0): break</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; swmm_model.swmm_end()</span>
+<span class="sd">    &gt;&gt;&gt; swmm_model.swmm_report()</span>
+<span class="sd">    &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">inpfile</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+                 <span class="n">rptfile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">binfile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">swmm_lib_path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize the PySWMM object class.</span>
+
+<span class="sd">        User can specified SWMM library path. Uses default lib if</span>
+<span class="sd">        not provided.</span>
+
+<span class="sd">        :param str inpfile: Name of SWMM input file (default &#39;&#39;)</span>
+<span class="sd">        :param str rptfile: Report file to generate (default None)</span>
+<span class="sd">        :param str binfile: Optional binary output file (default None)</span>
+<span class="sd">        :param str swmm_lib_path: SWMM library path (default None).</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fileLoaded</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inpfile</span> <span class="o">=</span> <span class="n">inpfile</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rptfile</span> <span class="o">=</span> <span class="n">rptfile</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">binfile</span> <span class="o">=</span> <span class="n">binfile</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">curSimTime</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<div class="viewcode-block" id="PySWMM.swmmExec"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.swmmExec">[docs]</a>    <span class="k">def</span> <span class="nf">swmmExec</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inpfile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rptfile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">binfile</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Open an input file, run SWMM, then close the file.</span>
+
+<span class="sd">        :param str inpfile: Name of SWMM input file</span>
+<span class="sd">        :param str rptfile: Report file to generate</span>
+<span class="sd">        :param str binfile: Optional binary output file</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmmExec()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">inpfile</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">inpfile</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inpfile</span>
+
+        <span class="k">if</span> <span class="n">rptfile</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rptfile</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">rptfile</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">rptfile</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rptfile</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">rptfile</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inpfile</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.inp&#39;</span><span class="p">,</span> <span class="s1">&#39;.rpt&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">binfile</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">binfile</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">binfile</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">binfile</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">binfile</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">binfile</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inpfile</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.inp&#39;</span><span class="p">,</span> <span class="s1">&#39;.out&#39;</span><span class="p">)</span>
+
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">... SWMM Version </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">swmm_getVersion</span><span class="p">(</span>
+        <span class="p">)))</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">swmm_run</span><span class="p">()</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">... Run Complete&quot;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">PYSWMMException</span><span class="p">:</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">... SWMM completed. There are errors.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="p">(</span><span class="n">PYSWMMException</span><span class="p">(</span><span class="s2">&quot;SWMM Close Failed&quot;</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="PySWMM.swmm_run"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.swmm_run">[docs]</a>    <span class="k">def</span> <span class="nf">swmm_run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inpfile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rptfile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">binfile</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;# TODO:.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">inpfile</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">inpfile</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inpfile</span>
+
+        <span class="k">if</span> <span class="n">rptfile</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rptfile</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">rptfile</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">rptfile</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rptfile</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">rptfile</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inpfile</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.inp&#39;</span><span class="p">,</span> <span class="s1">&#39;.rpt&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">binfile</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">binfile</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">binfile</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">binfile</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">binfile</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">binfile</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inpfile</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.inp&#39;</span><span class="p">,</span> <span class="s1">&#39;.out&#39;</span><span class="p">)</span>
+
+        <span class="n">solver</span><span class="o">.</span><span class="n">swmm_run</span><span class="p">(</span><span class="n">inpfile</span><span class="p">,</span> <span class="n">rptfile</span><span class="p">,</span> <span class="n">binfile</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.swmm_open"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.swmm_open">[docs]</a>    <span class="k">def</span> <span class="nf">swmm_open</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inpfile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rptfile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">binfile</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Opens SWMM input file &amp; reads in network data.</span>
+
+<span class="sd">        :param str inpfile: Name of SWMM input file</span>
+<span class="sd">        :param str rptfile: Report file to generate</span>
+<span class="sd">        :param str binfile: Optional binary output file</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fileLoaded</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">swmm_close</span><span class="p">()</span>
+            <span class="n">error_msg</span> <span class="o">=</span> <span class="s1">&#39;Fatal error closing previously opened file&#39;</span>
+            <span class="k">raise</span> <span class="p">(</span><span class="n">PYSWMMException</span><span class="p">(</span><span class="n">error_msg</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="n">inpfile</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">inpfile</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inpfile</span>
+
+        <span class="k">if</span> <span class="n">rptfile</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rptfile</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">rptfile</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">rptfile</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rptfile</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">rptfile</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inpfile</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.inp&#39;</span><span class="p">,</span> <span class="s1">&#39;.rpt&#39;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">rptfile</span> <span class="o">=</span> <span class="n">rptfile</span>
+
+        <span class="k">if</span> <span class="n">binfile</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">binfile</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">binfile</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">binfile</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">binfile</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">binfile</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inpfile</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.inp&#39;</span><span class="p">,</span> <span class="s1">&#39;.out&#39;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">binfile</span> <span class="o">=</span> <span class="n">binfile</span>
+
+        <span class="n">solver</span><span class="o">.</span><span class="n">swmm_open</span><span class="p">(</span><span class="n">inpfile</span><span class="p">,</span> <span class="n">rptfile</span><span class="p">,</span> <span class="n">binfile</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fileLoaded</span> <span class="o">=</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="PySWMM.swmm_start"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.swmm_start">[docs]</a>    <span class="k">def</span> <span class="nf">swmm_start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">SaveOut2rpt</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Prepares to Start SWMM Simulation.</span>
+
+<span class="sd">        :param bool SaveOut2rpt: Save timeseries results to rpt file</span>
+<span class="sd">                                 (default is False).</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_start()</span>
+<span class="sd">        &gt;&gt;&gt; while(True):</span>
+<span class="sd">        ...     time = swmm_model.swmm_step()</span>
+<span class="sd">        ...     if (time &lt;= 0.0): break</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_end()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_report()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">solver</span><span class="o">.</span><span class="n">swmm_start</span><span class="p">(</span><span class="n">SaveOut2rpt</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.swmm_end"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.swmm_end">[docs]</a>    <span class="k">def</span> <span class="nf">swmm_end</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Ends SWMM Simulation.</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_start()</span>
+<span class="sd">        &gt;&gt;&gt; while(True):</span>
+<span class="sd">        ...     time = swmm_model.swmm_step()</span>
+<span class="sd">        ...     if (time &lt;= 0.0): break</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_end()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_report()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">solver</span><span class="o">.</span><span class="n">swmm_end</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="PySWMM.swmm_step"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.swmm_step">[docs]</a>    <span class="k">def</span> <span class="nf">swmm_step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Advances SWMM Simulation by a single routing step.</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_start()</span>
+<span class="sd">        &gt;&gt;&gt; while(True):</span>
+<span class="sd">        ...     time = swmm_model.swmm_step()</span>
+<span class="sd">        ...     if (time &lt;= 0.0): break</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_end()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_report()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">swmm_step</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="PySWMM.swmm_stride"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.swmm_stride">[docs]</a>    <span class="k">def</span> <span class="nf">swmm_stride</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">advanceSeconds</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function allows for user defined stride length to advance</span>
+<span class="sd">        the model simulation by a defined time.  This is useful when control</span>
+<span class="sd">        rules are managed externally by PySWMM. Instead of evaluating rules</span>
+<span class="sd">        every routing step, instead the simulation can be advanced further</span>
+<span class="sd">        in time before the PySWMM can intervene. When a 0 is returned, the</span>
+<span class="sd">        simulation period has reached the end.</span>
+
+<span class="sd">        :param int advanceSeconds: Number seconds to advance the simulation</span>
+<span class="sd">                                   forward.</span>
+<span class="sd">        :return: Current simulation time after a stride in decimal days (float)</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_start()</span>
+<span class="sd">        &gt;&gt;&gt; while(True):</span>
+<span class="sd">        ...     time = swmm_model.swmm_stride(600)</span>
+<span class="sd">        ...     if (time &lt;= 0.0): break</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_end()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_report()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">ctime</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">curSimTime</span>
+        <span class="n">secPday</span> <span class="o">=</span> <span class="mf">3600.0</span> <span class="o">*</span> <span class="mf">24.0</span>
+        <span class="n">advanceDays</span> <span class="o">=</span> <span class="n">advanceSeconds</span> <span class="o">/</span> <span class="n">secPday</span>
+        <span class="n">eps</span> <span class="o">=</span> <span class="n">advanceDays</span> <span class="o">*</span> <span class="mf">0.00001</span>
+        <span class="n">elapsed_time</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">curSimTime</span> <span class="o">&lt;=</span> <span class="n">ctime</span> <span class="o">+</span> <span class="n">advanceDays</span> <span class="o">-</span> <span class="n">eps</span><span class="p">:</span>
+            <span class="n">elapsed_time</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">swmm_step</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">elapsed_time</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">return</span> <span class="mf">0.0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">curSimTime</span> <span class="o">=</span> <span class="n">elapsed_time</span>
+
+        <span class="k">return</span> <span class="n">elapsed_time</span></div>
+
+<div class="viewcode-block" id="PySWMM.swmm_report"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.swmm_report">[docs]</a>    <span class="k">def</span> <span class="nf">swmm_report</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Copies Time Series results from .out to .rpt file.</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_start()</span>
+<span class="sd">        &gt;&gt;&gt; while(True):</span>
+<span class="sd">        ...     time = swmm_model.swmm_step()</span>
+<span class="sd">        ...     if (time &lt;= 0.0): break</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_end()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_report()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">solver</span><span class="o">.</span><span class="n">swmm_report</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="PySWMM.swmm_close"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.swmm_close">[docs]</a>    <span class="k">def</span> <span class="nf">swmm_close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Closes model and supporting files and cleans up memory.</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_start()</span>
+<span class="sd">        &gt;&gt;&gt; while(True):</span>
+<span class="sd">        ...     time = swmm_model.swmm_step()</span>
+<span class="sd">        ...     if (time &lt;= 0.0): break</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_end()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_report()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">solver</span><span class="o">.</span><span class="n">swmm_close</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fileLoaded</span> <span class="o">=</span> <span class="kc">False</span></div>
+
+<div class="viewcode-block" id="PySWMM.swmm_getVersion"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.swmm_getVersion">[docs]</a>    <span class="k">def</span> <span class="nf">swmm_getVersion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retrieves version number of current SWMM engine.</span>
+
+<span class="sd">        The format used is xyzzz where x = major version number,</span>
+<span class="sd">        y = minor version number, and zzz = build number.</span>
+
+<span class="sd">        :return: version number of the DLL source code</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">major</span><span class="p">,</span> <span class="n">minor</span><span class="p">,</span> <span class="n">patch</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">swmm_version_info</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">distutils</span><span class="o">.</span><span class="n">version</span><span class="o">.</span><span class="n">LooseVersion</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">major</span><span class="p">,</span> <span class="n">minor</span><span class="p">,</span> <span class="n">patch</span><span class="p">]))</span>
+
+        <span class="k">return</span></div>
+<div class="viewcode-block" id="PySWMM.swmm_getMassBalErr"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.swmm_getMassBalErr">[docs]</a>    <span class="k">def</span> <span class="nf">swmm_getMassBalErr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Mass Balance Errors.</span>
+
+<span class="sd">        :return: Runoff Error, Flow Routing Error, Quality Error</span>
+<span class="sd">        :rtype: tuple</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">swmm_get_mass_balance</span><span class="p">()</span></div>
+
+    <span class="c1"># --- NETWORK API FUNCTIONS</span>
+    <span class="c1"># -------------------------------------------------------------------------</span>
+<div class="viewcode-block" id="PySWMM.getSimulationDateTime"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getSimulationDateTime">[docs]</a>    <span class="k">def</span> <span class="nf">getSimulationDateTime</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeType</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Simulation Time Data (Based on SimulationTime options).</span>
+
+<span class="sd">        :param int timeType: (toolkitapi.SimulationTime member variable)</span>
+<span class="sd">        :return: datetime</span>
+<span class="sd">        :rtype: datetime</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getSimulationDateTime(SimulationTime.StartDateTime)</span>
+<span class="sd">        2015-11-01 14:00:00</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getSimulationDateTime(SimulationTime.EndDateTime)</span>
+<span class="sd">        2015-11-04 00:00:00</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getSimulationDateTime(SimulationTime.ReportStart)</span>
+<span class="sd">        2015-11-01 14:00:00</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">datetime</span><span class="p">(</span><span class="o">*</span><span class="n">solver</span><span class="o">.</span><span class="n">simulation_get_datetime</span><span class="p">(</span><span class="n">timeType</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="PySWMM.setSimulationDateTime"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.setSimulationDateTime">[docs]</a>    <span class="k">def</span> <span class="nf">setSimulationDateTime</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeType</span><span class="p">,</span> <span class="n">newDateTime</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set Simulation Time Data (Based on SimulationTime options).</span>
+
+<span class="sd">        :param int timeType: (toolkitapi.SimulationTime member variable)</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.setSimulationDateTime(SimulationTime.StartDateTime,</span>
+<span class="sd">                                             datetime(2009, 10, 1, 12,30))</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">solver</span><span class="o">.</span><span class="n">simulation_set_datetime</span><span class="p">(</span><span class="n">timeType</span><span class="p">,</span> <span class="n">newDateTime</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">newDateTime</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> 
+            <span class="n">newDateTime</span><span class="o">.</span><span class="n">day</span><span class="p">,</span> <span class="n">newDateTime</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="n">newDateTime</span><span class="o">.</span><span class="n">minute</span><span class="p">,</span> <span class="n">newDateTime</span><span class="o">.</span><span class="n">second</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.getSimUnit"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getSimUnit">[docs]</a>    <span class="k">def</span> <span class="nf">getSimUnit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">unit_type</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Simulation Units.</span>
+
+<span class="sd">        :param int unittype: Simulation Unit Type</span>
+<span class="sd">        :return: Simulation Unit Type</span>
+<span class="sd">        :rtype: str</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getSimUnit(SimulationUnits.FlowUnits)</span>
+<span class="sd">        CFS</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">simulation_get_unit</span><span class="p">(</span><span class="n">unit_type</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">unit_type</span> <span class="o">==</span> <span class="n">tka</span><span class="o">.</span><span class="n">SimulationUnits</span><span class="o">.</span><span class="n">FlowUnits</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
+            <span class="c1"># Temporary Solution (2017-1-2 BEM)</span>
+            <span class="n">_flowunitnames</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CFS&quot;</span><span class="p">,</span> <span class="s2">&quot;GPM&quot;</span><span class="p">,</span> <span class="s2">&quot;MGD&quot;</span><span class="p">,</span> <span class="s2">&quot;CMS&quot;</span><span class="p">,</span> <span class="s2">&quot;LPS&quot;</span><span class="p">,</span> <span class="s2">&quot;MLD&quot;</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">_flowunitnames</span><span class="p">[</span><span class="n">value</span><span class="p">]</span>
+
+        <span class="k">elif</span> <span class="n">unit_type</span> <span class="o">==</span> <span class="n">tka</span><span class="o">.</span><span class="n">SimulationUnits</span><span class="o">.</span><span class="n">UnitSystem</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
+            <span class="c1"># Temporary Solution (2017-1-2 BEM)</span>
+            <span class="n">_flowunitnames</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;US&quot;</span><span class="p">,</span> <span class="s2">&quot;SI&quot;</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">_flowunitnames</span><span class="p">[</span><span class="n">value</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="PySWMM.getSimOptionSetting"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getSimOptionSetting">[docs]</a>    <span class="k">def</span> <span class="nf">getSimOptionSetting</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">setting_type</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Simulation Option Settings.</span>
+
+<span class="sd">        :param int settingtype: Analysis Option Setting</span>
+<span class="sd">        :return: Simulation Analysis option setting</span>
+<span class="sd">        :rtype: bool</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getSimAnalysisSetting(SimAnalysisSettings.AllowPonding)</span>
+<span class="sd">        False</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">solver</span><span class="o">.</span><span class="n">simulation_get_setting</span><span class="p">(</span><span class="n">setting_type</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="PySWMM.getSimAnalysisSetting"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getSimAnalysisSetting">[docs]</a>    <span class="k">def</span> <span class="nf">getSimAnalysisSetting</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param_type</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Simulation Configuration Parameter.</span>
+
+<span class="sd">        :param int paramtype: Simulation Parameter Type</span>
+<span class="sd">        :return: Simulation Analysis Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getSimAnalysisSetting(SimulationParameters.RouteStep)</span>
+<span class="sd">        300</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">simulation_get_parameter</span><span class="p">(</span><span class="n">param_type</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.getProjectSize"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getProjectSize">[docs]</a>    <span class="k">def</span> <span class="nf">getProjectSize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">object_type</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Project Size: Number of Objects.</span>
+
+<span class="sd">        :param int objecttype: (member variable)</span>
+<span class="sd">        :return: Object Count</span>
+<span class="sd">        :rtype: int</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getProjectSize(ObjectType.NODE)</span>
+<span class="sd">        10</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">project_get_count</span><span class="p">(</span><span class="n">object_type</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.getObjectId"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getObjectId">[docs]</a>    <span class="k">def</span> <span class="nf">getObjectId</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">objecttype</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Object ID name.</span>
+
+<span class="sd">        :param int objecttype: (member variable)</span>
+<span class="sd">        :param index: ID Index</span>
+<span class="sd">        :return: Object ID</span>
+<span class="sd">        :rtype: string</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getObjectId(ObjectType.NODE,35)</span>
+<span class="sd">        &quot;example_id_name&quot;</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">project_get_id</span><span class="p">(</span><span class="n">objecttype</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.getObjectIDList"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getObjectIDList">[docs]</a>    <span class="k">def</span> <span class="nf">getObjectIDList</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">objecttype</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Object ID list.</span>
+
+<span class="sd">        :param int objecttype: (member variable)</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getObjectIDList(ObjectType.LINK)</span>
+<span class="sd">        [&#39;C1:C2&#39;, &#39;C2&#39;, &#39;C3&#39;]</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">IDS</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getProjectSize</span><span class="p">(</span><span class="n">objecttype</span><span class="p">)):</span>
+            <span class="n">IDS</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getObjectId</span><span class="p">(</span><span class="n">objecttype</span><span class="p">,</span> <span class="n">index</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">IDS</span></div>
+
+<div class="viewcode-block" id="PySWMM.getObjectIDIndex"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getObjectIDIndex">[docs]</a>    <span class="k">def</span> <span class="nf">getObjectIDIndex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">objecttype</span><span class="p">,</span> <span class="n">ID</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get Object ID Index. Mostly used as an internal function.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">project_get_index</span><span class="p">(</span><span class="n">objecttype</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.ObjectIDexist"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.ObjectIDexist">[docs]</a>    <span class="k">def</span> <span class="nf">ObjectIDexist</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">objecttype</span><span class="p">,</span> <span class="n">ID</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check if Object ID Exists. Mostly used as an internal function.&quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">project_get_index</span><span class="p">(</span><span class="n">objecttype</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">index</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span></div>
+
+<div class="viewcode-block" id="PySWMM.getNodeType"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getNodeType">[docs]</a>    <span class="k">def</span> <span class="nf">getNodeType</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Node Type (e.g. Junction, Outfall, Storage, Divider).</span>
+
+<span class="sd">        :param str index: ID</span>
+<span class="sd">        :return: Object ID</span>
+<span class="sd">        :rtype: int</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getNodeType(&#39;J1&#39;)</span>
+<span class="sd">        0</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getNodeType(&#39;J1&#39;) is NodeType.junction</span>
+<span class="sd">        True</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">NODE</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">node_get_type</span><span class="p">(</span><span class="n">index</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.getLinkType"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getLinkType">[docs]</a>    <span class="k">def</span> <span class="nf">getLinkType</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Link Type (e.g. Conduit, Pump, Orifice, Weir, Outlet).</span>
+
+<span class="sd">        :param str index: ID</span>
+<span class="sd">        :return: Object ID</span>
+<span class="sd">        :rtype: int</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getLinkType(&#39;C1&#39;)</span>
+<span class="sd">        3</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getLinkType(&#39;C1&#39;) is LinkType.weir</span>
+<span class="sd">        True</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">LINK</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">link_get_type</span><span class="p">(</span><span class="n">index</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.getLinkConnections"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getLinkConnections">[docs]</a>    <span class="k">def</span> <span class="nf">getLinkConnections</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Link Connections (Upstream and Downstream Nodes).</span>
+
+<span class="sd">        Interestingly, if the dynamic wave solver is used, when the input file</span>
+<span class="sd">        is parsed and added to the SWMM5 data model, any negatively sloped</span>
+<span class="sd">        conduits are reversed automatically. The swmm_getLinkConnections</span>
+<span class="sd">        function always calls the _swmm_getLinkDirection function to ensure</span>
+<span class="sd">        the user-assigned upstream ID and downstream IDs are in the correct</span>
+<span class="sd">        order. This way, the function provides support for directed graphs</span>
+<span class="sd">        automatically.</span>
+
+<span class="sd">        :param str index: ID</span>
+<span class="sd">        :return: (Upstream Node Index, Downstream Node Index)</span>
+<span class="sd">        :rtype: tuple</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getLinkConnections(&#39;C1&#39;)</span>
+<span class="sd">        (&#39;NodeUSID&#39;,&#39;NodeDSID&#39;)</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">LINK</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="n">us_node</span><span class="p">,</span> <span class="n">ds_node</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">link_get_connections</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        <span class="n">us_node_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectId</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">NODE</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">us_node</span><span class="p">)</span>
+        <span class="n">ds_node_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectId</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">NODE</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ds_node</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getLinkDirection</span><span class="p">(</span><span class="n">ID</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="c1"># Return Tuple of Upstream and Downstream Node IDS</span>
+            <span class="k">return</span> <span class="n">us_node_id</span><span class="p">,</span> <span class="n">ds_node_id</span>
+        <span class="c1"># link validations reverse the conduit direction if the slope is &lt; 0</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getLinkDirection</span><span class="p">(</span><span class="n">ID</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="c1"># Return Tuple of Upstream and Downstream Node IDS</span>
+            <span class="k">return</span> <span class="n">ds_node_id</span><span class="p">,</span> <span class="n">us_node_id</span></div>
+
+    <span class="k">def</span> <span class="nf">_getLinkDirection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Internal Method: returns conduit flow direction.</span>
+
+<span class="sd">        :param str index: link ID</span>
+<span class="sd">        :return: 1 for conduit flow from upstream node to downstream node</span>
+<span class="sd">        and -1 for conduit flow from downstream node to upstream node</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">LINK</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">link_get_direction</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+
+<div class="viewcode-block" id="PySWMM.getNodeParam"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getNodeParam">[docs]</a>    <span class="k">def</span> <span class="nf">getNodeParam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">parameter</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Node Parameter.</span>
+
+<span class="sd">        :param str ID: Node ID</span>
+<span class="sd">        :param int parameter: Parameter (toolkitapi.NodeParams member variable)</span>
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getNodeParam(&#39;J2&#39;,NodeParams.invertElev )</span>
+<span class="sd">        13.392</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">NODE</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">node_get_parameter</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">parameter</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.setNodeParam"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.setNodeParam">[docs]</a>    <span class="k">def</span> <span class="nf">setNodeParam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">parameter</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set Node Parameter.</span>
+
+<span class="sd">        :param str ID: Node ID</span>
+<span class="sd">        :param int Parameter: Parameter (toolkitapi.NodeParams member variable)</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getNodeParam(&#39;J2&#39;,NodeParams.invertElev, 19 )</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">NODE</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="n">solver</span><span class="o">.</span><span class="n">node_set_parameter</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">parameter</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.getLinkParam"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getLinkParam">[docs]</a>    <span class="k">def</span> <span class="nf">getLinkParam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">parameter</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Link Parameter.</span>
+
+<span class="sd">        :param str ID: Link ID</span>
+<span class="sd">        :param int Parameter: Parameter (toolkitapi.NodeParams member variable)</span>
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getLinkParam(&#39;C1:C2&#39;,LinkParams.offset1 )</span>
+<span class="sd">        0.0</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">LINK</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">link_get_parameter</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">parameter</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.setLinkParam"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.setLinkParam">[docs]</a>    <span class="k">def</span> <span class="nf">setLinkParam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">parameter</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set Link Parameter.</span>
+
+<span class="sd">        :param str ID: Link ID</span>
+<span class="sd">        :param int Parameter: Parameter (toolkitapi.NodeParams member variable)</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.setLinkParam(&#39;C1:C2&#39;,LinkParams.offset1, 2 )</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">LINK</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="n">solver</span><span class="o">.</span><span class="n">link_set_parameter</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">parameter</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.getLidCOverflow"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getLidCOverflow">[docs]</a>    <span class="k">def</span> <span class="nf">getLidCOverflow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Lid Control Parameter.</span>
+
+<span class="sd">        :param str ID: Lid Control ID</span>
+<span class="sd">        :rtype: Bool</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getLidCOverflow(&#39;J2&#39;)</span>
+<span class="sd">        True</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">LID</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">solver</span><span class="o">.</span><span class="n">lid_control_get_overflow</span><span class="p">(</span><span class="n">index</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="PySWMM.getLidCParam"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getLidCParam">[docs]</a>    <span class="k">def</span> <span class="nf">getLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">layer</span><span class="p">,</span> <span class="n">parameter</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get LidControl Parameter.</span>
+
+<span class="sd">        :param str ID: Lid Control ID</span>
+<span class="sd">        :param int layer: Layer (toolkitapi.LidLayers member variable)</span>
+<span class="sd">        :param int parameter: Parameter (toolkitapi.LidLayersProperty member variable)</span>
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getLidCParam(&#39;J2&#39;, LidLayer.surface, LidLayersProperty.thickness)</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">LID</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">lid_control_get_parameter</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">layer</span><span class="p">,</span> <span class="n">parameter</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.setLidCParam"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.setLidCParam">[docs]</a>    <span class="k">def</span> <span class="nf">setLidCParam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">layer</span><span class="p">,</span> <span class="n">parameter</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set Lid Control Parameter Before/During Model Simulation.</span>
+
+<span class="sd">        :param str ID: Lid Control ID</span>
+<span class="sd">        :param int layer: Layer (toolkitapi.LidLayers member variable)</span>
+<span class="sd">        :param int parameter: Parameter (toolkitapi.LidLayersProperty member variable)</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.setLidCParam(&#39;J2&#39;, LidLayer.surface, LidLayersProperty.thickness, 110)</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">LID</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="n">solver</span><span class="o">.</span><span class="n">lid_control_set_parameter</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">layer</span><span class="p">,</span> <span class="n">parameter</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.getLidUCount"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getLidUCount">[docs]</a>    <span class="k">def</span> <span class="nf">getLidUCount</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Number of Lid Units Defined for Subcatchment.</span>
+
+<span class="sd">        :param str ID: Subcatchment ID</span>
+<span class="sd">        :rtype: int</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getLidUCount(&#39;J2&#39;)</span>
+<span class="sd">        2</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">SUBCATCH</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">lid_usage_get_count</span><span class="p">(</span><span class="n">index</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.getLidUParam"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getLidUParam">[docs]</a>    <span class="k">def</span> <span class="nf">getLidUParam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">subcatchID</span><span class="p">,</span> <span class="n">lid_index</span><span class="p">,</span> <span class="n">parameter</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get LidUnit Parameter</span>
+
+<span class="sd">        :param str subcatchID: Subcatchment ID</span>
+<span class="sd">        :param int lid_index: Lid unit index</span>
+<span class="sd">        :param int parameter: Paramter (toolkitapi.LidUParams member variable)</span>
+<span class="sd">        :return: paramater Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getLidUParam(&#39;S2&#39;, 0, LidUParams.unitarea)</span>
+<span class="sd">        1000</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">SUBCATCH</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">subcatchID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">lid_usage_get_parameter</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">lid_index</span><span class="p">,</span> <span class="n">parameter</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.setLidUParam"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.setLidUParam">[docs]</a>    <span class="k">def</span> <span class="nf">setLidUParam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">subcatchID</span><span class="p">,</span> <span class="n">lid_index</span><span class="p">,</span> <span class="n">parameter</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set LidUnit Parameter</span>
+
+<span class="sd">        :param str subcatchID: Subcatchment ID</span>
+<span class="sd">        :param int lid_index: Lid unit index</span>
+<span class="sd">        :param int parameter: parameter (toolkitapi.LidUParams member variable)</span>
+<span class="sd">        :param double value: value set to parameter</span>
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.setLidUParam(&#39;S2&#39;, 0, LidUParams.unitarea, 10)</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">SUBCATCH</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">subcatchID</span><span class="p">)</span>
+        <span class="n">solver</span><span class="o">.</span><span class="n">lid_usage_set_parameter</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">lid_index</span><span class="p">,</span> <span class="n">parameter</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.getLidUOption"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getLidUOption">[docs]</a>    <span class="k">def</span> <span class="nf">getLidUOption</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">subcatchID</span><span class="p">,</span> <span class="n">lid_index</span><span class="p">,</span> <span class="n">parameter</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get LidUnit Option</span>
+
+<span class="sd">        :param str subcatchID: Subcatchment ID</span>
+<span class="sd">        :param int lid_index: Lid unit Index</span>
+<span class="sd">        :param int parameter: paramter (toolkitapi.LidUParams member variable)</span>
+<span class="sd">        :return: paramater Value</span>
+<span class="sd">        :rtype: int</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getLidUOption(&#39;S2&#39;, 0, LidUParams.index)</span>
+<span class="sd">        1000</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">SUBCATCH</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">subcatchID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">lid_usage_get_option</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">lid_index</span><span class="p">,</span> <span class="n">parameter</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.setLidUOption"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.setLidUOption">[docs]</a>    <span class="k">def</span> <span class="nf">setLidUOption</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">subcatchID</span><span class="p">,</span> <span class="n">lid_index</span><span class="p">,</span> <span class="n">parameter</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set LidUnit Option</span>
+
+<span class="sd">        :param str subcatchID: Subcatchment ID</span>
+<span class="sd">        :param int lid_index: Lid unit index</span>
+<span class="sd">        :param int parameter: paramter (toolkitapi.LidUParams member variable)</span>
+<span class="sd">        :param double value: value set to parameter</span>
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.setLidUOption(&#39;S2&#39;, 0, LidUParams.index, 0)</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">SUBCATCH</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">subcatchID</span><span class="p">)</span>
+        <span class="n">solver</span><span class="o">.</span><span class="n">lid_usage_set_option</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">lid_index</span><span class="p">,</span> <span class="n">parameter</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.getSubcatchParam"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getSubcatchParam">[docs]</a>    <span class="k">def</span> <span class="nf">getSubcatchParam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">parameter</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Subcatchment Parameter</span>
+
+<span class="sd">        :param str ID: Subcatchment ID</span>
+<span class="sd">        :param int Parameter: Parameter (toolkitapi.SubcParams member variable)</span>
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getLinkParam(&#39;S2&#39;,SubcParams.area )</span>
+<span class="sd">        43561.596096880996</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">SUBCATCH</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">subcatch_get_parameter</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">parameter</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.setSubcatchParam"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.setSubcatchParam">[docs]</a>    <span class="k">def</span> <span class="nf">setSubcatchParam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">parameter</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set Subcatchment Parameter.</span>
+
+<span class="sd">        :param str ID: Subcatchment ID</span>
+<span class="sd">        :param int parameter: paramter (toolkitapi.SubcParams member variable)</span>
+<span class="sd">        :param double value: value set to parameter</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.setLinkParam(&#39;S2&#39;,SubcParams.area, 100 )</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">SUBCATCH</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="n">solver</span><span class="o">.</span><span class="n">subcatch_set_parameter</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">parameter</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.getSubcatchOutConnection"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getSubcatchOutConnection">[docs]</a>    <span class="k">def</span> <span class="nf">getSubcatchOutConnection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Subcatchment Outlet Connection.</span>
+
+<span class="sd">        This function return the type of loading surface and the ID. The two</span>
+<span class="sd">        load to objects are nodes and other subcatchments.</span>
+
+<span class="sd">        Nodes are ObjectType.NODE</span>
+<span class="sd">        Subcatchments are ObjectType.SUBCATCH</span>
+
+<span class="sd">        :param str ID: Subcatchment ID</span>
+<span class="sd">        :param int Parameter: Parameter (toolkitapi.SubcParams member variable)</span>
+<span class="sd">        :return: (Loading Surface Type, ID)</span>
+<span class="sd">        :rtype: tuple</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getSubcatchOutConnection(&#39;S2&#39;,SubcParams.area )</span>
+<span class="sd">        (2, &#39;J2&#39;)</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; subout = swmm_model.getSubcatchOutConnection(&#39;S2&#39;,SubcParams.area )</span>
+<span class="sd">        &gt;&gt;&gt; subout[0]  == ObjectType.NODE</span>
+<span class="sd">        True</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">SUBCATCH</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="n">outlet_type</span><span class="p">,</span> <span class="n">outlet_index</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">subcatch_get_connection</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        <span class="n">outlet_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectId</span><span class="p">(</span><span class="n">outlet_type</span><span class="p">,</span> <span class="n">outlet_index</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">outlet_id</span></div>
+
+<div class="viewcode-block" id="PySWMM.getGagePrecip"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getGagePrecip">[docs]</a>    <span class="k">def</span> <span class="nf">getGagePrecip</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">parameter</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get precipitation from gage</span>
+
+<span class="sd">        This function returns the rainfall, show and total precipitation</span>
+<span class="sd">        associated with the gage</span>
+
+<span class="sd">        :param str ID: Gage ID</span>
+<span class="sd">        :param int parameter: paramter (toolkitapi.RainGageResults member variable)</span>
+<span class="sd">        :return: value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.getGagePrecip(&#39;Gage1&#39;, )</span>
+<span class="sd">        0.0</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">GAGE</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">raingage_get_precipitation</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">parameter</span><span class="p">)</span></div>
+
+    <span class="c1"># --- Active Simulation Result &quot;Getters&quot;</span>
+    <span class="c1"># -------------------------------------------------------------------------</span>
+<div class="viewcode-block" id="PySWMM.getCurrentSimulationTime"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getCurrentSimulationTime">[docs]</a>    <span class="k">def</span> <span class="nf">getCurrentSimulationTime</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Current Simulation DateTime in Python Format.</span>
+
+<span class="sd">        :return: Python Datetime</span>
+<span class="sd">        :rtype: datetime</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_start()</span>
+<span class="sd">        &gt;&gt;&gt; while(True):</span>
+<span class="sd">        ...     time = swmm_model.swmm_step()</span>
+<span class="sd">        ...     print(swmm_model.getCurrentSimualationTime())</span>
+<span class="sd">        ...     if (time &lt;= 0.0): break</span>
+<span class="sd">        2015-11-03 10:10:12</span>
+<span class="sd">        2015-11-03 10:20:12</span>
+<span class="sd">        2015-11-03 10:30:12</span>
+<span class="sd">        2015-11-03 10:40:12</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_end()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_report()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">datetime</span><span class="p">(</span><span class="o">*</span><span class="n">solver</span><span class="o">.</span><span class="n">simulation_get_current_datetime</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="PySWMM.getLidUFluxRates"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getLidUFluxRates">[docs]</a>    <span class="k">def</span> <span class="nf">getLidUFluxRates</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">subcatchID</span><span class="p">,</span> <span class="n">lidIndex</span><span class="p">,</span> <span class="n">layerIndex</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Lid Unit Layer Flux Rates Result.</span>
+
+<span class="sd">        :param str subcatchID: Subcatchment ID</span>
+<span class="sd">        :param int lidIndex: Lid unit Index</span>
+<span class="sd">        :param int layerIndex: Parameter (toolkitapi.LidLayers member variable)</span>
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_start()</span>
+<span class="sd">        &gt;&gt;&gt; while(True):</span>
+<span class="sd">        ...     time = swmm_model.swmm_step()</span>
+<span class="sd">        ...     print(swmm_model.getLidUFluxRates(&#39;J1&#39;, 0, LidLayers.surface))</span>
+<span class="sd">        ...     if (time &lt;= 0.0): break</span>
+<span class="sd">        1.2</span>
+<span class="sd">        1.5</span>
+<span class="sd">        1.9</span>
+<span class="sd">        1.2</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_end()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_report()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span>
+            <span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">SUBCATCH</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">subcatchID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">lid_usage_get_flux_rate</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">lidIndex</span><span class="p">,</span> <span class="n">layerIndex</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.getLidUResult"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getLidUResult">[docs]</a>    <span class="k">def</span> <span class="nf">getLidUResult</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">subcatchID</span><span class="p">,</span> <span class="n">lidIndex</span><span class="p">,</span> <span class="n">resultType</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Lid Result.</span>
+
+<span class="sd">        :param str subcatchID: Subcatchment ID</span>
+<span class="sd">        :param int lidIndex: Lid unit Index</span>
+<span class="sd">        :param int resultType: Parameter (toolkitapi.LidUResults member variable)</span>
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_start()</span>
+<span class="sd">        &gt;&gt;&gt; while(True):</span>
+<span class="sd">        ...     time = swmm_model.swmm_step()</span>
+<span class="sd">        ...     print(swmm_model.getLidUResult(&#39;J1&#39;, 0, LidUResults.inflow))</span>
+<span class="sd">        ...     if (time &lt;= 0.0): break</span>
+<span class="sd">        1.2</span>
+<span class="sd">        1.5</span>
+<span class="sd">        1.9</span>
+<span class="sd">        1.2</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_end()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_report()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span>
+            <span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">SUBCATCH</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">subcatchID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">lid_usage_get_result</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">lidIndex</span><span class="p">,</span> <span class="n">resultType</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.getLidGResult"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getLidGResult">[docs]</a>    <span class="k">def</span> <span class="nf">getLidGResult</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">subcatchID</span><span class="p">,</span> <span class="n">resultType</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Lid Group Result.</span>
+
+<span class="sd">        :param str subcatchID: Subcatchment ID</span>
+<span class="sd">        :param int resultType: Parameter (toolkitapi.LidUResults member variable)</span>
+<span class="sd">        :return: Parameter Value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_start()</span>
+<span class="sd">        &gt;&gt;&gt; while(True):</span>
+<span class="sd">        ...     time = swmm_model.swmm_step()</span>
+<span class="sd">        ...     print(swmm_model.getLidGResult(&#39;J1&#39;, LidUResults.flowToPerv))</span>
+<span class="sd">        ...     if (time &lt;= 0.0): break</span>
+<span class="sd">        1.2</span>
+<span class="sd">        1.5</span>
+<span class="sd">        1.9</span>
+<span class="sd">        1.2</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_end()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_report()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">SUBCATCH</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">subcatchID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">lid_group_get_result</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">resultType</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.getNodeResult"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getNodeResult">[docs]</a>    <span class="k">def</span> <span class="nf">getNodeResult</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">result_type</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Node Result.</span>
+
+<span class="sd">        :param str ID: Node ID</span>
+<span class="sd">        :param int result_type: parameter (toolkitapi.NodeResults member variable)</span>
+<span class="sd">        :return: value</span>
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_start()</span>
+<span class="sd">        &gt;&gt;&gt; while(True):</span>
+<span class="sd">        ...     time = swmm_model.swmm_step()</span>
+<span class="sd">        ...     print(swmm_model.getNodeResult(&#39;J1&#39;, NodeResults.newDepth))</span>
+<span class="sd">        ...     if (time &lt;= 0.0): break</span>
+<span class="sd">        1.2</span>
+<span class="sd">        1.5</span>
+<span class="sd">        1.9</span>
+<span class="sd">        1.2</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_end()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_report()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">NODE</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">node_get_result</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">result_type</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.getNodePollut"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getNodePollut">[docs]</a>    <span class="k">def</span> <span class="nf">getNodePollut</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">result_type</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get water quality results from a Node.</span>
+
+<span class="sd">        :param str ID: Node ID</span>
+<span class="sd">        :param int result_type: parameter (toolkitapi.NodePollut member value)</span>
+<span class="sd">        :rtype: list</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">NODE</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">node_get_pollutant</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">result_type</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.getLinkResult"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getLinkResult">[docs]</a>    <span class="k">def</span> <span class="nf">getLinkResult</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">result_type</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Link Result.</span>
+
+<span class="sd">        :param str ID: Link ID</span>
+<span class="sd">        :param int result_type: parameter (toolkitapi.LinkResults member variable)</span>
+<span class="sd">        :return: parameter value</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_start()</span>
+<span class="sd">        &gt;&gt;&gt; while(True):</span>
+<span class="sd">        ...     time = swmm_model.swmm_step()</span>
+<span class="sd">        ...     print(swmm_model.getLinkResult(&#39;J1&#39;, LinkResults.newFlow))</span>
+<span class="sd">        ...     if (time &lt;= 0.0): break</span>
+<span class="sd">        1.2</span>
+<span class="sd">        1.5</span>
+<span class="sd">        1.9</span>
+<span class="sd">        1.2</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_end()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_report()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">LINK</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">link_get_result</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">result_type</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.getLinkPollut"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getLinkPollut">[docs]</a>    <span class="k">def</span> <span class="nf">getLinkPollut</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">result_type</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get water quality results from a Link.</span>
+
+<span class="sd">        :param str ID: Link ID</span>
+<span class="sd">        :param int result_type:  parameter (toolkitapi.LinkPollut member value)</span>
+<span class="sd">        :return: Pollutant Value</span>
+<span class="sd">        :rtype: list</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">LINK</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">link_get_pollutant</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">result_type</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.getSubcatchResult"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getSubcatchResult">[docs]</a>    <span class="k">def</span> <span class="nf">getSubcatchResult</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">result_type</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Subcatchment Result</span>
+
+<span class="sd">        :param str ID: Subcatchment ID</span>
+<span class="sd">        :param int result_type: paramter (toolkitapi.LinkResults member variable)</span>
+<span class="sd">        :return: paramater Value</span>
+
+<span class="sd">        :rtype: float</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_start()</span>
+<span class="sd">        &gt;&gt;&gt; while(True):</span>
+<span class="sd">        ...     time = swmm_model.swmm_step()</span>
+<span class="sd">        ...     print(swmm_model.getSubcatchResult(&#39;S3&#39;, SubcResults.newRunoff))</span>
+<span class="sd">        ...     if (time &lt;= 0.0): break</span>
+<span class="sd">        0.01</span>
+<span class="sd">        0.05</span>
+<span class="sd">        0.09</span>
+<span class="sd">        0.08</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_end()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_report()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">SUBCATCH</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">subcatch_get_result</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">result_type</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.getSubcatchPollut"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.getSubcatchPollut">[docs]</a>    <span class="k">def</span> <span class="nf">getSubcatchPollut</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">result_type</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get pollutant results from a Subcatchment.</span>
+
+<span class="sd">        :param str ID: Subcatchment ID</span>
+<span class="sd">        :param int result_type: parameter (toolkitapi.SubcPollut member variable)</span>
+<span class="sd">        :return: Pollutant Values</span>
+<span class="sd">        :rtype: list</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">SUBCATCH</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">subcatch_get_pollutant</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">result_type</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.node_statistics"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.node_statistics">[docs]</a>    <span class="k">def</span> <span class="nf">node_statistics</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get stats for a Node.</span>
+
+<span class="sd">        :param str ID: Node ID</span>
+<span class="sd">        :return: Group Stats</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">NODE</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="n">stats</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">node_get_stats</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        <span class="n">alias</span> <span class="o">=</span> <span class="n">tka</span><span class="o">.</span><span class="n">NodeStats</span><span class="o">.</span><span class="n">_py_alias_ids</span>
+        <span class="c1"># Copy Items to Dictionary using Alias Names.</span>
+        <span class="n">dict_stats</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">stats</span><span class="p">):</span>
+            <span class="k">if</span> <span class="s2">&quot;_&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">attr</span> <span class="ow">and</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">alias</span><span class="p">:</span>
+                <span class="n">dict_stats</span><span class="p">[</span><span class="n">alias</span><span class="p">[</span><span class="n">attr</span><span class="p">]]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">stats</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">dict_stats</span></div>
+
+<div class="viewcode-block" id="PySWMM.node_inflow"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.node_inflow">[docs]</a>    <span class="k">def</span> <span class="nf">node_inflow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get total inflow volume for a Node.</span>
+
+<span class="sd">        :param str ID: Node ID</span>
+<span class="sd">        :return: Total Volume</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">NODE</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">node_get_total_inflow</span><span class="p">(</span><span class="n">index</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.storage_statistics"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.storage_statistics">[docs]</a>    <span class="k">def</span> <span class="nf">storage_statistics</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get stats for a Storage Node.</span>
+
+<span class="sd">        :param str ID: Node ID</span>
+<span class="sd">        :return: Group Stats</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">NODE</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="n">stats</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">storage_get_stats</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        <span class="n">alias</span> <span class="o">=</span> <span class="n">tka</span><span class="o">.</span><span class="n">StorageStats</span><span class="o">.</span><span class="n">_py_alias_ids</span>
+        <span class="c1"># Copy Items to Dictionary using Alias Names.</span>
+        <span class="n">dict_stats</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">stats</span><span class="p">):</span>
+            <span class="k">if</span> <span class="s2">&quot;_&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">attr</span> <span class="ow">and</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">alias</span><span class="p">:</span>
+                <span class="n">dict_stats</span><span class="p">[</span><span class="n">alias</span><span class="p">[</span><span class="n">attr</span><span class="p">]]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">stats</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">dict_stats</span></div>
+
+<div class="viewcode-block" id="PySWMM.outfall_statistics"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.outfall_statistics">[docs]</a>    <span class="k">def</span> <span class="nf">outfall_statistics</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get stats for a Outfall Node.</span>
+
+<span class="sd">        :param str ID: Node ID</span>
+<span class="sd">        :return: Group Stats</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">NODE</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="n">stats</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">outfall_get_stats</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        <span class="n">alias</span> <span class="o">=</span> <span class="n">tka</span><span class="o">.</span><span class="n">OutfallStats</span><span class="o">.</span><span class="n">_py_alias_ids</span>
+        <span class="c1"># Copy Items to Dictionary using Alias Names.</span>
+        <span class="n">dict_stats</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">stats</span><span class="p">):</span>
+            <span class="k">if</span> <span class="s2">&quot;_&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">attr</span> <span class="ow">and</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">alias</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">attr</span> <span class="o">==</span> <span class="s2">&quot;totalLoad&quot;</span><span class="p">:</span>
+                    <span class="n">dict_stats</span><span class="p">[</span><span class="n">alias</span><span class="p">[</span><span class="n">attr</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span>
+                    <span class="n">pollutants</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDList</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">POLLUT</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">pollutant</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pollutants</span><span class="p">):</span>
+                        <span class="n">dict_stats</span><span class="p">[</span><span class="n">alias</span><span class="p">[</span><span class="n">attr</span><span class="p">]][</span><span class="n">pollutant</span><span class="p">]</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">get_totalLoad</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">dict_stats</span><span class="p">[</span><span class="n">alias</span><span class="p">[</span><span class="n">attr</span><span class="p">]]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">stats</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">dict_stats</span></div>
+
+<div class="viewcode-block" id="PySWMM.conduit_statistics"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.conduit_statistics">[docs]</a>    <span class="k">def</span> <span class="nf">conduit_statistics</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get stats for a Conduits.</span>
+
+<span class="sd">        :param str ID: Conduit ID</span>
+<span class="sd">        :return: Group Stats</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">LINK</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="n">stats</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">link_get_stats</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        <span class="n">alias</span> <span class="o">=</span> <span class="n">tka</span><span class="o">.</span><span class="n">LinkStats</span><span class="o">.</span><span class="n">_py_alias_ids</span>
+        <span class="c1"># Copy Items to Dictionary using Alias Names.</span>
+        <span class="n">dict_stats</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">stats</span><span class="p">):</span>
+            <span class="k">if</span> <span class="s2">&quot;_&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">attr</span> <span class="ow">and</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">alias</span><span class="p">:</span>
+                <span class="n">dict_stats</span><span class="p">[</span><span class="n">alias</span><span class="p">[</span><span class="n">attr</span><span class="p">]]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">stats</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">dict_stats</span></div>
+
+<div class="viewcode-block" id="PySWMM.pump_statistics"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.pump_statistics">[docs]</a>    <span class="k">def</span> <span class="nf">pump_statistics</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get stats for a Pump.</span>
+
+<span class="sd">        :param str ID: Pump ID</span>
+<span class="sd">        :return: Group Stats</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">LINK</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="n">stats</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">pump_get_stats</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        <span class="n">alias</span> <span class="o">=</span> <span class="n">tka</span><span class="o">.</span><span class="n">PumpStats</span><span class="o">.</span><span class="n">_py_alias_ids</span>
+        <span class="c1"># Copy Items to Dictionary using Alias Names.</span>
+        <span class="n">dict_stats</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">stats</span><span class="p">):</span>
+            <span class="k">if</span> <span class="s2">&quot;_&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">attr</span> <span class="ow">and</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">alias</span><span class="p">:</span>
+                <span class="n">dict_stats</span><span class="p">[</span><span class="n">alias</span><span class="p">[</span><span class="n">attr</span><span class="p">]]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">stats</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">dict_stats</span></div>
+
+<div class="viewcode-block" id="PySWMM.subcatch_statistics"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.subcatch_statistics">[docs]</a>    <span class="k">def</span> <span class="nf">subcatch_statistics</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get stats for a Subcatchment.</span>
+
+<span class="sd">        :param str ID: Subcatchment ID</span>
+<span class="sd">        :return: Group Stats</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">SUBCATCH</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="n">stats</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">subcatch_get_stats</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        <span class="n">alias</span> <span class="o">=</span> <span class="n">tka</span><span class="o">.</span><span class="n">SubcStats</span><span class="o">.</span><span class="n">_py_alias_ids</span>
+        <span class="c1"># Copy Items to Dictionary using Alias Names.</span>
+        <span class="n">dict_stats</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">stats</span><span class="p">):</span>
+            <span class="k">if</span> <span class="s2">&quot;_&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">attr</span> <span class="ow">and</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">alias</span><span class="p">:</span>
+                <span class="n">dict_stats</span><span class="p">[</span><span class="n">alias</span><span class="p">[</span><span class="n">attr</span><span class="p">]]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">stats</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">dict_stats</span></div>
+
+<div class="viewcode-block" id="PySWMM.flow_routing_stats"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.flow_routing_stats">[docs]</a>    <span class="k">def</span> <span class="nf">flow_routing_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Flow Routing System stats.</span>
+
+<span class="sd">        :return: Dictionary of Flow Routing Stats.</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">stats</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">system_get_routing_totals</span><span class="p">()</span>
+        <span class="n">alias</span> <span class="o">=</span> <span class="n">tka</span><span class="o">.</span><span class="n">RoutingTotals</span><span class="o">.</span><span class="n">_py_alias_ids</span>
+        <span class="c1"># Copy Items to Dictionary using Alias Names.</span>
+        <span class="n">dict_stats</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">stats</span><span class="p">):</span>
+            <span class="k">if</span> <span class="s2">&quot;_&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">attr</span> <span class="ow">and</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">alias</span><span class="p">:</span>
+                <span class="n">dict_stats</span><span class="p">[</span><span class="n">alias</span><span class="p">[</span><span class="n">attr</span><span class="p">]]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">stats</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">dict_stats</span></div>
+
+<div class="viewcode-block" id="PySWMM.runoff_routing_stats"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.runoff_routing_stats">[docs]</a>    <span class="k">def</span> <span class="nf">runoff_routing_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get Runoff Routing System stats.</span>
+
+<span class="sd">        :return: Dictionary of Runoff Routing Stats.</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">stats</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">system_get_runoff_totals</span><span class="p">()</span>
+        <span class="n">alias</span> <span class="o">=</span> <span class="n">tka</span><span class="o">.</span><span class="n">RunoffTotals</span><span class="o">.</span><span class="n">_py_alias_ids</span>
+        <span class="c1"># Copy Items to Dictionary using Alias Names.</span>
+        <span class="n">dict_stats</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">stats</span><span class="p">):</span>
+            <span class="k">if</span> <span class="s2">&quot;_&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">attr</span> <span class="ow">and</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">alias</span><span class="p">:</span>
+                <span class="n">dict_stats</span><span class="p">[</span><span class="n">alias</span><span class="p">[</span><span class="n">attr</span><span class="p">]]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">stats</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">dict_stats</span></div>
+
+    <span class="c1"># --- Active Simulation Parameter &quot;Setters&quot;</span>
+    <span class="c1"># -------------------------------------------------------------------------</span>
+<div class="viewcode-block" id="PySWMM.setLinkSetting"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.setLinkSetting">[docs]</a>    <span class="k">def</span> <span class="nf">setLinkSetting</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">target_setting</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set Link Setting (Pumps, Orifices, Weirs).</span>
+
+<span class="sd">        :param str ID: Link ID</span>
+<span class="sd">        :param float target_setting: New target setting which will be applied</span>
+<span class="sd">        at the start of the next routing step.</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_start()</span>
+<span class="sd">        &gt;&gt;&gt; i = 0</span>
+<span class="sd">        &gt;&gt;&gt; while(True):</span>
+<span class="sd">        ...     time = swmm_model.swmm_step()</span>
+<span class="sd">        ...     i+=1</span>
+<span class="sd">        ...     if i == 80:</span>
+<span class="sd">        ...         swmm_model.setLinkSetting(&#39;C3&#39;,0.5)</span>
+<span class="sd">        ...     if (time &lt;= 0.0): break</span>
+<span class="sd">        ...</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_end()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_report()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">LINK</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="n">solver</span><span class="o">.</span><span class="n">link_set_target_setting</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">target_setting</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.setNodeInflow"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.setNodeInflow">[docs]</a>    <span class="k">def</span> <span class="nf">setNodeInflow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">flow_rate</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set Node Inflow rate.</span>
+
+<span class="sd">        The flow rate should be in the user defined units. The value is held</span>
+<span class="sd">        constant in the model until it is redefined by the toolkit API.</span>
+
+<span class="sd">        :param str ID: Node ID</span>
+<span class="sd">        :param float flow_rate: New flow rate in the user-defined flow units</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_start()</span>
+<span class="sd">        &gt;&gt;&gt; i = 0</span>
+<span class="sd">        &gt;&gt;&gt; while(True):</span>
+<span class="sd">        ...     if i == 80:</span>
+<span class="sd">        ...         swmm_model.setNodeInflow(&#39;J1&#39;,4)</span>
+<span class="sd">        ...     time = swmm_model.swmm_step()</span>
+<span class="sd">        ...     i+=1</span>
+<span class="sd">        ...     if (time &lt;= 0.0): break</span>
+<span class="sd">        ...</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_end()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_report()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">NODE</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="n">solver</span><span class="o">.</span><span class="n">node_set_total_inflow</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">flow_rate</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.setOutfallStage"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.setOutfallStage">[docs]</a>    <span class="k">def</span> <span class="nf">setOutfallStage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">stage</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set Outfall Stage (head).</span>
+
+<span class="sd">        The level should be in the user defined units. The value is held</span>
+<span class="sd">        constant in the model until it is redefined by the toolkit API.</span>
+
+<span class="sd">        :param str ID: Node ID</span>
+<span class="sd">        :param float stage: New flow rate in the user-defined flow units</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_start()</span>
+<span class="sd">        &gt;&gt;&gt; i = 0</span>
+<span class="sd">        &gt;&gt;&gt; while(True):</span>
+<span class="sd">        ...     if i == 80:</span>
+<span class="sd">        ...         swmm_model.setOutfallStage(&#39;J1&#39;,4)</span>
+<span class="sd">        ...     time = swmm_model.swmm_step()</span>
+<span class="sd">        ...     i+=1</span>
+<span class="sd">        ...     if (time &lt;= 0.0): break</span>
+<span class="sd">        ...</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_end()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_report()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">NODE</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="n">solver</span><span class="o">.</span><span class="n">outfall_set_stage</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">stage</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.setGagePrecip"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.setGagePrecip">[docs]</a>    <span class="k">def</span> <span class="nf">setGagePrecip</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set precipitation to gage</span>
+
+<span class="sd">        This function sets the rainfall intensity to the gage</span>
+
+<span class="sd">        :param str ID: Gage ID</span>
+<span class="sd">        :param float valve: rainfall intensity</span>
+<span class="sd">        :return: errcode</span>
+
+<span class="sd">        Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; swmm_model = PySWMM(r&#39;\\.inp&#39;,r&#39;\\.rpt&#39;,r&#39;\\.out&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_open()</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.setGagePrecip(&#39;Gage1&#39;, 10.0)</span>
+<span class="sd">        &gt;&gt;&gt; swmm_model.swmm_close()</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">GAGE</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="n">solver</span><span class="o">.</span><span class="n">raingage_set_precipitation</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.setNodePollut"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.setNodePollut">[docs]</a>    <span class="k">def</span> <span class="nf">setNodePollut</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">pollutant_ID</span><span class="p">,</span> <span class="n">pollutant_value</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set water quality results in a Node.</span>
+
+<span class="sd">        :param str ID: Node ID</span>
+<span class="sd">        :param str pollutant_ID</span>
+<span class="sd">        :param float pollutant_value: pollutant value to set</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">NODE</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="n">pollutant_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">POLLUT</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">pollutant_ID</span><span class="p">)</span>
+        <span class="n">solver</span><span class="o">.</span><span class="n">node_set_pollutant</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">tka</span><span class="o">.</span><span class="n">NodePollut</span><span class="o">.</span><span class="n">nodeQual</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">pollutant_index</span><span class="p">,</span> <span class="n">pollutant_value</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PySWMM.setLinkPollut"><a class="viewcode-back" href="../reference/swmm5.html#swmm5.PySWMM.setLinkPollut">[docs]</a>    <span class="k">def</span> <span class="nf">setLinkPollut</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">pollutant_ID</span><span class="p">,</span> <span class="n">pollutant_value</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set water quality results in a Link.</span>
+
+<span class="sd">        :param str ID: Link ID</span>
+<span class="sd">        :param str ID: Pollutant ID</span>
+<span class="sd">        :param float pollutant_value: pollutant value to set</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">LINK</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+        <span class="n">pollutant_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObjectIDIndex</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">POLLUT</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">pollutant_ID</span><span class="p">)</span>
+        <span class="n">solver</span><span class="o">.</span><span class="n">link_set_pollutant</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">tka</span><span class="o">.</span><span class="n">LinkPollut</span><span class="o">.</span><span class="n">linkQual</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">pollutant_index</span><span class="p">,</span> <span class="n">pollutant_value</span><span class="p">)</span></div></div>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">test</span> <span class="o">=</span> <span class="n">PySWMM</span><span class="p">(</span>
+        <span class="n">inpfile</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;./tests/data/model_weir_setting.inp&quot;</span><span class="p">,</span>
+        <span class="n">rptfile</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;./tests/data/model_weir_setting.rpt&quot;</span><span class="p">,</span>
+        <span class="n">binfile</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;./tests/data/model_weir_setting.out&quot;</span><span class="p">)</span>
+    <span class="n">test</span><span class="o">.</span><span class="n">swmm_open</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Simulation Time Info&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Start Time&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="o">.</span><span class="n">getSimulationDateTime</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">SimulationTime</span><span class="o">.</span><span class="n">StartDateTime</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;End Time&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="o">.</span><span class="n">getSimulationDateTime</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">SimulationTime</span><span class="o">.</span><span class="n">EndDateTime</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Report Time&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="o">.</span><span class="n">getSimulationDateTime</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">SimulationTime</span><span class="o">.</span><span class="n">ReportStart</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Simulation Units&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="o">.</span><span class="n">getSimUnit</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">SimulationUnits</span><span class="o">.</span><span class="n">FlowUnits</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Simulation Engine Version&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="o">.</span><span class="n">swmm_getVersion</span><span class="p">())</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Simulation Allow Ponding Option Selection&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="n">test</span><span class="o">.</span><span class="n">getSimAnalysisSetting</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">SimAnalysisSettings</span><span class="o">.</span><span class="n">AllowPonding</span><span class="o">.</span><span class="n">value</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Simulation Routing Step&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="o">.</span><span class="n">getSimAnalysisSetting</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">SimulationParameters</span><span class="o">.</span><span class="n">RouteStep</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of Nodes&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="o">.</span><span class="n">getProjectSize</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">NODE</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Node ID&quot;</span><span class="p">)</span>
+    <span class="n">IDS</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">getObjectIDList</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">NODE</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">IDS</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ID,Invert,Type&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">ind</span><span class="p">,</span> <span class="n">idd</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">IDS</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="n">ind</span><span class="p">,</span>
+            <span class="n">idd</span><span class="p">,</span>
+            <span class="n">test</span><span class="o">.</span><span class="n">getNodeParam</span><span class="p">(</span><span class="n">idd</span><span class="p">,</span> <span class="n">tka</span><span class="o">.</span><span class="n">NodeParams</span><span class="o">.</span><span class="n">invertElev</span><span class="o">.</span><span class="n">value</span><span class="p">),</span>
+            <span class="n">test</span><span class="o">.</span><span class="n">getNodeParam</span><span class="p">(</span><span class="n">idd</span><span class="p">,</span> <span class="n">tka</span><span class="o">.</span><span class="n">NodeParams</span><span class="o">.</span><span class="n">fullDepth</span><span class="o">.</span><span class="n">value</span><span class="p">),</span>
+            <span class="n">test</span><span class="o">.</span><span class="n">getNodeType</span><span class="p">(</span><span class="n">idd</span><span class="p">),</span> <span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Link ID&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ID,offset1,LinkConnections&#39;</span><span class="p">)</span>
+    <span class="n">IDS</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">getObjectIDList</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">LINK</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">IDS</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">ind</span><span class="p">,</span> <span class="n">idd</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">IDS</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="n">ind</span><span class="p">,</span>
+            <span class="n">idd</span><span class="p">,</span>
+            <span class="n">test</span><span class="o">.</span><span class="n">getLinkParam</span><span class="p">(</span><span class="n">idd</span><span class="p">,</span> <span class="n">tka</span><span class="o">.</span><span class="n">LinkParams</span><span class="o">.</span><span class="n">offset1</span><span class="o">.</span><span class="n">value</span><span class="p">),</span>
+            <span class="n">test</span><span class="o">.</span><span class="n">getLinkConnections</span><span class="p">(</span><span class="n">idd</span><span class="p">),</span> <span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SUBCATCH ID&quot;</span><span class="p">)</span>
+    <span class="n">IDS</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">getObjectIDList</span><span class="p">(</span><span class="n">tka</span><span class="o">.</span><span class="n">ObjectType</span><span class="o">.</span><span class="n">SUBCATCH</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">IDS</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">ind</span><span class="p">,</span> <span class="n">idd</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">IDS</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="n">ind</span><span class="p">,</span>
+            <span class="n">idd</span><span class="p">,</span>
+            <span class="n">test</span><span class="o">.</span><span class="n">getSubcatchParam</span><span class="p">(</span><span class="n">idd</span><span class="p">,</span> <span class="n">tka</span><span class="o">.</span><span class="n">SubcParams</span><span class="o">.</span><span class="n">area</span><span class="o">.</span><span class="n">value</span><span class="p">),</span>
+            <span class="n">test</span><span class="o">.</span><span class="n">getSubcatchOutConnection</span><span class="p">(</span><span class="n">idd</span><span class="p">),</span> <span class="p">)</span>
+
+    <span class="n">test</span><span class="o">.</span><span class="n">swmm_start</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">1000</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;test </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">test</span><span class="o">.</span><span class="n">flow_routing_stats</span><span class="p">()))</span>
+        <span class="n">eltime</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">swmm_step</span><span class="p">()</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">eltime</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+
+    <span class="n">test</span><span class="o">.</span><span class="n">swmm_end</span><span class="p">()</span>
+    <span class="n">test</span><span class="o">.</span><span class="n">swmm_close</span><span class="p">()</span>
+</pre></div>
+
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div id="searchbox"></div>
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2016, Bryant E. McDonnell (EmNet LLC).<br>
+
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

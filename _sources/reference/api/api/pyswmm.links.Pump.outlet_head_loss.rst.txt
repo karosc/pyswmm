@@ -1,0 +1,6 @@
+Pump.outlet\_head\_loss
+=======================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Pump.outlet_head_loss

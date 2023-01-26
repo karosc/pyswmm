@@ -1,0 +1,6 @@
+Conduit.initial\_flow
+=====================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Conduit.initial_flow

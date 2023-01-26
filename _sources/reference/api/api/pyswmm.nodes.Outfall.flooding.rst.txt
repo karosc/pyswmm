@@ -1,0 +1,6 @@
+Outfall.flooding
+================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Outfall.flooding

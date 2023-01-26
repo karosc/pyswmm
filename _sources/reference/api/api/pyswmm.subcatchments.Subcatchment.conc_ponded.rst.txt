@@ -1,0 +1,6 @@
+Subcatchment.conc\_ponded
+=========================
+
+.. currentmodule:: pyswmm.subcatchments
+
+.. autoproperty:: Subcatchment.conc_ponded

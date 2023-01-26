@@ -1,0 +1,35 @@
+﻿DrainMat
+========
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoclass:: DrainMat
+
+   
+   .. .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: api/
+      :nosignatures:
+      
+   
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree: api/
+   
+      ~DrainMat.alpha
+      ~DrainMat.roughness
+      ~DrainMat.thickness
+      ~DrainMat.void_fraction
+   
+   

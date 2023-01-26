@@ -1,0 +1,6 @@
+Storage.exfiltration
+====================
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoproperty:: Storage.exfiltration

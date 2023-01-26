@@ -1,0 +1,6 @@
+Conduit.flow
+============
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Conduit.flow

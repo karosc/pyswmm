@@ -1,0 +1,6 @@
+Storage.is\_divider
+===================
+
+.. currentmodule:: pyswmm.nodes
+
+.. automethod:: Storage.is_divider

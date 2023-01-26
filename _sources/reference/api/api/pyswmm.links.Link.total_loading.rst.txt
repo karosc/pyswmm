@@ -1,0 +1,6 @@
+Link.total\_loading
+===================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Link.total_loading

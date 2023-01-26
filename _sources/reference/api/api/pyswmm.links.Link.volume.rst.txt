@@ -1,0 +1,6 @@
+Link.volume
+===========
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Link.volume

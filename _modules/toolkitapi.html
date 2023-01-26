@@ -1,0 +1,1074 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>toolkitapi &#8212; pyswmm</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/pyswmm.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/toolkitapi';</script>
+    <link rel="shortcut icon" href="../_static/icon-logo-black.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../_static/type-logo-black.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/type-logo-white.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../overview.html">
+                        Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../install.html">
+                        Installing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../reference/index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-external" href="https://www.pyswmm.org/examples">
+                        Examples
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../authors.html">
+                        Authors
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cite.html">
+                        How to Cite
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/OpenWaterAnalytics/pyswmm" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pyswmm" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-solid fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/@pyswmm" title="YouTube" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-youtube"></i></span>
+            <label class="sr-only">YouTube</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/company/pyswmm/" title="LinkedIn" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.pyswmm.org" title="pyswmm.org" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><img src="../_static/icon-logo-grey.png" class="icon-link-image" alt="pyswmm.org"/></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../overview.html">
+                        Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../install.html">
+                        Installing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Quick Start
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../reference/index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-external" href="https://www.pyswmm.org/examples">
+                        Examples
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../authors.html">
+                        Authors
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cite.html">
+                        How to Cite
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/OpenWaterAnalytics/pyswmm" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pyswmm" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-solid fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/@pyswmm" title="YouTube" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-youtube"></i></span>
+            <label class="sr-only">YouTube</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/company/pyswmm/" title="LinkedIn" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.pyswmm.org" title="pyswmm.org" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><img src="../_static/icon-logo-grey.png" class="icon-link-image" alt="pyswmm.org"/></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+  <h1>Source code for toolkitapi</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="c1"># -----------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) 2014 Bryant E. McDonnell</span>
+<span class="c1">#</span>
+<span class="c1"># Licensed under the terms of the BSD2 License</span>
+<span class="c1"># See LICENSE.txt for details</span>
+<span class="c1"># -----------------------------------------------------------------------------</span>
+<span class="sd">&quot;&quot;&quot;SWMM Object Enum.&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">swmm.toolkit</span> <span class="kn">import</span> <span class="n">shared_enum</span>
+<span class="c1"># Standard library imports</span>
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">import</span> <span class="nn">ctypes</span>
+
+
+<div class="viewcode-block" id="SimulationTime"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.SimulationTime">[docs]</a><span class="k">class</span> <span class="nc">SimulationTime</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">StartDateTime</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">EndDateTime</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">ReportStart</span> <span class="o">=</span> <span class="mi">2</span></div>
+
+
+<div class="viewcode-block" id="SimulationUnits"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.SimulationUnits">[docs]</a><span class="k">class</span> <span class="nc">SimulationUnits</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">UnitSystem</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># (0-US, 1-SI)</span>
+    <span class="n">FlowUnits</span> <span class="o">=</span> <span class="mi">1</span></div>
+
+
+<div class="viewcode-block" id="SimAnalysisSettings"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.SimAnalysisSettings">[docs]</a><span class="k">class</span> <span class="nc">SimAnalysisSettings</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">AllowPonding</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># No ponding at nodes</span>
+    <span class="n">SkipSteadyState</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Do flow routing in steady state periods</span>
+    <span class="n">IgnoreRainfall</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># Analyze rainfall/runoff</span>
+    <span class="n">IgnoreRDII</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># Analyze RDII</span>
+    <span class="n">IgnoreSnowmelt</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># Analyze snowmelt</span>
+    <span class="n">IgnoreGwater</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># Analyze groundwater</span>
+    <span class="n">IgnoreRouting</span> <span class="o">=</span> <span class="mi">6</span>  <span class="c1"># Analyze flow routing</span>
+    <span class="n">IgnoreQuality</span> <span class="o">=</span> <span class="mi">7</span>  <span class="c1"># Analyze water quality</span></div>
+
+
+<div class="viewcode-block" id="SimulationParameters"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.SimulationParameters">[docs]</a><span class="k">class</span> <span class="nc">SimulationParameters</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">RouteStep</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Routing time step (sec)</span>
+    <span class="n">MinRouteStep</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Minimum variable time step (sec)</span>
+    <span class="n">LengtheningStep</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># Time step for lengthening (sec)</span>
+    <span class="n">StartDryDays</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># Antecedent dry days</span>
+    <span class="n">CourantFactor</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># Courant time step factor</span>
+    <span class="n">MinSurfArea</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># Minimum nodal surface area</span>
+    <span class="n">MinSlope</span> <span class="o">=</span> <span class="mi">6</span>  <span class="c1"># Minimum conduit slope</span>
+    <span class="n">RunoffError</span> <span class="o">=</span> <span class="mi">7</span>  <span class="c1"># Runoff continuity error</span>
+    <span class="n">GwaterError</span> <span class="o">=</span> <span class="mi">8</span>  <span class="c1"># Groundwater continuity error</span>
+    <span class="n">FlowError</span> <span class="o">=</span> <span class="mi">9</span>  <span class="c1"># Flow routing error</span>
+    <span class="n">QualError</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># Quality routing error</span>
+    <span class="n">HeadTol</span> <span class="o">=</span> <span class="mi">11</span>  <span class="c1"># DW routing head tolerance (ft)</span>
+    <span class="n">SysFlowTol</span> <span class="o">=</span> <span class="mi">12</span>  <span class="c1"># Tolerance for steady system flow</span>
+    <span class="n">LatFlowTol</span> <span class="o">=</span> <span class="mi">13</span>  <span class="c1"># Tolerance for steady nodal inflow</span></div>
+
+
+<div class="viewcode-block" id="ObjectType"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.ObjectType">[docs]</a><span class="k">class</span> <span class="nc">ObjectType</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">GAGE</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># rain gage</span>
+    <span class="n">SUBCATCH</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># subcatchment</span>
+    <span class="n">NODE</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># conveyance system node</span>
+    <span class="n">LINK</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># conveyance system link</span>
+    <span class="n">POLLUT</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># pollutant</span>
+    <span class="n">LANDUSE</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># land use category</span>
+    <span class="n">TIMEPATTERN</span> <span class="o">=</span> <span class="mi">6</span>  <span class="c1"># dry weather flow time pattern</span>
+    <span class="n">CURVE</span> <span class="o">=</span> <span class="mi">7</span>  <span class="c1"># generic table of values</span>
+    <span class="n">TSERIES</span> <span class="o">=</span> <span class="mi">8</span>  <span class="c1"># generic time series of values</span>
+    <span class="n">CONTROL</span> <span class="o">=</span> <span class="mi">9</span>  <span class="c1"># conveyance system control rules</span>
+    <span class="n">TRANSECT</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># irregular channel cross-section</span>
+    <span class="n">AQUIFER</span> <span class="o">=</span> <span class="mi">11</span>  <span class="c1"># groundwater aquifer</span>
+    <span class="n">UNITHYD</span> <span class="o">=</span> <span class="mi">12</span>  <span class="c1"># RDII unit hydrograph</span>
+    <span class="n">SNOWMELT</span> <span class="o">=</span> <span class="mi">13</span>  <span class="c1"># snowmelt parameter set</span>
+    <span class="n">SHAPE</span> <span class="o">=</span> <span class="mi">14</span>  <span class="c1"># custom conduit shape</span>
+    <span class="n">LID</span> <span class="o">=</span> <span class="mi">15</span>  <span class="c1"># LID treatment units</span>
+    <span class="n">MAX_OBJ_TYPES</span> <span class="o">=</span> <span class="mi">16</span>  <span class="c1"># MaximumObjectTypes</span></div>
+
+
+<div class="viewcode-block" id="NodeParams"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.NodeParams">[docs]</a><span class="k">class</span> <span class="nc">NodeParams</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">invertElev</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># double</span>
+    <span class="n">fullDepth</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># double</span>
+    <span class="n">surDepth</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># double</span>
+    <span class="n">pondedArea</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># double</span>
+    <span class="n">initDepth</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># double</span></div>
+
+
+<div class="viewcode-block" id="NodeResults"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.NodeResults">[docs]</a><span class="k">class</span> <span class="nc">NodeResults</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">totalinflow</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Total Inflow</span>
+    <span class="n">outflow</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Total Outflow</span>
+    <span class="n">losses</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># Losses (evap + exfiltration loss)</span>
+    <span class="n">newVolume</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># Current Volume</span>
+    <span class="n">overflow</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># overflow</span>
+    <span class="n">newDepth</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># Current water depth</span>
+    <span class="n">newHead</span> <span class="o">=</span> <span class="mi">6</span>  <span class="c1"># Current water head</span>
+    <span class="n">newLatFlow</span> <span class="o">=</span> <span class="mi">7</span>  <span class="c1"># Current Lateral Inflow</span>
+    <span class="n">hyd_res_time</span> <span class="o">=</span> <span class="mi">8</span>  <span class="c1"># Current hydraulic retention time</span></div>
+
+
+<div class="viewcode-block" id="NodePollut"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.NodePollut">[docs]</a><span class="k">class</span> <span class="nc">NodePollut</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">nodeQual</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Current Water Quality Value</span>
+    <span class="n">inflowQual</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Current inflow water quality value</span>
+    <span class="n">reactorQual</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># Current quality value in the mixed reactor</span></div>
+
+
+<div class="viewcode-block" id="NodeType"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.NodeType">[docs]</a><span class="k">class</span> <span class="nc">NodeType</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">junction</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Junction Type</span>
+    <span class="n">outfall</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Outfall Type</span>
+    <span class="n">storage</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># Storage Type</span>
+    <span class="n">divider</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># Divider Type</span></div>
+
+
+<div class="viewcode-block" id="LinkParams"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.LinkParams">[docs]</a><span class="k">class</span> <span class="nc">LinkParams</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">offset1</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># double</span>
+    <span class="n">offset2</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># double</span>
+    <span class="n">q0</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># double</span>
+    <span class="n">qLimit</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># double</span>
+    <span class="n">cLossInlet</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># double</span>
+    <span class="n">cLossOutlet</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># double</span>
+    <span class="n">cLossAvg</span> <span class="o">=</span> <span class="mi">6</span>  <span class="c1"># double</span>
+    <span class="n">seepRate</span> <span class="o">=</span> <span class="mi">7</span>  <span class="c1"># double</span></div>
+
+
+<div class="viewcode-block" id="LinkResults"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.LinkResults">[docs]</a><span class="k">class</span> <span class="nc">LinkResults</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">newFlow</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># double</span>
+    <span class="n">newDepth</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># double</span>
+    <span class="n">newVolume</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># double</span>
+    <span class="n">surfArea1</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># double</span>
+    <span class="n">surfArea2</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># double</span>
+    <span class="n">setting</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># double</span>
+    <span class="n">targetSetting</span> <span class="o">=</span> <span class="mi">6</span>  <span class="c1"># double</span>
+    <span class="n">froude</span> <span class="o">=</span> <span class="mi">7</span>  <span class="c1"># double</span></div>
+
+
+<div class="viewcode-block" id="LinkPollut"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.LinkPollut">[docs]</a><span class="k">class</span> <span class="nc">LinkPollut</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">linkQual</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Current Water Quality Value</span>
+    <span class="n">totalLoad</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Total Quality Mass Loading</span>
+    <span class="n">reactorQual</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># Current quality value in the mixed reactor</span></div>
+
+
+<div class="viewcode-block" id="LinkType"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.LinkType">[docs]</a><span class="k">class</span> <span class="nc">LinkType</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">conduit</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Conduit Type</span>
+    <span class="n">pump</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Pump Type</span>
+    <span class="n">orifice</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># Orifice Type</span>
+    <span class="n">weir</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># Weir Type</span>
+    <span class="n">outlet</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># Outlet Type</span></div>
+
+
+<div class="viewcode-block" id="SubcParams"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.SubcParams">[docs]</a><span class="k">class</span> <span class="nc">SubcParams</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">width</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># double</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># double</span>
+    <span class="n">fracImperv</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># double</span>
+    <span class="n">slope</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># double</span>
+    <span class="n">curbLength</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># double</span></div>
+    <span class="c1"># initBuildup = 5  # double</span>
+
+
+<div class="viewcode-block" id="SubcResults"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.SubcResults">[docs]</a><span class="k">class</span> <span class="nc">SubcResults</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">rainfall</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Current Rainfall</span>
+    <span class="n">evapLoss</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Current Evaporation Loss</span>
+    <span class="n">infilLoss</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># Current Infiltration Loss</span>
+    <span class="n">runon</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># Subcatchment Runon</span>
+    <span class="n">newRunoff</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># Current Runoff</span>
+    <span class="n">newSnowDepth</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># Current Snow Depth</span></div>
+
+
+<div class="viewcode-block" id="SubcPollut"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.SubcPollut">[docs]</a><span class="k">class</span> <span class="nc">SubcPollut</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">buildup</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Subcatchment Surface Buildup</span>
+    <span class="n">concPonded</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Ponded Pollutant Concentration</span>
+    <span class="n">subcQual</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># Current Pollutant Runoff Quality</span>
+    <span class="n">subcTotalLoad</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># Total Pollutant Washoff Load</span></div>
+
+
+<div class="viewcode-block" id="LidUParams"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.LidUParams">[docs]</a><span class="k">class</span> <span class="nc">LidUParams</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">unitArea</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># double</span>
+    <span class="n">fullWidth</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># double</span>
+    <span class="n">botWidth</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># double</span>
+    <span class="n">initSat</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># double</span>
+    <span class="n">fromImperv</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># double</span>
+    <span class="n">fromPerv</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># double</span></div>
+
+
+<div class="viewcode-block" id="LidResults"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.LidResults">[docs]</a><span class="k">class</span> <span class="nc">LidResults</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">inflow</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># double</span>
+    <span class="n">evap</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># double</span>
+    <span class="n">infil</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># double</span>
+    <span class="n">surfFlow</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># double</span>
+    <span class="n">drainFlow</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># double</span>
+    <span class="n">initVol</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># double</span>
+    <span class="n">finalVol</span> <span class="o">=</span> <span class="mi">6</span>  <span class="c1"># double</span>
+    <span class="n">surfDepth</span> <span class="o">=</span> <span class="mi">7</span>  <span class="c1"># double</span>
+    <span class="n">paveDepth</span> <span class="o">=</span> <span class="mi">8</span>  <span class="c1"># double</span>
+    <span class="n">soilMoist</span> <span class="o">=</span> <span class="mi">9</span>  <span class="c1"># double</span>
+    <span class="n">storDepth</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># double</span>
+    <span class="n">dryTime</span> <span class="o">=</span> <span class="mi">11</span>  <span class="c1"># double</span>
+    <span class="n">oldDrainFlow</span> <span class="o">=</span> <span class="mi">12</span>  <span class="c1"># double</span>
+    <span class="n">newDrainFlow</span> <span class="o">=</span> <span class="mi">13</span>  <span class="c1"># double</span>
+    <span class="n">pervArea</span> <span class="o">=</span> <span class="mi">14</span>  <span class="c1"># double</span>
+    <span class="n">flowToPerv</span> <span class="o">=</span> <span class="mi">15</span>  <span class="c1"># double</span>
+    <span class="n">evapRate</span> <span class="o">=</span> <span class="mi">16</span>  <span class="c1"># double</span>
+    <span class="n">nativeInfil</span> <span class="o">=</span> <span class="mi">17</span>  <span class="c1"># double</span>
+    <span class="n">surfInflow</span> <span class="o">=</span> <span class="mi">18</span>  <span class="c1"># double</span>
+    <span class="n">surfInfil</span> <span class="o">=</span> <span class="mi">19</span>  <span class="c1"># double</span>
+    <span class="n">surfEvap</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># double</span>
+    <span class="n">surfOutflow</span> <span class="o">=</span> <span class="mi">21</span>  <span class="c1"># double</span>
+    <span class="n">paveEvap</span> <span class="o">=</span> <span class="mi">22</span>  <span class="c1"># double</span>
+    <span class="n">pavePerc</span> <span class="o">=</span> <span class="mi">23</span>  <span class="c1"># double</span>
+    <span class="n">soilEvap</span> <span class="o">=</span> <span class="mi">24</span>  <span class="c1"># double</span>
+    <span class="n">soilPerc</span> <span class="o">=</span> <span class="mi">25</span>  <span class="c1"># double</span>
+    <span class="n">storInflow</span> <span class="o">=</span> <span class="mi">26</span>  <span class="c1"># double</span>
+    <span class="n">storExfil</span> <span class="o">=</span> <span class="mi">27</span>  <span class="c1"># double</span>
+    <span class="n">storEvap</span> <span class="o">=</span> <span class="mi">28</span>  <span class="c1"># double</span>
+    <span class="n">storDrain</span> <span class="o">=</span> <span class="mi">29</span>  <span class="c1"># double</span></div>
+
+
+<div class="viewcode-block" id="LidUOptions"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.LidUOptions">[docs]</a><span class="k">class</span> <span class="nc">LidUOptions</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># int</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># int</span>
+    <span class="n">toPerv</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># int</span>
+    <span class="n">drainSub</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># int</span>
+    <span class="n">drainNode</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># int</span></div>
+
+
+<div class="viewcode-block" id="LidLayers"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.LidLayers">[docs]</a><span class="k">class</span> <span class="nc">LidLayers</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">surface</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># int</span>
+    <span class="n">soil</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># int</span>
+    <span class="n">storage</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># int</span>
+    <span class="n">pavement</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># int</span>
+    <span class="n">drain</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># int</span>
+    <span class="n">drainMat</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># int</span></div>
+
+
+<div class="viewcode-block" id="LidLayersProperty"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.LidLayersProperty">[docs]</a><span class="k">class</span> <span class="nc">LidLayersProperty</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">thickness</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># double</span>
+    <span class="n">voidFrac</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># double</span>
+    <span class="n">roughness</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># double</span>
+    <span class="n">surfSlope</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># double</span>
+    <span class="n">sideSlope</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># double</span>
+    <span class="n">alpha</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># double</span>
+    <span class="n">porosity</span> <span class="o">=</span> <span class="mi">6</span>  <span class="c1"># double</span>
+    <span class="n">fieldCap</span> <span class="o">=</span> <span class="mi">7</span>  <span class="c1"># double</span>
+    <span class="n">wiltPoint</span> <span class="o">=</span> <span class="mi">8</span>  <span class="c1"># double</span>
+    <span class="n">suction</span> <span class="o">=</span> <span class="mi">9</span>  <span class="c1"># double</span>
+    <span class="n">kSat</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># double</span>
+    <span class="n">kSlope</span> <span class="o">=</span> <span class="mi">11</span>  <span class="c1"># double</span>
+    <span class="n">clogFactor</span> <span class="o">=</span> <span class="mi">12</span>  <span class="c1"># double</span>
+    <span class="n">impervFrac</span> <span class="o">=</span> <span class="mi">13</span>  <span class="c1"># double</span>
+    <span class="n">coeff</span> <span class="o">=</span> <span class="mi">14</span>  <span class="c1"># double</span>
+    <span class="n">expon</span> <span class="o">=</span> <span class="mi">15</span>  <span class="c1"># double</span>
+    <span class="n">offset</span> <span class="o">=</span> <span class="mi">16</span>  <span class="c1"># double</span>
+    <span class="n">delay</span> <span class="o">=</span> <span class="mi">17</span>  <span class="c1"># double</span>
+    <span class="n">hOpen</span> <span class="o">=</span> <span class="mi">18</span>  <span class="c1"># double</span>
+    <span class="n">hClose</span> <span class="o">=</span> <span class="mi">19</span>  <span class="c1"># double</span>
+    <span class="n">qCurve</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># integer</span>
+    <span class="n">regenDays</span> <span class="o">=</span> <span class="mi">21</span>  <span class="c1"># double</span>
+    <span class="n">regenDegree</span> <span class="o">=</span> <span class="mi">22</span>  <span class="c1"># double</span></div>
+
+
+<div class="viewcode-block" id="RainGageResults"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.RainGageResults">[docs]</a><span class="k">class</span> <span class="nc">RainGageResults</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">total_precip</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">rainfall</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">snowfall</span> <span class="o">=</span> <span class="mi">2</span></div>
+
+
+<div class="viewcode-block" id="NodeStats"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.NodeStats">[docs]</a><span class="k">class</span> <span class="nc">NodeStats</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">Structure</span><span class="p">):</span>
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;avgDepth&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;maxDepth&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;maxDepthDate&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;maxRptDepth&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;volFlooded&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;timeFlooded&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;timeSurcharged&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;timeCourantCritical&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;totLatFlow&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;maxLatFlow&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;maxInflow&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;maxOverflow&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;maxPondedVol&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;maxInflowDate&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;maxOverflowDate&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">)</span>
+    <span class="p">]</span>
+    <span class="n">_py_alias_ids</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;avgDepth&quot;</span><span class="p">:</span> <span class="s2">&quot;average_depth&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxDepth&quot;</span><span class="p">:</span> <span class="s2">&quot;max_depth&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxDepthDate&quot;</span><span class="p">:</span> <span class="s2">&quot;max_depth_date&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxRptDepth&quot;</span><span class="p">:</span> <span class="s2">&quot;max_report_depth&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;volFlooded&quot;</span><span class="p">:</span> <span class="s2">&quot;flooding_volume&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;timeFlooded&quot;</span><span class="p">:</span> <span class="s2">&quot;flooding_duration&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;timeSurcharged&quot;</span><span class="p">:</span> <span class="s2">&quot;surcharge_duration&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;timeCourantCritical&quot;</span><span class="p">:</span> <span class="s2">&quot;courant_crit_duration&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;totLatFlow&quot;</span><span class="p">:</span> <span class="s2">&quot;lateral_infow_vol&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxLatFlow&quot;</span><span class="p">:</span> <span class="s2">&quot;peak_lateral_inflowrate&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxInflow&quot;</span><span class="p">:</span> <span class="s2">&quot;peak_total_inflow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxOverflow&quot;</span><span class="p">:</span> <span class="s2">&quot;peak_flooding_rate&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxPondedVol&quot;</span><span class="p">:</span> <span class="s2">&quot;max_ponded_volume&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxInflowDate&quot;</span><span class="p">:</span> <span class="s2">&quot;max_inflow_date&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxOverflowDate&quot;</span><span class="p">:</span> <span class="s2">&quot;max_flooding_date&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;loads&quot;</span><span class="p">:</span> <span class="s2">&quot;pollutant_loading&quot;</span>
+    <span class="p">}</span></div>
+
+
+<div class="viewcode-block" id="StorageStats"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.StorageStats">[docs]</a><span class="k">class</span> <span class="nc">StorageStats</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">Structure</span><span class="p">):</span>
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;initVol&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;avgVol&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;maxVol&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;maxFlow&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;evapLosses&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;exfilLosses&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;maxVolDate&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">)]</span>
+    <span class="n">_py_alias_ids</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;initVol&quot;</span><span class="p">:</span> <span class="s2">&quot;initial_volume&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;avgVol&quot;</span><span class="p">:</span> <span class="s2">&quot;average_volume&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxVol&quot;</span><span class="p">:</span> <span class="s2">&quot;max_volume&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxFlow&quot;</span><span class="p">:</span> <span class="s2">&quot;peak_flowrate&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;evapLosses&quot;</span><span class="p">:</span> <span class="s2">&quot;evap_loss&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;exfilLosses&quot;</span><span class="p">:</span> <span class="s2">&quot;exfil_loss&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxVolDate&quot;</span><span class="p">:</span> <span class="s2">&quot;max_vol_date&quot;</span>
+    <span class="p">}</span></div>
+
+
+<span class="n">PollutArray</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">POINTER</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="OutfallStats"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.OutfallStats">[docs]</a><span class="k">class</span> <span class="nc">OutfallStats</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">Structure</span><span class="p">):</span>
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;avgFlow&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;maxFlow&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;totalLoad&quot;</span><span class="p">,</span> <span class="n">PollutArray</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;totalPeriods&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">)]</span>
+    <span class="n">_py_alias_ids</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;avgFlow&quot;</span><span class="p">:</span> <span class="s2">&quot;average_flowrate&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxFlow&quot;</span><span class="p">:</span> <span class="s2">&quot;peak_flowrate&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;totalLoad&quot;</span><span class="p">:</span> <span class="s2">&quot;pollutant_loading&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;totalPeriods&quot;</span><span class="p">:</span> <span class="s2">&quot;total_periods&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;loads&quot;</span><span class="p">:</span> <span class="s2">&quot;pollutant_loading&quot;</span>
+    <span class="p">}</span></div>
+
+
+<span class="n">FlowClassArray</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span> <span class="o">*</span> <span class="mi">7</span>
+
+
+<div class="viewcode-block" id="LinkStats"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.LinkStats">[docs]</a><span class="k">class</span> <span class="nc">LinkStats</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">Structure</span><span class="p">):</span>
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;maxFlow&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;maxFlowDate&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;maxVeloc&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;maxDepth&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;timeNormalFlow&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;timeInletControl&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;timeSurcharged&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;timeFullUpstream&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;timeFullDnstream&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;timeFullFlow&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;timeCapacityLimited&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;timeInFlowClass&quot;</span><span class="p">,</span> <span class="n">FlowClassArray</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;timeCourantCritical&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;flowTurns&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_long</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;flowTurnSign&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">)]</span>
+    <span class="n">_py_alias_ids</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;maxFlow&quot;</span><span class="p">:</span> <span class="s2">&quot;peak_flow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxFlowDate&quot;</span><span class="p">:</span> <span class="s2">&quot;peak_flow_date&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxVeloc&quot;</span><span class="p">:</span> <span class="s2">&quot;peak_velocity&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxDepth&quot;</span><span class="p">:</span> <span class="s2">&quot;peak_depth&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;timeNormalFlow&quot;</span><span class="p">:</span> <span class="s2">&quot;time_normal_flow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;timeInletControl&quot;</span><span class="p">:</span> <span class="s2">&quot;time_inlet_control&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;timeSurcharged&quot;</span><span class="p">:</span> <span class="s2">&quot;time_surcharged&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;timeFullUpstream&quot;</span><span class="p">:</span> <span class="s2">&quot;time_full_upstream&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;timeFullDnstream&quot;</span><span class="p">:</span> <span class="s2">&quot;time_full_downstream&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;timeFullFlow&quot;</span><span class="p">:</span> <span class="s2">&quot;time_full_flow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;timeCapacityLimited&quot;</span><span class="p">:</span> <span class="s2">&quot;time_capacity_limited&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;timeInFlowClass&quot;</span><span class="p">:</span> <span class="s2">&quot;time_in_flow_class&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;timeCourantCritical&quot;</span><span class="p">:</span> <span class="s2">&quot;time_courant_crit&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;flowTurns&quot;</span><span class="p">:</span> <span class="s2">&quot;flow_turns&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;flowTurnSign&quot;</span><span class="p">:</span> <span class="s2">&quot;flow_turn_sign&quot;</span>
+    <span class="p">}</span></div>
+
+
+<div class="viewcode-block" id="PumpStats"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.PumpStats">[docs]</a><span class="k">class</span> <span class="nc">PumpStats</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">Structure</span><span class="p">):</span>
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;utilized&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;minFlow&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;avgFlow&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;maxFlow&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;volume&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;energy&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;offCurveLow&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;offCurveHigh&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;startUps&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;totalPeriods&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>
+    <span class="p">]</span>
+    <span class="n">_py_alias_ids</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;utilized&quot;</span><span class="p">:</span> <span class="s2">&quot;percent_utilized&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;minFlow&quot;</span><span class="p">:</span> <span class="s2">&quot;min_flowrate&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;avgFlow&quot;</span><span class="p">:</span> <span class="s2">&quot;average_flowrate&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxFlow&quot;</span><span class="p">:</span> <span class="s2">&quot;max_flowrate&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;total_volume&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;energy&quot;</span><span class="p">:</span> <span class="s2">&quot;energy_consumed&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;offCurveLow&quot;</span><span class="p">:</span> <span class="s2">&quot;off_curve_low&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;offCurveHigh&quot;</span><span class="p">:</span> <span class="s2">&quot;off_curve_high&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;startUps&quot;</span><span class="p">:</span> <span class="s2">&quot;number_startups&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;totalPeriods&quot;</span><span class="p">:</span> <span class="s2">&quot;total_periods&quot;</span>
+    <span class="p">}</span></div>
+
+
+<div class="viewcode-block" id="SubcStats"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.SubcStats">[docs]</a><span class="k">class</span> <span class="nc">SubcStats</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">Structure</span><span class="p">):</span>
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;precip&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;runon&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;evap&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;infil&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;runoff&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;maxFlow&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">)]</span>
+    <span class="n">_py_alias_ids</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;precip&quot;</span><span class="p">:</span> <span class="s2">&quot;precipitation&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;runon&quot;</span><span class="p">:</span> <span class="s2">&quot;runon&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;evap&quot;</span><span class="p">:</span> <span class="s2">&quot;evaporation&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;infil&quot;</span><span class="p">:</span> <span class="s2">&quot;infiltration&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;runoff&quot;</span><span class="p">:</span> <span class="s2">&quot;runoff&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxFlow&quot;</span><span class="p">:</span> <span class="s2">&quot;peak_runoff_rate&quot;</span><span class="p">,</span>
+    <span class="p">}</span></div>
+
+
+<div class="viewcode-block" id="RoutingTotals"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.RoutingTotals">[docs]</a><span class="k">class</span> <span class="nc">RoutingTotals</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">Structure</span><span class="p">):</span>
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;dwInflow&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;wwInflow&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;gwInflow&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;iiInflow&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;exInflow&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;flooding&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;outflow&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;evapLoss&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;seepLoss&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;reacted&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;initStorage&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;finalStorage&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;pctError&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">)]</span>
+    <span class="n">_py_alias_ids</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;dwInflow&quot;</span><span class="p">:</span> <span class="s2">&quot;dry_weather_inflow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;wwInflow&quot;</span><span class="p">:</span> <span class="s2">&quot;wet_weather_inflow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;gwInflow&quot;</span><span class="p">:</span> <span class="s2">&quot;groundwater_inflow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;iiInflow&quot;</span><span class="p">:</span> <span class="s2">&quot;II_inflow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;exInflow&quot;</span><span class="p">:</span> <span class="s2">&quot;external_inflow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;flooding&quot;</span><span class="p">:</span> <span class="s2">&quot;flooding&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;outflow&quot;</span><span class="p">:</span> <span class="s2">&quot;outflow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;evapLoss&quot;</span><span class="p">:</span> <span class="s2">&quot;evaporation_loss&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;seepLoss&quot;</span><span class="p">:</span> <span class="s2">&quot;seepage_loss&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;reacted&quot;</span><span class="p">:</span> <span class="s2">&quot;reacted&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;initStorage&quot;</span><span class="p">:</span> <span class="s2">&quot;initial_storage&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;finalStorage&quot;</span><span class="p">:</span> <span class="s2">&quot;final_storage&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;pctError&quot;</span><span class="p">:</span> <span class="s2">&quot;routing_error&quot;</span>
+    <span class="p">}</span></div>
+
+
+<div class="viewcode-block" id="RunoffTotals"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.RunoffTotals">[docs]</a><span class="k">class</span> <span class="nc">RunoffTotals</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">Structure</span><span class="p">):</span>
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;rainfall&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;evap&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;infil&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;runoff&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;drains&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;runon&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;initStorage&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;finalStorage&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;initSnowCover&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;finalSnowCover&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;snowRemoved&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;pctError&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span><span class="p">)</span>
+    <span class="p">]</span>
+    <span class="n">_py_alias_ids</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;rainfall&quot;</span><span class="p">:</span> <span class="s2">&quot;rainfall&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;evap&quot;</span><span class="p">:</span> <span class="s2">&quot;evaporation&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;infil&quot;</span><span class="p">:</span> <span class="s2">&quot;infiltration&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;runoff&quot;</span><span class="p">:</span> <span class="s2">&quot;runoff&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;drains&quot;</span><span class="p">:</span> <span class="s2">&quot;drains&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;runon&quot;</span><span class="p">:</span> <span class="s2">&quot;runon&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;initStorage&quot;</span><span class="p">:</span> <span class="s2">&quot;init_storage&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;finalStorage&quot;</span><span class="p">:</span> <span class="s2">&quot;final_storage&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;initSnowCover&quot;</span><span class="p">:</span> <span class="s2">&quot;init_snow_cover&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;finalSnowCover&quot;</span><span class="p">:</span> <span class="s2">&quot;final_snow_cover&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;snowRemoved&quot;</span><span class="p">:</span> <span class="s2">&quot;snow_removed&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;pctError&quot;</span><span class="p">:</span> <span class="s2">&quot;routing_error&quot;</span>
+    <span class="p">}</span></div>
+
+
+<span class="c1"># --- SWMM Output API</span>
+<span class="c1"># -----------------------------------------------------------------------------</span>
+<span class="n">DLLErrorKeys</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">411</span><span class="p">:</span> <span class="s2">&quot;Input Error 411: no memory allocated for results.&quot;</span><span class="p">,</span>
+    <span class="mi">412</span><span class="p">:</span> <span class="s2">&quot;Input Error 412: no results; binary file hasn&#39;t been opened.&quot;</span><span class="p">,</span>
+    <span class="mi">421</span><span class="p">:</span> <span class="s2">&quot;Input Error 421: invalid parameter code.&quot;</span><span class="p">,</span>
+    <span class="mi">434</span><span class="p">:</span> <span class="s2">&quot;File Error  434: unable to open binary output file.&quot;</span><span class="p">,</span>
+    <span class="mi">435</span><span class="p">:</span> <span class="s2">&quot;File Error  435: run terminated; no results in binary file.&quot;</span><span class="p">,</span>
+    <span class="mi">441</span><span class="p">:</span> <span class="s2">&quot;Error 441: need to call SMR_open before calling this function&quot;</span>
+<span class="p">}</span>
+
+
+<div class="viewcode-block" id="SMO_elementCount"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.SMO_elementCount">[docs]</a><span class="k">class</span> <span class="nc">SMO_elementCount</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">subcatchCount</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">nodeCount</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">linkCount</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">pollutantCount</span> <span class="o">=</span> <span class="mi">3</span></div>
+
+
+<div class="viewcode-block" id="SMO_unit"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.SMO_unit">[docs]</a><span class="k">class</span> <span class="nc">SMO_unit</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">flow_rate</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">concentration</span> <span class="o">=</span> <span class="mi">1</span></div>
+
+
+<div class="viewcode-block" id="SMO_apiFunction"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.SMO_apiFunction">[docs]</a><span class="k">class</span> <span class="nc">SMO_apiFunction</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">getAttribute</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">getResult</span> <span class="o">=</span> <span class="mi">1</span></div>
+
+
+<div class="viewcode-block" id="SMO_elementType"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.SMO_elementType">[docs]</a><span class="k">class</span> <span class="nc">SMO_elementType</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">SM_subcatch</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">SM_node</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">SM_link</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">SM_sys</span> <span class="o">=</span> <span class="mi">3</span></div>
+
+
+<div class="viewcode-block" id="SMO_time"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.SMO_time">[docs]</a><span class="k">class</span> <span class="nc">SMO_time</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">reportStep</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">numPeriods</span> <span class="o">=</span> <span class="mi">1</span></div>
+
+
+<div class="viewcode-block" id="SMO_subcatchAttribute"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.SMO_subcatchAttribute">[docs]</a><span class="k">class</span> <span class="nc">SMO_subcatchAttribute</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">rainfall_subcatch</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">snow_depth_subcatch</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">evap_loss</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">infil_loss</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">runoff_rate</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">gwoutflow_rate</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">gwtable_elev</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="n">soil_moisture</span> <span class="o">=</span> <span class="mi">7</span>
+    <span class="n">pollutant_conc_subcatch</span> <span class="o">=</span> <span class="mi">8</span></div>
+
+
+<div class="viewcode-block" id="SMO_nodeAttribute"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.SMO_nodeAttribute">[docs]</a><span class="k">class</span> <span class="nc">SMO_nodeAttribute</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">invert_depth</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">hydraulic_head</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">stored_ponded_volume</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">lateral_inflow</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">total_inflow</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">flooding_losses</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">pollutant_conc_node</span> <span class="o">=</span> <span class="mi">6</span></div>
+
+
+<div class="viewcode-block" id="SMO_linkAttribute"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.SMO_linkAttribute">[docs]</a><span class="k">class</span> <span class="nc">SMO_linkAttribute</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">flow_rate_link</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">flow_depth</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">flow_velocity</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">flow_volume</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">capacity</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">pollutant_conc_link</span> <span class="o">=</span> <span class="mi">5</span></div>
+
+
+<div class="viewcode-block" id="SMO_systemAttribute"><a class="viewcode-back" href="../reference/toolkitapi.html#toolkitapi.SMO_systemAttribute">[docs]</a><span class="k">class</span> <span class="nc">SMO_systemAttribute</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">air_temp</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">rainfall_system</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">snow_depth_system</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">evap_infil_loss</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">runoff_flow</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">dry_weather_inflow</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">groundwater_inflow</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="n">RDII_inflow</span> <span class="o">=</span> <span class="mi">7</span>
+    <span class="n">direct_inflow</span> <span class="o">=</span> <span class="mi">8</span>
+    <span class="n">total_lateral_inflow</span> <span class="o">=</span> <span class="mi">9</span>
+    <span class="n">flood_losses</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">outfall_flows</span> <span class="o">=</span> <span class="mi">11</span>
+    <span class="n">volume_stored</span> <span class="o">=</span> <span class="mi">12</span>
+    <span class="n">evap_rate</span> <span class="o">=</span> <span class="mi">13</span></div>
+</pre></div>
+
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div id="searchbox"></div>
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2016, Bryant E. McDonnell (EmNet LLC).<br>
+
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

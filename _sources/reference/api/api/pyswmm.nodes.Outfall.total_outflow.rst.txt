@@ -1,0 +1,6 @@
+Outfall.total\_outflow
+======================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Outfall.total_outflow

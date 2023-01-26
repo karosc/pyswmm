@@ -1,0 +1,6 @@
+﻿Output.verify\_time
+===================
+
+.. currentmodule:: pyswmm.output
+
+.. automethod:: Output.verify_time

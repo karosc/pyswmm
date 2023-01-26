@@ -1,0 +1,6 @@
+Node.generated\_inflow
+======================
+
+.. currentmodule:: pyswmm.nodes
+
+.. automethod:: Node.generated_inflow

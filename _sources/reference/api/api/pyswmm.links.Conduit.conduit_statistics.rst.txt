@@ -1,0 +1,6 @@
+Conduit.conduit\_statistics
+===========================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Conduit.conduit_statistics

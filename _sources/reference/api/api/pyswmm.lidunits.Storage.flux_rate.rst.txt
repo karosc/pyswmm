@@ -1,0 +1,6 @@
+Storage.flux\_rate
+==================
+
+.. currentmodule:: pyswmm.lidunits
+
+.. autoproperty:: Storage.flux_rate

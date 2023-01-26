@@ -1,0 +1,6 @@
+Link.ds\_xsection\_area
+=======================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Link.ds_xsection_area

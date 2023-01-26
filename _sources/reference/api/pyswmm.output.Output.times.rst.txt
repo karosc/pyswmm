@@ -1,0 +1,6 @@
+﻿Output.times
+============
+
+.. currentmodule:: pyswmm.output
+
+.. autoproperty:: Output.times

@@ -1,0 +1,6 @@
+Drain.open\_head
+================
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Drain.open_head

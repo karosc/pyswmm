@@ -1,0 +1,99 @@
+﻿Simulation
+==========
+
+.. currentmodule:: pyswmm.simulation
+
+.. autoclass:: Simulation
+
+   
+   .. .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree: api/
+      :nosignatures:
+      
+   
+      
+      
+         ~Simulation.add_after_close
+       
+      
+         ~Simulation.add_after_end
+       
+      
+         ~Simulation.add_after_step
+       
+      
+         ~Simulation.add_before_end
+       
+      
+         ~Simulation.add_before_start
+       
+      
+         ~Simulation.add_before_step
+       
+      
+         ~Simulation.after_close
+       
+      
+         ~Simulation.after_end
+       
+      
+         ~Simulation.after_step
+       
+      
+         ~Simulation.before_end
+       
+      
+         ~Simulation.before_start
+       
+      
+         ~Simulation.before_step
+       
+      
+         ~Simulation.close
+       
+      
+         ~Simulation.execute
+       
+      
+         ~Simulation.initial_conditions
+       
+      
+         ~Simulation.report
+       
+      
+         ~Simulation.start
+       
+      
+         ~Simulation.step_advance
+       
+      
+         ~Simulation.terminate_simulation
+       
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree: api/
+   
+      ~Simulation.current_time
+      ~Simulation.end_time
+      ~Simulation.engine_version
+      ~Simulation.flow_routing_error
+      ~Simulation.flow_units
+      ~Simulation.percent_complete
+      ~Simulation.quality_error
+      ~Simulation.report_start
+      ~Simulation.runoff_error
+      ~Simulation.start_time
+      ~Simulation.system_units
+   
+   

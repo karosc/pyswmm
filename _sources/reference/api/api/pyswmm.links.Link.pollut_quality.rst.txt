@@ -1,0 +1,6 @@
+Link.pollut\_quality
+====================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Link.pollut_quality

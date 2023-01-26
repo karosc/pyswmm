@@ -1,0 +1,6 @@
+Storage.cumulative\_inflow
+==========================
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Storage.cumulative_inflow

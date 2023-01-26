@@ -1,0 +1,6 @@
+Conduit.flow\_limit
+===================
+
+.. currentmodule:: pyswmm.links
+
+.. autoproperty:: Conduit.flow_limit

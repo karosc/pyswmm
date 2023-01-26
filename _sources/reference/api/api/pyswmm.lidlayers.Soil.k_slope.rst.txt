@@ -1,0 +1,6 @@
+Soil.k\_slope
+=============
+
+.. currentmodule:: pyswmm.lidlayers
+
+.. autoproperty:: Soil.k_slope

@@ -1,0 +1,6 @@
+Outfall.head
+============
+
+.. currentmodule:: pyswmm.nodes
+
+.. autoproperty:: Outfall.head
